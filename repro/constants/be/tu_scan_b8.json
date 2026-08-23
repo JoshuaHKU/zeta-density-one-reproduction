@@ -1,0 +1,15 @@
+{
+ "b": 8,
+ "gate": "F-BE-TU-8",
+ "verdict": "PASS",
+ "shards": 40,
+ "matrices_total": 197357,
+ "checked_total": 197357,
+ "leg_A_full_minor_matrices": 2029,
+ "partition_shapes": 22,
+ "coverage": "LEG A: >=100 matrices per partition shape (22 shapes), ALL k<=8 minors. LEG B: EVERY matrix, minors of order 2,3,4 only. THIS IS NOT A FULL EXHAUSTIVE PROOF AT b=8 -- coverage is stated, not implied.",
+ "leg_A_fraction": 0.0103,
+ "violations": [],
+ "wall_s_max_shard": 4964.6,
+ "hosts": "230 (shards 0-19) + 231 (shards 20-39)"
+}

@@ -1,0 +1,54 @@
+{
+ "class": "m_14",
+ "status": "IN PROGRESS -- fit needs N=2..9, holdout N=10",
+ "engine": "tt_moments.py (multiset aggregation + span-DP), bounded caches TT_CHI_CACHE=300000 TT_SCHUR_CACHE=60000",
+ "note": "Values are recorded here as they land, per the standing instruction to persist completed computations immediately.  A value that exists only in a remote log or a chat message is not evidence -- this file is.",
+ "points": {
+  "2": {
+   "value": "9694845/16384",
+   "terms": 8,
+   "wall_s": 0.0,
+   "host": "222"
+  },
+  "3": {
+   "value": "2524570795/1594323",
+   "terms": 126,
+   "wall_s": 0.1,
+   "host": "222"
+  },
+  "4": {
+   "value": "289210401837/134217728",
+   "terms": 1242,
+   "wall_s": 0.5,
+   "host": "222"
+  },
+  "5": {
+   "value": "75488618341123/30517578125",
+   "terms": 8512,
+   "wall_s": 6.5,
+   "host": "222"
+  },
+  "6": {
+   "value": "626103135252583/235092492288",
+   "terms": 44916,
+   "wall_s": 68.9,
+   "host": "222"
+  },
+  "7": {
+   "value": "1887841937797135/678223072849",
+   "terms": 194668,
+   "wall_s": 594.8,
+   "host": "240"
+  },
+  "8": {
+   "value": "787271833417437/274877906944",
+   "terms": 723354,
+   "wall_s": 4242.9,
+   "host": "240"
+  }
+ },
+ "pending": [
+  "N=9 (queued, 240)",
+  "N=10 holdout (worker cap to be set from measured peak RSS at N=9)"
+ ]
+}

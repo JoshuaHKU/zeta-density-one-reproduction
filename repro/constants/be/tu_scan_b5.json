@@ -1,0 +1,10 @@
+{
+ "b": 5,
+ "matrices_deduped": 253,
+ "rows": 10,
+ "gate": "F-BE-TU-5",
+ "coverage": "exhaustive: all k x k minors, k<=b",
+ "violations": [],
+ "verdict": "PASS",
+ "wall_s": 4.0
+}

@@ -1,0 +1,22 @@
+{
+ "b": 7,
+ "gate": "F-BE-LTU-7",
+ "verdict": "PASS",
+ "shards": 8,
+ "matrices_checked": 37633,
+ "violations": [],
+ "coverage": "exhaustive: all k x k minors, k <= b+r, over all 37633 deduped lifted systems",
+ "method": "GPU float64 batched screen (CuPy) + exact Bareiss integer adjudication of every minor whose |det| falls outside 1e-6 of {0,+-1}.  Hadamard bounds |det| <= 14^7 ~ 1.05e8 << 2^53, so the screen can only cost extra exact checks, never mask a violation.  Verified against the CPU-only scanner on b=5 (501 systems): identical PASS.",
+ "hosts": "238 (V100 + RTX 3080 Ti, 6 shards) + 220 (RTX 2080 Ti, 2 shards)",
+ "wall_s_per_shard": [
+  2527.2,
+  2220.8,
+  2535.1,
+  818.3,
+  2763.8,
+  3100.8,
+  745.7,
+  3106.6
+ ],
+ "wall_s_max": 3106.6
+}

@@ -1,0 +1,11 @@
+{
+ "b": 7,
+ "gate": "F-BE-LTU-7",
+ "shard": "2/8",
+ "checked": 4704,
+ "violations": [],
+ "backend": "cupy(dev1)",
+ "verdict": "PASS",
+ "wall_s": 2535.1,
+ "method": "GPU float64 batched screen + exact Bareiss adjudication of every suspicious minor; Hadamard bound 14^7 << 2^53 so the screen can only cost extra exact checks, never mask a violation"
+}

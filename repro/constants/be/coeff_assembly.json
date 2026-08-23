@@ -1,0 +1,96 @@
+{
+ "spec": "COEFF_SPEC_BE_R163.md",
+ "gate": "F-BE-COEFF",
+ "note": "Independent second implementation written from the r163 spec; no sandbox code reused.  Coverage exceeds the math-side sandbox (b=3 N=2..7, b=4 N=2..7, b=5 N=2..5).",
+ "self_checks_sec3": {
+  "|B|=1 -> N*delta_{k=0}": "OK",
+  "|B|=2 -> min(|k|,N); 0 at k=0": "OK",
+  "q(s)=1,2,6,26,150": "OK",
+  "sum_P prod q(|B|) = Fubini 13,75,541,4683,47293": "OK"
+ },
+ "levels": {
+  "5": {
+   "N": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "engine": "cupy(dev0)",
+   "verdict": "PASS",
+   "values": {
+    "2": "264",
+    "3": "3589",
+    "4": "21376",
+    "5": "83725",
+    "6": "253576",
+    "7": "644889",
+    "8": "1444864",
+    "9": "2940201",
+    "10": "5547400"
+   }
+  },
+  "6": {
+   "N": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "engine": "cupy(dev0)",
+   "verdict": "PASS",
+   "values": {
+    "2": "858",
+    "3": "18627",
+    "4": "150964",
+    "5": "745925",
+    "6": "2724366",
+    "7": "8107143",
+    "8": "20798312",
+    "9": "47675529",
+    "10": "100038850",
+    "11": "195469131"
+   }
+  },
+  "3": {
+   "N": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "engine": "CPU be_sigma2.py",
+   "verdict": "PASS",
+   "note": "verified inline, N=2..8 digit for digit"
+  },
+  "4": {
+   "N": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "engine": "CPU be_sigma2.py + GPU be_coeff_gpu.py",
+   "verdict": "PASS",
+   "note": "both engines agree digit for digit, N=2..9"
+  }
+ }
+}

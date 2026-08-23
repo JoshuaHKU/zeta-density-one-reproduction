@@ -1,0 +1,26 @@
+{
+ "round": "r160 O-BE-7",
+ "RESULT_RECORDED_AT": "2026-08-21T04:59:27",
+ "points": {
+  "m_9(8)": {
+   "tt_moments": "2365045367/33554432",
+   "predicted": "2365045367/33554432",
+   "F_BE_EXT_holdout": "HIT",
+   "p3_direct_sum": "PENDING (dual implementation)"
+  },
+  "m_13(10)": {
+   "tt_moments": "8485654468512913/6250000000000",
+   "predicted": "8485654468512913/6250000000000",
+   "F_BE_EXT_holdout": "HIT",
+   "p3_direct_sum": "PENDING (dual implementation)"
+  },
+  "m_11(9)": {
+   "tt_moments": "28016781811331/94143178827",
+   "predicted": "28016781811331/94143178827",
+   "F_BE_EXT_holdout": "HIT",
+   "wall_s": 284.4,
+   "host": "240",
+   "p3_direct_sum": "PENDING (dual implementation)"
+  }
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "class": "{9}",
+ "cycle": 9,
+ "total": "27649/302400",
+ "total_float": 0.09143187830687831,
+ "self_check": {
+  "sum_size_times_value_equals_total": true,
+  "rebuilt_from_60739_term_orbits": true,
+  "signed_weights_sum_to_zero": true
+ },
+ "orbit_values": {
+  "012345678": {
+   "size": 1,
+   "rep": [
+    [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ]
+   ],
+   "value": "27649/302400",
+   "method": "facet+dihedral-quotient",
+   "engine": "run_pure_rows.py",
+   "term_orbits": 60739,
+   "fcyc_terms": 1091670,
+   "hosts": "238 (shards 0,2) + 220 (shard 1); earlier segments on 230/231",
+   "second_path": {
+    "method": "pre-registered-target-hit",
+    "note": "C_9 + {7,2} = -75863/302400 was registered by the math side BEFORE this computation finished; with {7,2} = -4313/12600 already delivered by the same facet chain, the target C_9 = 27649/302400 was pinned digit for digit and is HIT.  This closes F-FACET-9, the second method for Sigma_9 (the first being the Toeplitz-trace route)."
+   }
+  }
+ }
+}

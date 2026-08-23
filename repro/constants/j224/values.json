@@ -1,0 +1,605 @@
+{
+ "class": "{2,2,4}",
+ "cycle": 8,
+ "total": "-127/840",
+ "total_float": -0.15119047619047618,
+ "self_check": {
+  "sum_size_times_value_equals_total": true
+ },
+ "orbit_values": {
+  "01|2346|57": {
+   "size": 16,
+   "rep": [
+    [
+     0,
+     1,
+     2,
+     4
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     6,
+     7
+    ]
+   ],
+   "value": "-5/18144",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "0124|36|57": {
+   "size": 16,
+   "rep": [
+    [
+     0,
+     1,
+     2,
+     4
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "value": "-1/5670",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "01|2456|37": {
+   "size": 16,
+   "rep": [
+    [
+     0,
+     1,
+     2,
+     4
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     5,
+     6
+    ]
+   ],
+   "value": "-5/18144",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "01|2356|47": {
+   "size": 16,
+   "rep": [
+    [
+     0,
+     1,
+     3,
+     4
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     6,
+     7
+    ]
+   ],
+   "value": "-131/90720",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "01|2357|46": {
+   "size": 16,
+   "rep": [
+    [
+     0,
+     1,
+     3,
+     5
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     6,
+     7
+    ]
+   ],
+   "value": "-29/90720",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "0135|26|47": {
+   "size": 16,
+   "rep": [
+    [
+     0,
+     1,
+     3,
+     5
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     4,
+     7
+    ]
+   ],
+   "value": "-37/181440",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "0135|27|46": {
+   "size": 16,
+   "rep": [
+    [
+     0,
+     1,
+     3,
+     5
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     4,
+     6
+    ]
+   ],
+   "value": "-37/181440",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "01|23|4567": {
+   "size": 8,
+   "rep": [
+    [
+     0,
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     6,
+     7
+    ]
+   ],
+   "value": "-19/7560",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "0123|46|57": {
+   "size": 8,
+   "rep": [
+    [
+     0,
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "value": "-101/181440",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "01|27|3456": {
+   "size": 8,
+   "rep": [
+    [
+     0,
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     6
+    ]
+   ],
+   "value": "-197/90720",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "01|2347|56": {
+   "size": 8,
+   "rep": [
+    [
+     0,
+     1,
+     2,
+     5
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     6,
+     7
+    ]
+   ],
+   "value": "-109/45360",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "0125|36|47": {
+   "size": 8,
+   "rep": [
+    [
+     0,
+     1,
+     2,
+     5
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     7
+    ]
+   ],
+   "value": "-11/15120",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "0125|37|46": {
+   "size": 8,
+   "rep": [
+    [
+     0,
+     1,
+     2,
+     5
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     4,
+     6
+    ]
+   ],
+   "value": "-1/12960",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "0134|26|57": {
+   "size": 8,
+   "rep": [
+    [
+     0,
+     1,
+     3,
+     4
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "value": "-1/2835",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "0136|24|57": {
+   "size": 8,
+   "rep": [
+    [
+     0,
+     1,
+     3,
+     6
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "value": "-1/20160",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "0136|25|47": {
+   "size": 8,
+   "rep": [
+    [
+     0,
+     1,
+     3,
+     6
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     4,
+     7
+    ]
+   ],
+   "value": "-121/181440",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "01|2457|36": {
+   "size": 8,
+   "rep": [
+    [
+     0,
+     1,
+     3,
+     6
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "value": "-1/648",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "01|2367|45": {
+   "size": 4,
+   "rep": [
+    [
+     0,
+     1,
+     4,
+     5
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     6,
+     7
+    ]
+   ],
+   "value": "-109/45360",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "0145|26|37": {
+   "size": 4,
+   "rep": [
+    [
+     0,
+     1,
+     4,
+     5
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     3,
+     7
+    ]
+   ],
+   "value": "-13/30240",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "0145|27|36": {
+   "size": 4,
+   "rep": [
+    [
+     0,
+     1,
+     4,
+     5
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     3,
+     6
+    ]
+   ],
+   "value": "-7/6480",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "02|1357|46": {
+   "size": 4,
+   "rep": [
+    [
+     0,
+     2,
+     4,
+     6
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "value": "-1/45360",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  },
+  "0246|15|37": {
+   "size": 2,
+   "rep": [
+    [
+     0,
+     2,
+     4,
+     6
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     3,
+     7
+    ]
+   ],
+   "value": "-13/45360",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "note": "CuPy ladder dv=0.05, F-V-JOINTS 33-orbit match"
+   }
+  }
+ }
+}

@@ -1,0 +1,2776 @@
+{
+ "class": "{2^5}",
+ "cycle": 10,
+ "total": "10531/13860",
+ "total_float": 0.7598124098124098,
+ "self_check": {
+  "sum_size_times_value_equals_total": true
+ },
+ "orbit_values": {
+  "01|23|46|59|78": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     9
+    ],
+    [
+     7,
+     8
+    ]
+   ],
+   "value": "149/118800",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|23|47|59|68": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     9
+    ],
+    [
+     6,
+     8
+    ]
+   ],
+   "value": "347/554400",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|24|35|69|78": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     6,
+     9
+    ],
+    [
+     7,
+     8
+    ]
+   ],
+   "value": "193/142560",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|24|36|59|78": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     5,
+     9
+    ],
+    [
+     7,
+     8
+    ]
+   ],
+   "value": "1007/1663200",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|24|37|58|69": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     5,
+     8
+    ],
+    [
+     6,
+     9
+    ]
+   ],
+   "value": "43/100800",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|24|37|59|68": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     5,
+     9
+    ],
+    [
+     6,
+     8
+    ]
+   ],
+   "value": "211/554400",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|24|38|57|69": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     5,
+     7
+    ],
+    [
+     6,
+     9
+    ]
+   ],
+   "value": "247/997920",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|24|38|59|67": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     5,
+     9
+    ],
+    [
+     6,
+     7
+    ]
+   ],
+   "value": "13/20790",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|24|39|57|68": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     9
+    ],
+    [
+     5,
+     7
+    ],
+    [
+     6,
+     8
+    ]
+   ],
+   "value": "23/61600",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|24|39|58|67": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     9
+    ],
+    [
+     5,
+     8
+    ],
+    [
+     6,
+     7
+    ]
+   ],
+   "value": "1063/831600",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|25|37|49|68": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     6,
+     8
+    ]
+   ],
+   "value": "4471/9979200",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|25|39|47|68": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     9
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     6,
+     8
+    ]
+   ],
+   "value": "31/124740",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|26|37|49|58": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     5,
+     8
+    ]
+   ],
+   "value": "32/51975",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|26|38|49|57": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "value": "31/73920",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|26|39|47|58": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     3,
+     9
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     8
+    ]
+   ],
+   "value": "4321/9979200",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|26|39|48|57": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     3,
+     9
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "value": "167/453600",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|27|39|46|58": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     3,
+     9
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     8
+    ]
+   ],
+   "value": "79/311850",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|29|36|48|57": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     9
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "value": "797/1247400",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "02|13|47|59|68": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     9
+    ],
+    [
+     6,
+     8
+    ]
+   ],
+   "value": "29/155925",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "02|14|37|58|69": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     5,
+     8
+    ],
+    [
+     6,
+     9
+    ]
+   ],
+   "value": "383/1663200",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "02|14|37|59|68": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     5,
+     9
+    ],
+    [
+     6,
+     8
+    ]
+   ],
+   "value": "13/92400",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "02|15|37|48|69": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     6,
+     9
+    ]
+   ],
+   "value": "299/1108800",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "02|15|38|47|69": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     6,
+     9
+    ]
+   ],
+   "value": "2747/9979200",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "02|16|37|49|58": {
+   "size": 20,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     5,
+     8
+    ]
+   ],
+   "value": "13/64800",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|23|45|68|79": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     6,
+     8
+    ],
+    [
+     7,
+     9
+    ]
+   ],
+   "value": "1/693",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|23|45|69|78": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     6,
+     9
+    ],
+    [
+     7,
+     8
+    ]
+   ],
+   "value": "13/2310",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|23|46|58|79": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     8
+    ],
+    [
+     7,
+     9
+    ]
+   ],
+   "value": "1121/1663200",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|23|47|58|69": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     8
+    ],
+    [
+     6,
+     9
+    ]
+   ],
+   "value": "1499/831600",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|23|48|59|67": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     5,
+     9
+    ],
+    [
+     6,
+     7
+    ]
+   ],
+   "value": "2/1485",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|23|49|57|68": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     5,
+     7
+    ],
+    [
+     6,
+     8
+    ]
+   ],
+   "value": "1427/997920",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|23|49|58|67": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     5,
+     8
+    ],
+    [
+     6,
+     7
+    ]
+   ],
+   "value": "2561/498960",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|24|35|68|79": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     6,
+     8
+    ],
+    [
+     7,
+     9
+    ]
+   ],
+   "value": "149/399168",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|24|36|58|79": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     5,
+     8
+    ],
+    [
+     7,
+     9
+    ]
+   ],
+   "value": "1289/4989600",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|25|34|69|78": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     6,
+     9
+    ],
+    [
+     7,
+     8
+    ]
+   ],
+   "value": "317/62370",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|25|36|49|78": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     7,
+     8
+    ]
+   ],
+   "value": "59/34650",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|25|37|48|69": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     6,
+     9
+    ]
+   ],
+   "value": "1553/2494800",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|25|38|47|69": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     6,
+     9
+    ]
+   ],
+   "value": "5417/4989600",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|25|38|49|67": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     6,
+     7
+    ]
+   ],
+   "value": "481/277200",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|25|39|48|67": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     9
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     6,
+     7
+    ]
+   ],
+   "value": "3001/4989600",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|26|34|59|78": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     5,
+     9
+    ],
+    [
+     7,
+     8
+    ]
+   ],
+   "value": "1009/831600",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|26|35|49|78": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     7,
+     8
+    ]
+   ],
+   "value": "41/69300",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|26|37|48|59": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     5,
+     9
+    ]
+   ],
+   "value": "41/41580",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|26|38|47|59": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     9
+    ]
+   ],
+   "value": "533/831600",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|27|35|49|68": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     6,
+     8
+    ]
+   ],
+   "value": "109/453600",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|27|36|49|58": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     5,
+     8
+    ]
+   ],
+   "value": "5393/4989600",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|27|39|48|56": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     3,
+     9
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     5,
+     6
+    ]
+   ],
+   "value": "59/99792",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|28|39|46|57": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     8
+    ],
+    [
+     3,
+     9
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "value": "743/1995840",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|28|39|47|56": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     8
+    ],
+    [
+     3,
+     9
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     6
+    ]
+   ],
+   "value": "1313/997920",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|29|35|47|68": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     9
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     6,
+     8
+    ]
+   ],
+   "value": "469/712800",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|29|36|47|58": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     9
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     8
+    ]
+   ],
+   "value": "4297/2494800",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|29|38|46|57": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     9
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "value": "449/332640",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "02|13|46|58|79": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     8
+    ],
+    [
+     7,
+     9
+    ]
+   ],
+   "value": "1861/9979200",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "02|13|47|58|69": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     8
+    ],
+    [
+     6,
+     9
+    ]
+   ],
+   "value": "337/712800",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "02|14|36|58|79": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     5,
+     8
+    ],
+    [
+     7,
+     9
+    ]
+   ],
+   "value": "233/1995840",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "02|14|38|57|69": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     5,
+     7
+    ],
+    [
+     6,
+     9
+    ]
+   ],
+   "value": "227/1995840",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "02|15|36|48|79": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     7,
+     9
+    ]
+   ],
+   "value": "109/712800",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "02|15|37|49|68": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     6,
+     8
+    ]
+   ],
+   "value": "149/997920",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "02|15|38|46|79": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     7,
+     9
+    ]
+   ],
+   "value": "667/4989600",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "02|16|37|48|59": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     5,
+     9
+    ]
+   ],
+   "value": "52/155925",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "02|16|39|47|58": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     3,
+     9
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     8
+    ]
+   ],
+   "value": "989/4989600",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "03|15|27|48|69": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     6,
+     9
+    ]
+   ],
+   "value": "223/1247400",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "03|15|28|47|69": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     2,
+     8
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     6,
+     9
+    ]
+   ],
+   "value": "1/4050",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "03|16|27|48|59": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     5,
+     9
+    ]
+   ],
+   "value": "529/1995840",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "03|17|26|48|59": {
+   "size": 10,
+   "rep": [
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     7
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     5,
+     9
+    ]
+   ],
+   "value": "4087/9979200",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|23|49|56|78": {
+   "size": 5,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     5,
+     6
+    ],
+    [
+     7,
+     8
+    ]
+   ],
+   "value": "887/166320",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|24|38|56|79": {
+   "size": 5,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     5,
+     6
+    ],
+    [
+     7,
+     9
+    ]
+   ],
+   "value": "263/415800",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|27|38|49|56": {
+   "size": 5,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     5,
+     6
+    ]
+   ],
+   "value": "73/41580",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|29|38|47|56": {
+   "size": 5,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     9
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     6
+    ]
+   ],
+   "value": "1219/249480",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "02|13|49|57|68": {
+   "size": 5,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     5,
+     7
+    ],
+    [
+     6,
+     8
+    ]
+   ],
+   "value": "739/1995840",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "02|16|38|49|57": {
+   "size": 5,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "value": "307/1663200",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "02|16|39|48|57": {
+   "size": 5,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     3,
+     9
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "value": "29/113400",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "03|14|27|58|69": {
+   "size": 5,
+   "rep": [
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     5,
+     8
+    ],
+    [
+     6,
+     9
+    ]
+   ],
+   "value": "1279/1995840",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "03|16|27|49|58": {
+   "size": 5,
+   "rep": [
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     5,
+     8
+    ]
+   ],
+   "value": "541/712800",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "03|17|26|49|58": {
+   "size": 5,
+   "rep": [
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     7
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     5,
+     8
+    ]
+   ],
+   "value": "923/1663200",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "04|16|27|38|59": {
+   "size": 5,
+   "rep": [
+    [
+     0,
+     4
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     5,
+     9
+    ]
+   ],
+   "value": "103/311850",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "04|16|28|37|59": {
+   "size": 5,
+   "rep": [
+    [
+     0,
+     4
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     2,
+     8
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     5,
+     9
+    ]
+   ],
+   "value": "149/453600",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "01|23|45|67|89": {
+   "size": 2,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     8,
+     9
+    ]
+   ],
+   "value": "73/11088",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "03|18|25|47|69": {
+   "size": 2,
+   "rep": [
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     8
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     6,
+     9
+    ]
+   ],
+   "value": "191/332640",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  },
+  "05|16|27|38|49": {
+   "size": 1,
+   "rep": [
+    [
+     0,
+     5
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     4,
+     9
+    ]
+   ],
+   "value": "7/7128",
+   "method": "facet",
+   "host": "220",
+   "engine": "facet_recursion.py",
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 2.038e-06,
+    "bundle_dev": -4.22e-06,
+    "note": "F-V-25 (r141): midpoint ladder + h^2 Richardson on the V100, 79/79 orbits within 2.04e-6 and bundle within -4.22e-6 of 10531/13860 -- reproducing the math-side r136 figure -4.2e-6, which until r141 lived only in a log"
+   }
+  }
+ }
+}

@@ -1,0 +1,521 @@
+{
+ "class": "{2^4}",
+ "cycle": 8,
+ "total": "1661/3780",
+ "total_float": 0.43941798941798943,
+ "self_check": {
+  "sum_size_times_value_equals_total": true
+ },
+ "orbit_values": {
+  "01|25|37|46": {
+   "size": 16,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     4,
+     6
+    ]
+   ],
+   "value": "11/6048",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "ladder-r129",
+    "dev": -8.1e-07,
+    "note": "r129 3-level ladder 0.4394188(3); F-P24 criterion revised to 3e-6"
+   }
+  },
+  "01|23|46|57": {
+   "size": 8,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "value": "59/15120",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "ladder-r129",
+    "dev": -8.1e-07,
+    "note": "r129 3-level ladder 0.4394188(3); F-P24 criterion revised to 3e-6"
+   }
+  },
+  "01|23|47|56": {
+   "size": 8,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     6
+    ]
+   ],
+   "value": "223/15120",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "ladder-r129",
+    "dev": -8.1e-07,
+    "note": "r129 3-level ladder 0.4394188(3); F-P24 criterion revised to 3e-6"
+   }
+  },
+  "01|24|36|57": {
+   "size": 8,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "value": "19/10080",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "ladder-r129",
+    "dev": -8.1e-07,
+    "note": "r129 3-level ladder 0.4394188(3); F-P24 criterion revised to 3e-6"
+   }
+  },
+  "01|24|37|56": {
+   "size": 8,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     5,
+     6
+    ]
+   ],
+   "value": "11/3024",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "ladder-r129",
+    "dev": -8.1e-07,
+    "note": "r129 3-level ladder 0.4394188(3); F-P24 criterion revised to 3e-6"
+   }
+  },
+  "01|25|36|47": {
+   "size": 8,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     7
+    ]
+   ],
+   "value": "5/1008",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "ladder-r129",
+    "dev": -8.1e-07,
+    "note": "r129 3-level ladder 0.4394188(3); F-P24 criterion revised to 3e-6"
+   }
+  },
+  "01|27|35|46": {
+   "size": 8,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     4,
+     6
+    ]
+   ],
+   "value": "353/90720",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "ladder-r129",
+    "dev": -8.1e-07,
+    "note": "r129 3-level ladder 0.4394188(3); F-P24 criterion revised to 3e-6"
+   }
+  },
+  "02|14|36|57": {
+   "size": 8,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "value": "23/30240",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "ladder-r129",
+    "dev": -8.1e-07,
+    "note": "r129 3-level ladder 0.4394188(3); F-P24 criterion revised to 3e-6"
+   }
+  },
+  "02|15|36|47": {
+   "size": 8,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     7
+    ]
+   ],
+   "value": "13/10080",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "ladder-r129",
+    "dev": -8.1e-07,
+    "note": "r129 3-level ladder 0.4394188(3); F-P24 criterion revised to 3e-6"
+   }
+  },
+  "01|26|37|45": {
+   "size": 4,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "value": "19/5040",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "ladder-r129",
+    "dev": -8.1e-07,
+    "note": "r129 3-level ladder 0.4394188(3); F-P24 criterion revised to 3e-6"
+   }
+  },
+  "01|27|36|45": {
+   "size": 4,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "value": "319/22680",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "ladder-r129",
+    "dev": -8.1e-07,
+    "note": "r129 3-level ladder 0.4394188(3); F-P24 criterion revised to 3e-6"
+   }
+  },
+  "02|13|46|57": {
+   "size": 4,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "value": "29/25920",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "ladder-r129",
+    "dev": -8.1e-07,
+    "note": "r129 3-level ladder 0.4394188(3); F-P24 criterion revised to 3e-6"
+   }
+  },
+  "02|15|37|46": {
+   "size": 4,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     4,
+     6
+    ]
+   ],
+   "value": "17/15120",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "ladder-r129",
+    "dev": -8.1e-07,
+    "note": "r129 3-level ladder 0.4394188(3); F-P24 criterion revised to 3e-6"
+   }
+  },
+  "03|15|26|47": {
+   "size": 4,
+   "rep": [
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     4,
+     7
+    ]
+   ],
+   "value": "167/90720",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "ladder-r129",
+    "dev": -8.1e-07,
+    "note": "r129 3-level ladder 0.4394188(3); F-P24 criterion revised to 3e-6"
+   }
+  },
+  "01|23|45|67": {
+   "size": 2,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     6,
+     7
+    ]
+   ],
+   "value": "83/5040",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "ladder-r129",
+    "dev": -8.1e-07,
+    "note": "r129 3-level ladder 0.4394188(3); F-P24 criterion revised to 3e-6"
+   }
+  },
+  "03|16|25|47": {
+   "size": 2,
+   "rep": [
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     6
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     4,
+     7
+    ]
+   ],
+   "value": "283/90720",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "ladder-r129",
+    "dev": -8.1e-07,
+    "note": "r129 3-level ladder 0.4394188(3); F-P24 criterion revised to 3e-6"
+   }
+  },
+  "04|15|26|37": {
+   "size": 1,
+   "rep": [
+    [
+     0,
+     4
+    ],
+    [
+     1,
+     5
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     3,
+     7
+    ]
+   ],
+   "value": "13/4536",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "ladder-r129",
+    "dev": -8.1e-07,
+    "note": "r129 3-level ladder 0.4394188(3); F-P24 criterion revised to 3e-6"
+   }
+  }
+ }
+}

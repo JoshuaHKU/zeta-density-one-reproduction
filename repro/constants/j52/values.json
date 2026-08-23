@@ -1,0 +1,89 @@
+{
+ "class": "{5,2}",
+ "cycle": 7,
+ "total": "1/8",
+ "total_float": 0.125,
+ "self_check": {
+  "sum_size_times_value_equals_total": true
+ },
+ "orbit_values": {
+  "01|23456": {
+   "size": 7,
+   "rep": [
+    [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     5,
+     6
+    ]
+   ],
+   "value": "5/504",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "jobs": 8,
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 1.037e-06,
+    "note": "F-V-25: midpoint ladder + h^2 Richardson on the V100, 3/3 orbits within 1.04e-6, bundle within 7.9e-6 of 1/8; the pre-registered candidate 1/8 also hit exactly (model 0.124944)"
+   }
+  },
+  "01235|46": {
+   "size": 7,
+   "rep": [
+    [
+     0,
+     1,
+     2,
+     3,
+     5
+    ],
+    [
+     4,
+     6
+    ]
+   ],
+   "value": "1/360",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "jobs": 8,
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 1.037e-06,
+    "note": "F-V-25: midpoint ladder + h^2 Richardson on the V100, 3/3 orbits within 1.04e-6, bundle within 7.9e-6 of 1/8; the pre-registered candidate 1/8 also hit exactly (model 0.124944)"
+   }
+  },
+  "01245|36": {
+   "size": 7,
+   "rep": [
+    [
+     0,
+     1,
+     2,
+     4,
+     5
+    ],
+    [
+     3,
+     6
+    ]
+   ],
+   "value": "13/2520",
+   "method": "facet",
+   "host": "230",
+   "engine": "facet_recursion.py",
+   "jobs": 8,
+   "second_path": {
+    "method": "ladder-gpu",
+    "dev": 1.037e-06,
+    "note": "F-V-25: midpoint ladder + h^2 Richardson on the V100, 3/3 orbits within 1.04e-6, bundle within 7.9e-6 of 1/8; the pre-registered candidate 1/8 also hit exactly (model 0.124944)"
+   }
+  }
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "class": "{7}",
+ "cycle": 7,
+ "total": "-17/360",
+ "total_float": -0.04722222222222222,
+ "self_check": {
+  "sum_size_times_value_equals_total": true
+ },
+ "orbit_values": {
+  "0123456": {
+   "size": 1,
+   "rep": [
+    [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   ],
+   "value": "-17/360",
+   "method": "facet+dihedral-quotient",
+   "host": "230",
+   "engine": "run_pure.py",
+   "term_orbits": 685,
+   "fcyc_terms": 9366,
+   "wall_s": 208,
+   "second_path": {
+    "method": "identification-ladder",
+    "note": "r121-r124 seven-level Romberg identification hit -17/360 to machine precision, BEFORE the symbolic run -- so the symbolic value confirms a registered identification rather than merely matching a candidate drawn afterwards (r141 acceptance (d))"
+   }
+  }
+ }
+}

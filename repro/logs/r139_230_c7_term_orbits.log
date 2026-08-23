@@ -1,0 +1,3 @@
+backend gmpy2  C_7: 685 term orbits, 685 with nonzero weight, free dim 6, jobs 6
+  C_7 = -17/360 = -0.047222222222   939s
+  wrote c7_orbit_values.json

@@ -1,0 +1,3 @@
+backend gmpy2  C_8: 6027 term orbits, 6027 with nonzero weight, free dim 7, jobs 32
+  C_8 = 157/4032 = 0.038938492063   12293s
+  wrote c8_orbit_values.json

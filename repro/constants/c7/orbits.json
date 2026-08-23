@@ -1,0 +1,37 @@
+{
+ "class": "{7}",
+ "cycle": 7,
+ "partitions": 1,
+ "orbits": 1,
+ "self_check": {
+  "sum_of_orbit_sizes_equals_partitions": {
+   "sum": 1,
+   "partitions": 1,
+   "pass": true
+  },
+  "every_orbit_size_divides_2b": {
+   "2b": 14,
+   "sizes": [
+    1
+   ],
+   "pass": true
+  }
+ },
+ "orbit_list": [
+  {
+   "canon": "0123456",
+   "size": 1,
+   "rep": [
+    [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   ]
+  }
+ ]
+}

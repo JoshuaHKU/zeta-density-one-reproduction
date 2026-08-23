@@ -1,0 +1,136 @@
+{
+ "class": "{2,2,2}",
+ "cycle": 6,
+ "total": "32/105",
+ "total_float": 0.3047619047619048,
+ "self_check": {
+  "sum_size_times_value_equals_total": true
+ },
+ "orbit_values": {
+  "01|23|45": {
+   "size": 2,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "value": "3/70",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "newton-cotes-ladder",
+    "note": "phase0 exact_t222 iterated NC, method A vs B agree"
+   }
+  },
+  "01|25|34": {
+   "size": 3,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "value": "17/420",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "newton-cotes-ladder",
+    "note": "phase0 exact_t222 iterated NC, method A vs B agree"
+   }
+  },
+  "01|24|35": {
+   "size": 6,
+   "rep": [
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "value": "1/90",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "newton-cotes-ladder",
+    "note": "phase0 exact_t222 iterated NC, method A vs B agree"
+   }
+  },
+  "02|14|35": {
+   "size": 3,
+   "rep": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     3,
+     5
+    ]
+   ],
+   "value": "1/180",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "newton-cotes-ladder",
+    "note": "phase0 exact_t222 iterated NC, method A vs B agree"
+   }
+  },
+  "03|14|25": {
+   "size": 1,
+   "rep": [
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     2,
+     5
+    ]
+   ],
+   "value": "1/70",
+   "method": "polytope-exact",
+   "host": "local",
+   "engine": "walk_polytope.py",
+   "second_path": {
+    "method": "newton-cotes-ladder",
+    "note": "phase0 exact_t222 iterated NC, method A vs B agree"
+   }
+  }
+ }
+}

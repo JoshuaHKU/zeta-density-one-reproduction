@@ -1,0 +1,174 @@
+{
+ "_comment": "r129-corrected constants ({2,2,2} = 32/105, M6 = 640/63). M7/M8 below are the PRE-REGISTERED RATIONAL CANDIDATES from the model measurement, not proved values: {5,2}_total = 1/8 (dev 5.6e-5), Sigma_8 = 89/315 (dev 5.0e-5). See PLAN.md.",
+ "M7": "3439/180",
+ "M8": "519/14",
+ "_M7_decimal": 19.10555556,
+ "_M8_decimal": 37.07142857,
+ "_headline_at_this_corner": 0.849452,
+ "exact_k6": {
+  "w0": "247/2519",
+  "headline": "2025/2519",
+  "distinct": "2272/2519",
+  "headline_decimal": 0.8038904327113934,
+  "distinct_decimal": 0.9019452163556967,
+  "M6": "640/63",
+  "t222": "32/105"
+ },
+ "cone_vertex_over_m1_m6": {
+  "m7": 19.071225,
+  "m8": 36.762169
+ },
+ "recentring": {
+  "Sigma": [
+   "0",
+   "1/3",
+   "0",
+   "1/4",
+   "1/36",
+   "61/252"
+  ],
+  "m7_rational_part": "685/36",
+  "m8_rational_part": "217/6",
+  "m7": "685/36 + Sigma_7",
+  "m8": "217/6 + 8 Sigma_7 + Sigma_8",
+  "cross_check_r129": "685/36 + C7 = 6833/360 and 217/6 + 8C7 = 3221/90 with C7 = -17/360"
+ },
+ "frontier_0.84": [
+  [
+   19.06,
+   36.6825
+  ],
+  [
+   19.08,
+   36.8327
+  ],
+  [
+   19.09,
+   36.9219
+  ],
+  [
+   19.1,
+   37.0205
+  ],
+  [
+   19.1055,
+   37.0788
+  ],
+  [
+   19.11,
+   37.1286
+  ],
+  [
+   19.12,
+   37.246
+  ],
+  [
+   19.15,
+   37.6546
+  ]
+ ],
+ "measured": {
+  "E1_conditioned_VALIDATED": {
+   "m7": [
+    19.105396,
+    19.1055,
+    19.105503
+   ],
+   "m8": [
+    37.069833,
+    37.070934,
+    37.070929
+   ],
+   "validation": "m6 | m1..m5 = 10.158800/10.158631/10.158713 vs 640/63 = 10.1587302, i.e. +1.1/-1.1/-0.1 sigma"
+  },
+  "E2_empirical_christoffel_VALIDATED": {
+   "lambda3": [
+    0.098321,
+    0.09766,
+    0.098149
+   ],
+   "lambda3_exact": 0.098054784,
+   "dev_pct": [
+    0.27,
+    -0.4,
+    0.1
+   ],
+   "lambda4": [
+    0.075558,
+    0.074896,
+    0.075435
+   ],
+   "headline": [
+    0.8489,
+    0.8502,
+    0.8491
+   ]
+  },
+  "r129_recalibrated_ladder": 0.8493,
+  "consensus_k8_headline": 0.8494
+ },
+ "candidates": {
+  "{5,2}_total": "1/8",
+  "Sigma_7": "7/90",
+  "m7": "3439/180",
+  "Sigma_8": "89/315",
+  "m8": "519/14",
+  "headline": "17230713/20284508 = 0.849452",
+  "distinct": "37515221/40569016 = 0.924726"
+ },
+ "required_precision_to_clear_0.84": {
+  "m7_at_measured_m8": ">= 19.104773 (slack +7.3e-4)",
+  "m8_at_measured_m7": "<= 37.078792 (slack +7.9e-3, relative 2.1e-4)"
+ },
+ "phase_results": {
+  "phase0_t222": {
+   "D0_size2": "3/70",
+   "D1_nested_size3": "17/420",
+   "D2_size6": "1/90",
+   "D3_size3": "1/180",
+   "D4_size1": "1/70",
+   "bundle": "32/105",
+   "confirmed_by": "two independent exact methods (iterated Newton-Cotes breakpoint integration; polytope decomposition + barycentric monomial formula)",
+   "superseded": "131/420, delta -1/140"
+  },
+  "phase2_p24": {
+   "bundle": "1661/3780",
+   "decimal": 0.4394179894,
+   "r129_ladder": 0.4394188,
+   "deviation": -8.11e-07,
+   "note": "denominator 3780 = 2^2*3^3*5*7 does NOT divide 2520, which is exactly why the r129 small-denominator reconstruction found no hit",
+   "orbit_values_file": "phase2/p24_values.json"
+  },
+  "sigma8_remaining_target": {
+   "identity": "Sigma_8 = {2^4} + {2,2,4} + {4,4} + {6,2} + C_8",
+   "model_prediction_for_rest": -0.156928,
+   "requirement_for_0.84": "rest <= -0.148912 (margin 0.008)"
+  },
+  "enumeration_confirmed": {
+   "{5,2}": "21 / 3 orbits of size 7",
+   "{2^4}": "105 / 17 orbits",
+   "{2,2,4}": "210 / 22 orbits",
+   "{4,4}": "35 / 7 orbits",
+   "{6,2}": "28 / 4 orbits 8,8,8,4",
+   "F-CYC terms": "150 / 1082 / 9366 / 94586"
+  },
+  "phase1_52": {
+   "orbits": {
+    "Q0": "5/504",
+    "Q1": "1/360",
+    "Q2": "13/2520"
+   },
+   "sizes": [
+    7,
+    7,
+    7
+   ],
+   "total": "1/8",
+   "preregistered_candidate": "1/8",
+   "deviation": 0.0,
+   "Sigma_7": "7/90 (= 1/8 - 17/360, C7 at identification grade)",
+   "m7": "3439/180",
+   "F_SIGMA7": "PASS (>= 0.074844)"
+  }
+ }
+}

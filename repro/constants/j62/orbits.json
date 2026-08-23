@@ -1,0 +1,95 @@
+{
+ "class": "{6,2}",
+ "cycle": 8,
+ "partitions": 28,
+ "orbits": 4,
+ "self_check": {
+  "sum_of_orbit_sizes_equals_partitions": {
+   "sum": 28,
+   "partitions": 28,
+   "pass": true
+  },
+  "every_orbit_size_divides_2b": {
+   "2b": 16,
+   "sizes": [
+    8,
+    4
+   ],
+   "pass": true
+  }
+ },
+ "orbit_list": [
+  {
+   "canon": "01|234567",
+   "size": 8,
+   "rep": [
+    [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     6,
+     7
+    ]
+   ]
+  },
+  {
+   "canon": "012346|57",
+   "size": 8,
+   "rep": [
+    [
+     0,
+     1,
+     2,
+     3,
+     4,
+     6
+    ],
+    [
+     5,
+     7
+    ]
+   ]
+  },
+  {
+   "canon": "012356|47",
+   "size": 8,
+   "rep": [
+    [
+     0,
+     1,
+     2,
+     3,
+     5,
+     6
+    ],
+    [
+     4,
+     7
+    ]
+   ]
+  },
+  {
+   "canon": "012456|37",
+   "size": 4,
+   "rep": [
+    [
+     0,
+     1,
+     2,
+     4,
+     5,
+     6
+    ],
+    [
+     3,
+     7
+    ]
+   ]
+  }
+ ]
+}

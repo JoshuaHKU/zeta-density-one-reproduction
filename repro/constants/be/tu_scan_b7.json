@@ -1,0 +1,11 @@
+{
+ "b": 7,
+ "gate": "F-BE-TU-7",
+ "matrices_deduped": 18835,
+ "shards": 24,
+ "coverage": "exhaustive: all k x k minors, k<=7, over all deduped wall matrices",
+ "violations": [],
+ "verdict": "PASS",
+ "wall_s_max_shard": 586.9,
+ "hosts": "230 (shards 0-11) + 231 (shards 12-23)"
+}

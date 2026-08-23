@@ -1,0 +1,11 @@
+{
+ "b": 5,
+ "gate": "F-BE-LTU-5",
+ "shard": "0/1",
+ "matrices_deduped_total": 501,
+ "checked_this_shard": 501,
+ "coverage": "exhaustive: all k x k minors, k <= b+r, Bareiss exact integers",
+ "violations": [],
+ "verdict": "PASS",
+ "wall_s": 726.6
+}
