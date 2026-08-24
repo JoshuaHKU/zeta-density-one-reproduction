@@ -4,7 +4,7 @@ Audit outcome first: the legacy files (10 of them indexed in `README.md`, 24 on 
 were re-audited against the shipped receipts and REPRO_SPEC
 sec 6. **None qualifies for deletion**: every file is either
 cited by an acceptance/receipt (e.g. `r150_b14_partial.log` by
-`ACCEPTANCE_R150_B14_PARTIAL.md`), or is required incident
+its round acceptance note, now in the program archive), or is required incident
 evidence (`*_pre_restart.log`, `*_partial.log` document the
 recorded incidents narrated in `r136-137-138_compute_log.md`
 and the discrepancy register). Per the append-only pledge at
@@ -13,11 +13,15 @@ the top of `README.md`, nothing was removed.
 What this addendum ADDS: the raw logs of the branch-equality
 campaign (v4) and the C_9 facet second method, previously
 archived outside the publication tree; and the campaign's
-receipts/adjudications trail at `repro/` top level
-(`RECEIPT_R159_BE.md`, `RECEIPT_R160_BE.md`,
-`ADJUDICATION_R160_BE6.md`, `ACCEPTANCE_R160_BE.md`,
-`ACCEPTANCE_R160_BE2.md`, `ACCEPTANCE_R160_C9.md`,
-`COMPUTE_ORDERS_BE_R160.md`, `COEFF_SPEC_BE_R163.md`).
+receipts/adjudications trail at `repro/` top level.  Of that
+trail this release retains the documents that shipped data or
+gates cite as provenance -- `RECEIPT_R160_BE.md`,
+`ADJUDICATION_R160_BE6.md`, `COEFF_SPEC_BE_R163.md` and
+`RECEIPT_R148_J72.md`.  The remaining per-round acceptances,
+adjudications, compute orders and receipts are process records
+and live in the program archive (see the release-scope note in
+`../README.md`); no value, gate, log or provenance link depends
+on them.
 
 | file | round | host | what (consistency-checked against the paper) |
 |---|---|---|---|

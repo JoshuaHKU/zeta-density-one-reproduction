@@ -54,7 +54,7 @@ Includes the trace-route gate g_tt (engine validation ladder,
 table recomputation, fit consistency, anchors, lambda_5 chain) run
 on the MATH-SIDE engine `repro/engines/p3_direct_sum.py` — code-
 independent of the compute-side `repro/engines/tt_moments.py`;
-their bitwise agreement on overlap tables is the F-IMPL evidence family -- recorded in the receipts (RECEIPT_R150_FIMPL_B13.md, RECEIPT_R160_BE.md sec 1.1) and re-verified in-package by g_be BE5 (extension-point fits against both-engine tables); there is deliberately no separate gate script named F-IMPL.
+their bitwise agreement on overlap tables is the F-IMPL evidence family -- recorded in `repro/RECEIPT_R160_BE.md` sec 1.1 (the earlier b=13 receipt is a per-round process record and is not part of this release) and re-verified in-package by g_be BE5 (extension-point fits against both-engine tables); there is deliberately no separate gate script named F-IMPL.
 
 ## 2bis. Branch-equality campaign gate (seconds)
 
@@ -99,8 +99,12 @@ and the in-flight items recorded at freeze.
     python3 -c "from p3_direct_sum import m_b; print(m_b(9, 7))"
     -> 2803676131/40353607        (the first pre-registered holdout)
 
-Larger points: use tt_moments.py with sharding; costs and worker
-caps in the receipts (`repro/RECEIPT_R150_B14.md` §5–6).
+Larger points: use tt_moments.py with sharding.  The measured
+costs and worker caps were recorded in the b=14 round receipt, a
+per-round process record not shipped with this release; the
+operative rule it established is restated in `repro/run_all.sh`
+(heavy cost table): MEMORY, not cores, sets `--jobs` -- size jobs
+by memo x worker.
 
 ## 5. Measurement tiers (sampling; optional)
 

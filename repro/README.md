@@ -16,7 +16,9 @@ value.  Both start here.
 export OMP_NUM_THREADS=1 RATBACKEND=gmpy2
 ./run_all.sh gates
 ```
-Eighteen gate scripts (nineteen on disk incl. the optional sympy gate), seconds, no GPU, no cluster.  `exit 0` iff all pass; gates whose optional third-party dependencies (numpy/scipy) are absent print NOT-APPLICABLE and exit 3 rather than crash.
+Nineteen gate scripts (twenty on disk incl. the optional sympy gate), seconds, no GPU, no cluster.  `exit 0` iff all pass; gates whose optional third-party dependencies (numpy/scipy) are absent print NOT-APPLICABLE and exit 3 rather than crash -- and `run_all.sh gates` counts exit 3 as a failure, so the suite never reports green for a check that did not actually run.
+
+The nineteenth gate is `g_manifest` (AUDIT_R177 2.9bis).  It verifies `MANIFEST.json` itself -- until it existed, the package's hash root was the one artifact nothing checked.  It recomputes every recorded sha256 and byte size, and asserts set equality with the tree in BOTH directions, so a file that ships without being hashed fails just as loudly as a hash that no longer matches.  It runs last, and it takes about two seconds.  The disk side comes from `make_manifest.collect()` -- the same walk that generates the file -- because a checker that can drift away from its generator is worse than no checker.
 
 Then any single constant:
 
@@ -148,20 +150,54 @@ weights, j72, extension table) and requires the corresponding gate to fail,
 then restores the file and requires the gate to pass again.  A gate that
 stays green under injection is a fake gate.  Run before every release.
 
-## Release scope of per-round process documents (r179)
+## Release scope of per-round process documents (r179, extended r180)
 
-This release carries every process document that the shipped data, gates,
-paper or a retained document's evidence chain cites (receipts anchoring
-constants provenance, the adjudications referenced by the value tables,
-the freeze records, AUDIT_R149 referenced by gate code).  Fifteen
-per-round process documents cited by nothing in the release -- six
-acceptances (R148_J72, R148_OTT2, R150_FIMPL_B13, R160_BE, R160_BE2,
-R160_C9), ADJUDICATION_R148, BUG_REPORT_ENUM_R148, OPTIMIZATION_r141,
-four early receipts (R146, R148_OTT2, R148_OTT3_B11, R148_OTT3_B12),
-REPRO_UPDATE_R149 and VERDICT_R153_K14 -- are retained in the program
-archive rather than in this release.  Mentions of those filenames inside
-the retained historical documents (which are frozen and are not edited)
-refer to that archive; copies are available on request.  No value, gate,
-log or provenance link depends on the removed files -- verified by a
-whole-tree reference scan before removal, and the gate suite plus the
-injection self-test were re-run green afterwards.
+**What this release contains.**  The executable pipeline (engines, gates,
+drivers), the constants and measurement data they consume and produce, the
+freeze records that define the package, the paper, the Lean project and the
+certification layer.  In one sentence: the final reproduction results that the
+paper's numbers rest on, and everything needed to re-derive them from a command
+line.
+
+**What it does not contain.**  The round-by-round process correspondence of the
+campaign -- compute-side audit notes, acceptances, adjudications, compute
+orders, and the per-round receipts -- together with the compute-side audit and
+revision records of rounds r164/r177.  Twenty-seven such documents are held in
+the program archive (`git-pub-removed-r179/`, a sibling of this package, not
+part of it); copies are available on request.
+
+**The retention rule, stated so it can be checked.**  A process document is
+retained **iff a shipped data file, gate, engine, driver or pipeline document
+cites it as provenance**.  Four qualify and are shipped at `repro/` top level:
+
+| retained | cited by |
+|---|---|
+| `RECEIPT_R148_J72.md` | `constants/j72/values.json`, `constants/j72/RUN.md`, `constants/tt/m_tables_grades_v4.json` |
+| `ADJUDICATION_R160_BE6.md` | `constants/tt/m_tables_ext.json`, `constants/tt/m_tables_grades_v4.json` |
+| `COEFF_SPEC_BE_R163.md` | `constants/be/coeff_assembly.json` |
+| `RECEIPT_R160_BE.md` | `constants/tt/m_tables_ext.json`, `REPRODUCTION.md` |
+
+Removing any of these four would leave a shipped data file pointing at a
+document that is not in the package -- the opposite of the standard this
+package holds itself to, so they stay.  `REPRO_V3_FREEZE.md` and
+`REPRO_V4_FREEZE.md` stay for the same reason (`run_all.sh`,
+`make_manifest.py`, `REPRODUCTION.md` and this file cite them).
+
+**No dangling references.**  Where a retained document previously named a
+document that has since moved to the archive, the **filename** was replaced by
+a description of what it was; the two frozen receipts affected
+(`RECEIPT_R148_J72.md`, `RECEIPT_R160_BE.md`) carry an explicit editorial note
+recording that this, and only this, was changed.  Verified by a whole-tree
+scan: **zero references from this package to any archived file**.  No value,
+gate, log or provenance link depends on an archived file -- verified by
+re-running the 19-gate suite and the injection self-test green afterwards, and
+by recomputing every constant and the Sigma_7/8/9 partitions from the shipped
+data alone.
+
+*(The r179 note this replaces claimed the fifteen documents then removed were
+"cited by nothing in the release".  That was inaccurate -- five retained
+documents did name six of them, which is why the reference rewriting above is
+part of the r180 pass rather than an afterthought.  The substantive claim of
+that note -- that no value, gate, log or provenance link depended on them --
+was and remains true.)*
+

@@ -95,73 +95,25 @@
  },
  "grade_note": "second_path is honest per REPRO_SPEC R3: C_8 carries 'model-side-ABC', which BOUNDS but does not independently re-derive it -- the pre-registered candidate 7/180 missed the true value 157/4032 by 4.96e-5, so the model check is not a confirmation.  AUDIT_R177 2.9ter: the sentence that used to stand here -- 'Sigma_9 and Sigma_10 are high-statistics measurements, not exact rationals' -- was a v1 leftover and is FALSE since v3.  Both are exact rationals: Sigma_9 = 52207/302400 and Sigma_10 = 1333891/3326400, in constants/tt/m_tables.json, consumed exactly by certify91.py and gate-checked (g_be BE7 rebuilds the Sigma_9 partition).  Single-path constants are listed in gates/g_totals.py SINGLE_PATH and in repro/README.md: {2,2,5}, {5,4}, {6,2,2} and (per AUDIT_R177 2.5) {7,2}.",
  "files": {
-  "ACCEPTANCE_R148_OTT1.md": {
-   "sha256": "447e2addcecbe088df8b8ab4035740ff46641bd7bc4b1f0a8790051c836458d9",
-   "bytes": 3321
-  },
-  "ACCEPTANCE_R150_B14_PARTIAL.md": {
-   "sha256": "016639afb37c27ea52347424cb817fcfca4eb911772bad8b3b95f64ac39cc3b6",
-   "bytes": 2683
-  },
-  "ACCEPTANCE_r141.md": {
-   "sha256": "876beaa322d23e9ccced23e4ddad1b05d982cf785b1d384ce7e63d68df3eb445",
-   "bytes": 5658
-  },
-  "ADJUDICATION_R150_B12.md": {
-   "sha256": "9ab0aceba18f5b41fdb73839844e3b5f6225352f9f654988fd4725be9721156e",
-   "bytes": 7172
-  },
   "ADJUDICATION_R160_BE6.md": {
    "sha256": "448ff86df65408200f12aae9680b3b2ffb306e77f058723b4397f29f4b73d5b7",
    "bytes": 4378
-  },
-  "AUDIT_R149.md": {
-   "sha256": "586f42a9cf88ea2bff698af41453e663ba922e71f54e9ce35f8b44e92104b514",
-   "bytes": 5568
   },
   "COEFF_SPEC_BE_R163.md": {
    "sha256": "e968cc599e4f626c5565e85d7c553e19f4dcca8e3529f0a5b39b5a771bba6d06",
    "bytes": 3140
   },
-  "COMPUTE_ORDERS_BE_R160.md": {
-   "sha256": "fc7b73561412ada3eac0e06123c096c693032df349a554fb68a43ee30c1732ef",
-   "bytes": 3921
-  },
   "README.md": {
-   "sha256": "a96e88b0482d141278ac9d6aac8537c9d6044d432fe9380f9eb2d45a37c8be75",
-   "bytes": 9173
+   "sha256": "09ede13c9c3bb89fc1411c0babb4b4477a625e62cbadae47e23fc77b14795a8d",
+   "bytes": 11786
   },
   "RECEIPT_R148_J72.md": {
-   "sha256": "c752255e06337991e97a258296531c8922da870a7e0e808efa84e76822def271",
-   "bytes": 2656
-  },
-  "RECEIPT_R148_OTT1.md": {
-   "sha256": "5c0cd459f261c4b2d32a6bd588b28d9ae9a36f4f2c71d6ff5460ec83a5bba285",
-   "bytes": 3223
-  },
-  "RECEIPT_R150_B14.md": {
-   "sha256": "a1df34e3fdf2c9cc1f000cc96b07e022fc8b351362f86cd81e819439c7e2559b",
-   "bytes": 5248
-  },
-  "RECEIPT_R150_FIMPL_B13.md": {
-   "sha256": "a9017f65bc513d9b37288d6af8a261db7a426f309718636179eeef78b4e67ed1",
-   "bytes": 4332
-  },
-  "RECEIPT_R159_BE.md": {
-   "sha256": "b0e799e70b9ba8bcaf037742f472948ebdc55c28c07f55971a648174eb5bdf4a",
-   "bytes": 5665
+   "sha256": "7cbf42c8c2591a6b74b9cde232cca7489b8fe0ef39039d5cb2015df00cd2a77c",
+   "bytes": 3021
   },
   "RECEIPT_R160_BE.md": {
-   "sha256": "3a5d5175e8e6c93ba95b00ddc805bfb32ac6faa57bd7e732ecf702746ceb6788",
-   "bytes": 17527
-  },
-  "RECEIPT_R177_M98_DUALIMPL.md": {
-   "sha256": "bb5fe73a9d3561060c932dc022664854e86a367e82e998cf42cb2059ace52e72",
-   "bytes": 3993
-  },
-  "REPRO_LOG.md": {
-   "sha256": "c97aea8e0c848f678a62f6f1ee6d9c6978993c2c0a0268a8aaac70f7ce4c6ea9",
-   "bytes": 13235
+   "sha256": "8d0a46bcf6485c772a1be86d49dd371a0aa2bcd02661eab12c02bdbf592853e8",
+   "bytes": 17872
   },
   "REPRO_V3_FREEZE.md": {
    "sha256": "681ac6b7820eec5cdafcfc04036f05836fb818fad70544cd2599a962ac16573c",
@@ -248,8 +200,8 @@
    "bytes": 4722
   },
   "gates/g_totals.py": {
-   "sha256": "c28e71cb98202d90589248624239248714fd7613b2f3883ede5823669a508d57",
-   "bytes": 5826
+   "sha256": "47e03a8ee2f6eba3401869b265a1590305c24bec03a8f5ceb8f162c3dd12a9d5",
+   "bytes": 5837
   },
   "gates/g_tt.py": {
    "sha256": "7450b41a28da469d647d4358acafef698a490fa2efe9416c06cf94e3ffd2a076",
@@ -912,8 +864,8 @@
    "bytes": 2862
   },
   "logs/README_V4_ADDENDUM.md": {
-   "sha256": "b3eba4eb04f70b37476f003f209099c2b0b5b6fe6ab6f2fe87d76873de988a5d",
-   "bytes": 4278
+   "sha256": "196fd8f08d36e81f621a67607d688c9e79b0fe661e4d080e8bba64a5a105de48",
+   "bytes": 4533
   },
   "logs/r131_phase0_log.md": {
    "sha256": "610b6202213e28a0c3d4ac4233bc6673369bbd308f988551844fe3d1a22d661b",
@@ -1356,20 +1308,20 @@
    "bytes": 3596
   },
   "../paper.tex": {
-   "sha256": "93c1b44f854b56d7b2d8b3f73923dc731296705e39f935355cde6e08c8350ab6",
-   "bytes": 223270
+   "sha256": "62ca92d3c0bca7104a328baa7ccbefdd7be9578befe487237911469e586e61f0",
+   "bytes": 223787
   },
   "../paper.pdf": {
-   "sha256": "ae7ac289345622ceefea675b3acdb12d060a50c8772c9a0f6c78aad25356b86a",
-   "bytes": 729647
+   "sha256": "8203e9de3622c0e311416c9c08e642a23c47013e7f89c50e13679f45c1aac6cd",
+   "bytes": 730189
   },
   "../paper-zh.tex": {
-   "sha256": "7eeef8b2afbb9c14fadbda5d262483516778442ada4b83d6a4ff9f0cc0cdf6c0",
-   "bytes": 188565
+   "sha256": "4d5d9438c275355f8cf2735efb3807b1235f06c6fe37d4ce9818517b3e57cac4",
+   "bytes": 188985
   },
   "../paper-zh.pdf": {
-   "sha256": "65a9cae70aa278c90c64d76f518d12ec93f9ad2fc045ba71b1c5ee0d2db8864f",
-   "bytes": 627902
+   "sha256": "b181ae67fc585c0a53f650c8e37034b12bb83ce32885f1198dc80f4b23ec06ea",
+   "bytes": 628746
   },
   "../lean/BUILD.md": {
    "sha256": "a34c8976728110a6185acc7712a09841ac142aca2e3213ac0a11c429341f9332",

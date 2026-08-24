@@ -733,7 +733,7 @@ T_1=\tfrac1{90},\quad T_2=\tfrac1{180},\quad T_3=\tfrac1{70},
 \begin{proof}
 每个常数是盒上的积分
 $(1-\mathrm{spread})_+\cdot\prod\min(|x_i|,1)$对显式游走（Bell分类账的弦模式游走）的积分：一个分段多项式被积函数，其所有扭结超曲面为变量在$\{0,\pm1\}$水平的$\{0,\pm1\}$组合。由于0是游走位置且每个变量是位置或两位置之差，支撑在$[-1,1]^d$内且$\min$-帽从不绑定。然后该积分在\emph{精确}有理算术中通过完全断点枚举的迭代积分计算：内层断点具有单位首项系数，因此所有碰撞和边界结式保持小整数形式，在每个无扭结片上被积函数是次数至多$2/4/8$（在内外变量）的多项式，通过阶$5/7/9$的闭Newton--Cotes公式在有理节点处精确积分。每一片被积分两次（整片和两半）：对次数低于规则阶的多项式，两个精确有理数必须一致；任何遗漏的扭结会在包含片上导致不一致；未发生不一致。$t_{\mathrm{opp}}$和$T_0$另外允许通过象限分解的短闭式求值（附录~\ref{a:cert}），与算法值一致；每个类值由第二种独立精确方法（多面体分解，与迭代积分无算术共享）重现，且轨道不变性通过求值每个二面体类的额外成员进行机器检查。代码和输出：
-\texttt{certification/exact\_t222.py}及复现包的\texttt{phase0}审计。
+\texttt{exact\_t222.py}（程序档案）及复现包的\texttt{phase0}审计。
 \end{proof}
 
 \begin{remark}[分类修正；注册D19]\label{r:d19}
@@ -746,7 +746,7 @@ $(1-\mathrm{spread})_+\cdot\prod\min(|x_i|,1)$对显式游走（Bell分类账的
 
 \subsection{写出条目W1--W3}\label{s:writeouts}
 
-审计分类账中作为命名写出条目的三项在此处理；其预注册面在\texttt{certification/writeouts\_verification.py}中（全部通过；一条面在构造期间触发并被转换——附录~\ref{a:record}）。
+审计分类账中作为命名写出条目的三项在此处理；其预注册面在\texttt{writeouts\_verification.py}（程序档案）中（全部通过；一条面在构造期间触发并被转换——附录~\ref{a:record}）。
 
 \begin{lemma}[W2：自由槽分解]\label{l:W2}
 在任意$b$循环单元格分类账中，若槽的锁定无约束则精确分解：单元格聚合等于收缩的$(b-1)$循环聚合乘以自由槽的窗口质量$\sum_{m\in W}\LL(m)$，且$\sum_{m\in W}\LL(m)=|W|\bigl(1+O(e^{-c\sqrt{\log X}})\bigr)$。
@@ -1298,7 +1298,9 @@ $\liminf_T N_0^{s}/N\ge\sup_k(1-2\lambda_k(0))$——可数个真命题的上确
 
 \section{数值验证}\label{s:faces}
 
-独立管道（\texttt{pipeline/}；\texttt{numpy}，\texttt{scipy}）在几分钟内重新运行每个门。中心高度表（十六个互素模数族）：
+本节及前后验证叙述中点名、而非本发布包文件的脚本（\texttt{m1\_suite.py}、\texttt{certify\_lp.py}、\texttt{exact\_t222.py}、\texttt{certificate\_verification.py}等）均为程序的会话工具，保存于程序档案；发布包所附为\texttt{REPRODUCTION.md}所列的冻结重实现与门禁。
+
+前作程序的独立管道（\texttt{pipeline/}，程序档案；\texttt{numpy}，\texttt{scipy}）在几分钟内重新运行每个门。中心高度表（十六个互素模数族）：
 
 \begin{center}
 \begin{tabular}{lcccccccc}
@@ -1478,7 +1480,7 @@ $\prod_B(-1)^{|Q_B|-1}$、Fubini项数$75/541/4683$于$b=4/5/6$）
 
 完整包——论文、复现管道、认证层、GPU引擎及Lean源码和构建日志——公开于
 \url{https://github.com/JoshuaHKU/zeta-density-one-reproduction}。
-本文附有统一复现检查表（\texttt{REPRODUCTION.md}）：环境、每套件单命令、预期输出（2026年8月16日重跑值），以及每个引用常数到其再生脚本的映射。本修订的计算资产组织为自包含包（\texttt{repro/}：引擎，每常数轨道清单和值，内容规范键带每值来源和第二路径字段，测量原始数据，每个证伪者门一个可执行脚本带断言匹配计数，以及仅追加日志存档；规范在\texttt{compute/REPRO\_SPEC.md}中）。包冻结为v1：十三个常数带每轨道记录，$126$个文件在散列清单下，十一个门脚本全部通过，记录双面验收审计（\texttt{repro/ACCEPTANCE\_r141.md}）；其后的冻结 v3（迹路线）与 v4（分支相等战役）以只增不改方式将其扩展到当前的十九门套件（\texttt{repro/REPRO\_V4\_FREEZE.md}）。全集总运行时间在一台CPU上小于十五分钟（会话包可选长门小于三十；精确$\{2,2,2\}$认证小于两小时；N1多面体认证：$\{4,2\}$和$C_5$数分钟，$\{6\}$在$9.1$单核小时内，项并行）。
+本文附有统一复现检查表（\texttt{REPRODUCTION.md}）：环境、每套件单命令、预期输出（2026年8月16日重跑值），以及每个引用常数到其再生脚本的映射。本修订的计算资产组织为自包含包（\texttt{repro/}：引擎，每常数轨道清单和值，内容规范键带每值来源和第二路径字段，测量原始数据，每个证伪者门一个可执行脚本带断言匹配计数，以及仅追加日志存档；规范在\texttt{compute/REPRO\_SPEC.md}中——程序树内部规范，其规范性规则摘录于包内README）。包冻结为v1：十三个常数带每轨道记录，$126$个文件在散列清单下，十一个门脚本全部通过，记录双面验收审计（存于程序档案）；其后的冻结 v3（迹路线）与 v4（分支相等战役）以只增不改方式将其扩展到当前的十九门套件（\texttt{repro/REPRO\_V4\_FREEZE.md}）。全集总运行时间在一台CPU上小于十五分钟（会话包可选长门小于三十；精确$\{2,2,2\}$认证小于两小时；N1多面体认证：$\{4,2\}$和$C_5$数分钟，$\{6\}$在$9.1$单核小时内，项并行）。
 
 \section{精确认证层}\label{a:cert}
 
@@ -1512,7 +1514,7 @@ T_3=\tfrac1{70},\quad
 \qquad T_0'=\tfrac{17}{420}\ (\text{嵌套；D19}),
 \]
 且$\Phi_4=-\tfrac1{60}$，饱和$\{2,2\}=\tfrac4{15}$，平台$=\tfrac1{60}$，连通模型$=-\tfrac1{60}$（注记~\ref{r:books}）。代码：
-\texttt{certification/exact\_t222.py}（类分别运行；双方案逐片相同有理数检查）。
+\texttt{exact\_t222.py}（程序档案；类分别运行；双方案逐片相同有理数检查）。
 
 \subsection*{A4. 连续求积常数的闭式（N2，部分处理）}
 

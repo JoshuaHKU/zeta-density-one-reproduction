@@ -47,7 +47,7 @@ WANT = {"t222": "32/105", "p24": "1661/3780", "j224": "-127/840",
 #                            RECEIPT_R148_J72.md sec 3 had it right originally.
 SINGLE_PATH = {"j225", "j54", "j622", "j72"}
 
-pending_seen, methods_seen = set(), set()
+pending_seen = set()   # constants whose second_path method is PENDING
 n = 0
 for cls, want in WANT.items():
     v = json.load(open(os.path.join(CONST, cls, "values.json")))
@@ -69,7 +69,8 @@ for cls, want in WANT.items():
     for e in v["orbit_values"].values():
         sp = e.get("second_path")
         m = sp.get("method") if isinstance(sp, dict) else str(sp)
-        (pending_seen if m == "PENDING" else methods_seen).add(cls)
+        if m == "PENDING":
+            pending_seen.add(cls)
     tot_field_ok = (Q(v.get("total", "0")) == tot)
     totals_ok = (cls not in TOTALS) or (Q(TOTALS[cls]) == tot)
     n += check(f"total {v['class']:<10}",
@@ -88,7 +89,8 @@ _j72 = json.load(open(os.path.join(CONST, "j72", "values.json")))
 for e in _j72["orbit_values"].values():
     sp = e.get("second_path")
     m = sp.get("method") if isinstance(sp, dict) else str(sp)
-    (pending_seen if m == "PENDING" else methods_seen).add("j72")
+    if m == "PENDING":
+        pending_seen.add("j72")
 
 check("R3 single-path inventory exact",
       pending_seen == SINGLE_PATH,

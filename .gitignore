@@ -14,3 +14,7 @@ lean/.lake/
 lean/build/
 *.selftest.bak
 .selftest_absence/
+# r180: LaTeX build detritus at package root (repro/logs/*.log and
+# measurements/*.log are evidence and must stay, hence the anchored paths).
+/paper.log
+/paper-zh.log

@@ -1678,7 +1678,7 @@ independent exact method (polytope decomposition sharing no
 arithmetic with the iterated integration), and orbit invariance
 is machine-checked by evaluating extra members of each dihedral
 class. Code and outputs:
-\texttt{certification/exact\_t222.py} and the
+\texttt{exact\_t222.py} (program archive) and the
 \texttt{phase0} audit of the reproduction package.
 \end{proof}
 
@@ -1718,7 +1718,7 @@ classes are now theorems. Register items D7, D8.
 
 The three items carried as named write-outs in the audit ledger
 are discharged here; their pre-registered faces are in
-\texttt{certification/writeouts\_verification.py} (all green;
+\texttt{writeouts\_verification.py} (program archive; all green;
 one face fired during construction and was converted ---
 Appendix~\ref{a:record}).
 
@@ -3381,7 +3381,17 @@ $\zeta$ enters.
 
 \section{Numerical verification}\label{s:faces}
 
-The standalone pipeline (\texttt{pipeline/}; \texttt{numpy},
+Scripts named in this and the surrounding verification
+narratives that are not files of the release package
+(\texttt{m1\_suite.py}, \texttt{certify\_lp.py},
+\texttt{exact\_t222.py}, \texttt{certificate\_verification.py}
+and kin) are session tools of the program, preserved in the
+program archive; the release package ships the frozen
+re-implementations and gates listed in
+\texttt{REPRODUCTION.md}.
+
+The predecessor program's standalone pipeline
+(\texttt{pipeline/}, program archive; \texttt{numpy},
 \texttt{scipy}) reruns every gate in a few minutes. Central
 height table (sixteen coprime modulus families):
 
@@ -4480,11 +4490,12 @@ content-canonical keys with per-value provenance and
 second-path fields, measurement raw data, one executable
 script per falsifier gate with asserted match counts, and an
 append-only log archive; specification in
-\texttt{compute/REPRO\_SPEC.md}). The package is frozen as
+\texttt{compute/REPRO\_SPEC.md}, program tree; its normative rules
+are excerpted in the package README). The package is frozen as
 v1: thirteen constants with per-orbit records, $126$ files
 under a hashed manifest, eleven gate scripts all green, and a
 recorded two-sided acceptance audit
-(\texttt{repro/ACCEPTANCE\_r141.md}); the subsequent freezes
+(retained in the program archive); the subsequent freezes
 v3 (trace route) and v4 (branch-equality campaign) extend
 this append-only to the present suite of nineteen gates
 (\texttt{repro/REPRO\_V4\_FREEZE.md}). Total runtime of the full set is under fifteen minutes on one
@@ -4564,7 +4575,7 @@ T_0'=\tfrac{17}{420}\ (\text{nested; D19}),
 with $\Phi_4=-\tfrac1{60}$, saturated $\{2,2\}=\tfrac4{15}$,
 plateau $=\tfrac1{60}$, connected model $=-\tfrac1{60}$
 (Remark~\ref{r:books}). Code:
-\texttt{certification/exact\_t222.py} (classes run separately;
+\texttt{exact\_t222.py} (program archive; classes run separately;
 dual-scheme identical-rational check at every piece).
 
 \subsection*{A4. The continuum-quadrature constant in closed form
