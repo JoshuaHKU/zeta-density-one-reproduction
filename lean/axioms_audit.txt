@@ -1,0 +1,73 @@
+# Lean axiom audit -- compute-side audit machine (AUDIT_R164 / O-R176-1)
+# Verbatim '#print axioms' output for EVERY theorem in RhGateK14. Do not edit.
+
+date            : 2026-08-24T08:00:34Z (UTC)
+toolchain       : leanprover/lean4:v4.33.0   (Lean (version 4.33.0, arm64-apple-darwin24.6.0, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release))
+build           : from scratch, exit 0 -- see build_log.txt (same run)
+sources         : sha256 recorded in build_log.txt
+
+Scope: all 45 theorem declarations (Certificate84 16 + CertificateK1012 12
+       + CertificateK14 17). This is a superset of the three theorems named
+       in BUILD.md; those three appear below verbatim and agree.
+
+== The three theorems recorded in BUILD.md ==
+  'RhGate84.t222_corrected' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'RhGateK1012.sigma9_recentre' depends on axioms: [propext, Classical.choice, Quot.sound]
+  'RhGateK14.sigma11_recentre' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+== Full sweep, all 45 declarations ==
+  1  'RhGate84.t222_corrected' depends on axioms: [propext, Classical.choice, Quot.sound]
+  2  'RhGate84.M6_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+  3  'RhGate84.sigma7_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+  4  'RhGate84.M7_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+  5  'RhGate84.sigma8_known' depends on axioms: [propext, Classical.choice, Quot.sound]
+  6  'RhGate84.sigma8_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+  7  'RhGate84.M8_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+  8  'RhGate84.lambda3_corner' depends on axioms: [propext, Classical.choice, Quot.sound]
+  9  'RhGate84.headline_k6_simple' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 10  'RhGate84.headline_k6_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 11  'RhGate84.k6_beats_four_fifths' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 12  'RhGate84.k6_beats_nine_tenths' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 13  'RhGate84.headline_k8_simple' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 14  'RhGate84.headline_k8_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 15  'RhGate84.k8_beats_08493' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 16  'RhGate84.k8_beats_09246' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 17  'RhGateK1012.sigma9_recentre' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 18  'RhGateK1012.sigma10_recentre' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 19  'RhGateK1012.sigma11_recentre' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 20  'RhGateK1012.sigma12_recentre' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 21  'RhGateK1012.headline_k10_simple' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 22  'RhGateK1012.headline_k10_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 23  'RhGateK1012.k10_beats_08771' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 24  'RhGateK1012.k10_beats_09385' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 25  'RhGateK1012.headline_k12_simple' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 26  'RhGateK1012.headline_k12_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 27  'RhGateK1012.k12_beats_08964' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 28  'RhGateK1012.k12_beats_09482' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 29  'RhGateK14.sigma11_recentre' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 30  'RhGateK14.sigma12_recentre' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 31  'RhGateK14.sigma13_recentre' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 32  'RhGateK14.sigma14_recentre' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 33  'RhGateK14.headline_k10_simple' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 34  'RhGateK14.headline_k10_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 35  'RhGateK14.k10_beats_simple' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 36  'RhGateK14.k10_beats_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 37  'RhGateK14.headline_k12_simple' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 38  'RhGateK14.headline_k12_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 39  'RhGateK14.k12_beats_simple' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 40  'RhGateK14.k12_beats_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 41  'RhGateK14.headline_k14_simple' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 42  'RhGateK14.headline_k14_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 43  'RhGateK14.k14_beats_09104' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 44  'RhGateK14.k14_beats_09552' depends on axioms: [propext, Classical.choice, Quot.sound]
+ 45  'RhGateK14.mono_7_gt_6' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+== Result ==
+  declarations audited          : 45
+  distinct axiom sets observed  : 1  -> [propext, Classical.choice, Quot.sound]
+  occurrences of sorryAx        : 0
+  declarations with any other axiom: 0
+
+  propext / Classical.choice / Quot.sound are the three standard axioms of
+  core Lean 4; they are the same set discharged by any mathlib-free kernel
+  development. No 'sorry', no 'axiom', no 'native_decide' anywhere in tree.

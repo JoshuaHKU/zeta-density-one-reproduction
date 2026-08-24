@@ -52,8 +52,38 @@ Provenance: r147 (five gates F-TT-2..6, blind D19 hit), r148
 (F-TT-7..10 + Sigma_9/Sigma_10); receipts in the package root.
 """
 import itertools
+import os
 from fractions import Fraction
 from functools import lru_cache
+
+# ---------------------------------------------------------------------------
+# Memo caps (AUDIT_R177 4.4).  Both memos below are PURE -- capping them can
+# only cost recomputation, never change a value -- but until this audit they
+# were maxsize=None, and at the m_11(9) frontier that is not survivable:
+# measured, the character memo reached 1.63e6 entries / 435 MB after 13 of
+# 83,521 shards and was still climbing (upper bound on distinct (mu,nu) pairs
+# at b=11, N=9: 252,116).  Forty such workers on one node reproduces r136
+# incident 3bis (120 workers x 1.8 GB -> 31 GB of swap, 0 orbits in 87 min).
+#
+# Defaults are chosen to be INERT for everything shipped: gate-sized tables use
+# a few thousand entries, and the delivered m_9(8) run peaked at 316,995
+# character entries / 83 MB, so it still fits entirely.  Raise or lower per job
+# with the environment; 0 restores the old unbounded behaviour.
+#
+#   P3_CHAR_CAP=0        unbounded (pre-r177 behaviour)
+#   P3_CHAR_CAP=400000   default
+#
+# Frontier rule of thumb (r136, restated): size jobs by memo x worker, not by
+# core count.  Measure the steady-state RSS with a 1/64 probe shard AFTER
+# setting the caps -- a smaller cap trades memory for hit rate, so throughput
+# must be re-measured, not assumed.
+def _cap(name, default):
+    v = int(os.environ.get(name, default))
+    return None if v <= 0 else v
+
+
+_CHAR_CAP = _cap("P3_CHAR_CAP", 400_000)
+_TM_CAP = _cap("P3_TM_CAP", 200_000)
 
 # ---------------------------------------------------------------------------
 # Murnaghan-Nakayama characters on beta-numbers
@@ -66,7 +96,7 @@ def _betas(lam, n):
                          else (n - 1 - i) for i in range(n)), reverse=True))
 
 
-@lru_cache(maxsize=None)
+@lru_cache(maxsize=_CHAR_CAP)          # AUDIT_R177 4.4: bounded, see above
 def character(lam, rho):
     """chi^lam(rho) for partitions given as weakly-decreasing tuples.
 
@@ -100,7 +130,7 @@ def partitions(k, cap=None):
             yield (first,) + rest
 
 
-@lru_cache(maxsize=None)
+@lru_cache(maxsize=_TM_CAP)            # AUDIT_R177 4.4: bounded, see above
 def trace_moment(mu, nu, n):
     """E[ p_mu(U) conj(p_nu(U)) ] over CUE(n), exact (Schur orthogonality).
 

@@ -1,0 +1,15 @@
+{
+ "3439/180|747361/20160": {
+  "M7": "3439/180",
+  "M8": "747361/20160",
+  "den": 10000,
+  "atoms": [
+   "3137/10000",
+   "501/500",
+   "8279/5000",
+   "22247/10000"
+  ],
+  "w0": "397560243267556540070423721343/5278903382744981072330819894343"
+ },
+ "_note": "Rationalised extremal atoms (roots of K_4(x,0)) for the k=8 Christoffel certificate.  A WITNESS, not an input: build() rebuilds the certificate from these in exact rational arithmetic and rejects them if w0 - lambda_4(0) exceeds 1e-7.  Archived so the verification path needs no numpy (AUDIT_R177 2.10).  Regenerate: certify_k8.py --emit-atoms"
+}

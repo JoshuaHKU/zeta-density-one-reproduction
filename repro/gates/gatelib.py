@@ -26,7 +26,14 @@ def check(name, ok, detail=""):
     return bool(ok)
 
 def require_count(name, got, want, detail=""):
-    """R3 of sec 3: matching fewer items than expected is NOT a pass."""
+    """R3 of sec 3: matching fewer items than expected is NOT a pass.
+    AUDIT_R164 2.1: a non-positive expectation is NOT a pass either --
+    an expectation derived from the same glob as the data vanishes with
+    the data, and 0 == 0 must never green-light a gate."""
+    if want <= 0:
+        print(f"  NOT-APPLICABLE  {name}   expected count is {want} (<=0): "
+              f"empty comparison is not a pass")
+        _res.append((name, False)); return False
     if got < want:
         print(f"  NOT-APPLICABLE  {name}   matched {got}/{want} {detail}")
         _res.append((name, False)); return False
@@ -37,3 +44,24 @@ def finish(title):
     print(f"\n{title}: {len(_res)-len(bad)}/{len(_res)} pass"
           + (f"   FAILED: {', '.join(bad)}" if bad else ""))
     sys.exit(1 if bad else 0)
+
+
+def need(*modules):
+    """AUDIT_R164 1.3: third-party dependency guard (pattern lifted from
+    g_span_t222).  A gate whose dependencies are absent prints
+    NOT-APPLICABLE and exits 3 -- never an unhandled ImportError."""
+    import importlib
+    missing = []
+    for m in modules:
+        try:
+            importlib.import_module(m)
+        except Exception:
+            missing.append(m)
+    if missing:
+        # AUDIT_R177 2.10: the old wording claimed "certification does not
+        # need them", which is false for the k=8 chain (certify_k8.py).  Only
+        # certify84.py / certify91.py are genuinely stdlib-only.
+        print(f"  NOT-APPLICABLE  missing third-party module(s): "
+              f"{', '.join(missing)}  (this gate needs them; the exact-rational "
+              f"constant gates and certify84.py / certify91.py do not)")
+        sys.exit(3)

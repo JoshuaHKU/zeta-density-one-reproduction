@@ -1,8 +1,9 @@
 /- Certificate84.lean — the preprint-0.84 certificate layer.
    Core Lean only (grind + Lean.Grind.OrderedRing.sq_nonneg),
    pattern identical to the compiled RhGate/Certificate.lean.
-   Proxy-verified by certification/certify84.py; queued for the
-   maintainers' same-machine compile.  代理核验，待同机编译. -/
+   Cross-checked against certification/certify84.py; compiled with
+   lake (leanprover/lean4:v4.33.0) -- see lean/BUILD.md for the recorded
+   build and axiom audit. -/
 
 namespace RhGate84
 

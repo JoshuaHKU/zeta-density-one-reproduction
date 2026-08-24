@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+# PROVENANCE NOTE (AUDIT_R164 1.5): this script documents how constants/
+# was BUILT from the program's internal archives (sibling tree k8-0.84 and
+# /tmp/pull staging), which are not part of this published package.  It is
+# shipped as provenance, not as a runnable reproduction path: constants/
+# is VERIFIED in-package by the gate suite (run_all.sh gates), which is the
+# supported way to check every value.  Rebuilding from raw archives requires
+# the internal trees and is available from the authors on request.
 """Build repro/constants/<class>/{orbits.json,values.json} to REPRO_SPEC r139.
 
 R1: keys are the DIHEDRAL ORBIT CANONICAL FORM  min(orbit(placement)) ,

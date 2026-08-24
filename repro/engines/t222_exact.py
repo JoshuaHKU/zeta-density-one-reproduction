@@ -29,15 +29,19 @@ sys.path.insert(0, HERE)
 from walk_polytope import integral as integral_poly
 from walk_exact3 import integral as integral_iter
 
-METHOD = integral_poly
+# AUDIT_R164 2.3: the integration method must travel WITH each task, not
+# through a module-level global -- under the spawn start method workers
+# re-import this module and silently fall back to the default, so
+# "--iterated" ran the polytope engine twice and reported the two-method
+# cross-check as passing when it compared a method against itself.
+_METHODS = {"poly": integral_poly, "iter": integral_iter}
 import chord_classes as CC
 
 
 def job(args):
-    global METHOD
-    tag, pos = args
+    tag, pos, method_name = args
     t0 = time.time()
-    v = METHOD([tuple(p) for p in pos])
+    v = _METHODS[method_name]([tuple(p) for p in pos])
     return tag, v, time.time() - t0
 
 
@@ -45,21 +49,19 @@ def main():
     classes = json.load(open(os.path.join(HERE, "t222_classes.json"))) \
         if os.path.exists(os.path.join(HERE, "t222_classes.json")) else CC.main()
     full = "--full" in sys.argv
-    global METHOD
-    if "--iterated" in sys.argv:
-        METHOD = integral_iter
+    method_name = "iter" if "--iterated" in sys.argv else "poly"
 
-    tasks = [(c["name"], c["walk"]) for c in classes]
+    tasks = [(c["name"], c["walk"], method_name) for c in classes]
     # one extra member per orbit (where the orbit has one) for F-ORBIT
     extra = []
     for c in classes:
         for mem in c["members"][1:3]:
-            extra.append((c["name"] + "*", CC.walk(tuple(tuple(p) for p in mem))))
+            extra.append((c["name"] + "*", CC.walk(tuple(tuple(p) for p in mem)), method_name))
     if full:
         extra = []
         for c in classes:
             for i, mem in enumerate(c["members"]):
-                extra.append((f"{c['name']}#{i}", CC.walk(tuple(tuple(p) for p in mem))))
+                extra.append((f"{c['name']}#{i}", CC.walk(tuple(tuple(p) for p in mem)), method_name))
 
     print(f"exact integration of {len(tasks)} orbit representatives"
           f" + {len(extra)} invariance checks\n")

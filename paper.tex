@@ -138,7 +138,7 @@ kernel-checked in core Lean~4. A standalone reproduction and
 certification package accompanies the paper
 (\url{https://github.com/JoshuaHKU/zeta-density-one-reproduction});
 a falsifier registry
-($571$ pre-registered checks, $61$ fired and converted, all
+($631$ pre-registered checks, $74$ fired and converted, all
 forward-recorded) documents the research trail.
 \end{abstract}
 
@@ -355,7 +355,7 @@ values.
 The research program behind this paper operates falsifier-first:
 every structural claim carries a pre-registered numerical check;
 corrections are recorded forward, never edited away; claims are
-graded. Sixty-one of the registry's checks have fired and
+graded. Seventy-four of the registry's checks have fired and
 been converted --- several of them shaping this paper directly,
 including the $38$th, which corrected a consumed constant and
 \emph{raised} the theorem (Appendix~\ref{a:record}, D19). The chain's grade, its named
@@ -2491,7 +2491,7 @@ $m_{13}=\tfrac{240004263497}{167650560}$,
 $m_{14}=\tfrac{85585542088667}{27243216000}$. The full
 $1/N^{2}$-polynomials, the seventy-nine exact lattice values
 (plus the three odd-order extension points), and
-the eighteen-gate suite live in the reproduction package
+the nineteen-gate suite live in the reproduction package
 (\texttt{constants/tt/}).
 
 Three structural facts sharpen the record; the first two are
@@ -2770,7 +2770,9 @@ already-determined fits and then computed --- $m_9(8)$,
 $m_{11}(9)$ and
 $m_{13}(10)$ hit bitwise ($3{,}243{,}531$ terms at
 $b{=}13$, $N{=}10$), giving every $b\le14$ table a fit
-surplus of at least one point. $\Sigma_9$'s facet-recursion second
+surplus of at least one point; $m_9(8)$ has since also been
+reproduced bitwise by the code-disjoint lattice direct-sum
+implementation ($15^8$ points). $\Sigma_9$'s facet-recursion second
 method has landed: $C_9=\tfrac{27649}{302400}$ hit its
 pre-registered target bitwise ($60{,}739$ signed term
 orbits over $1{,}091{,}670$ F-CYC terms, three-machine
@@ -2956,9 +2958,11 @@ $m_4=\tfrac{13}4$, $m_5\ge M_5$, $m_6\le M_6$:
 all exact: the one-sided substitutions are valid because the
 coefficients of $(Q_3^*)^2$ alternate
 (Lemma~\ref{l:christoffel}), and the corner evaluation is a
-finite rational computation (kernel-checked in core Lean~4,
-\texttt{lean/RhGate/}\allowbreak\texttt{Certificate.lean},
-and independently in
+finite rational computation (kernel-checked in core Lean~4:
+\texttt{Certificate84.lean} in this package's \texttt{lean/}
+project, with the original corner certificate
+\texttt{lean/RhGate/}\allowbreak\texttt{Certificate.lean} in
+the predecessor repository; and independently in
 \texttt{certification/}\allowbreak\texttt{certify84.py}).
 No solver, grid, atom
 extraction or rationalization occurs anywhere; the historical
@@ -3398,8 +3402,8 @@ per-bin Siegel--Walfisz face falling tenfold over the range;
 Bell(5)/Bell(6) gates exact; five- and six-fold product faces
 green at all heights; well-spacing zero violations; hybrid size
 control $24$--$31\times$ height-stable; consumption LP
-grid-stable. The registry: $571$ pre-registered checks, $529$
-passed, $61$ fired and converted, all forward-recorded (the
+grid-stable. The registry: $631$ pre-registered checks, $589$
+passed, $74$ fired and converted, all forward-recorded (the
 $31$st--$35$th conversions belong to the corrected-constants
 pass, the Lean compiles and the spectral-route audit; the
 $36$th--$41$st to the model-edge audit, the $\{2,2,2\}$
@@ -3647,10 +3651,22 @@ unconditional in the band), \cite{MRT}, \cite{HR},
 
 \emph{(f) Formalization status.}
 The identity layer has now been \emph{compiled and
-kernel-checked} on the maintainers' machine: core Lean~4
+kernel-checked}: core Lean~4
 (toolchain \texttt{leanprover/lean4:v4.33.0}, no
-\texttt{mathlib}), package \texttt{lean/RhGate/}, build log
-included. Compiled content: the anchor-free assembly identities
+\texttt{mathlib}). Two projects exist: \texttt{lean/RhGate/}
+(the $k\le8$ identity layer described in this paragraph),
+which ships with the \emph{predecessor} repository, and
+\texttt{lean/} (the lake library \texttt{RhGateK14}:
+\texttt{Certificate84},
+\texttt{CertificateK1012}, \texttt{CertificateK14}), which
+ships with \emph{this} package --- compiled $3/3$ on two
+independent machines with an axiom audit
+(\texttt{propext}, \texttt{Classical.choice},
+\texttt{Quot.sound} only; no \texttt{sorryAx}), recorded in
+\texttt{lean/BUILD.md}, with the verbatim build log, the lockfile and
+the full 45-declaration axiom sweep shipped as
+\texttt{lean/build\_log.txt}, \texttt{lean/lake-manifest.json} and
+\texttt{lean/axioms\_audit.txt}. Compiled content: the anchor-free assembly identities
 $m_4=\tfrac{13}4$, $m_5$-part $=\tfrac{67}{12}$, $m_6$
 pair-layer $=\tfrac{39}4$ as universally quantified rational
 identities (any anchors $t_{\mathrm a},t_{\mathrm o}$ ---
@@ -4376,6 +4392,66 @@ re-run and archived before acceptance. \emph{Lesson: a
 number in a log or a receipt is not evidence; every table
 row must resolve to an archived artifact --- and this
 discipline must be enforced against receipts themselves.}
+\item[D29.] The compute side's audit of the published package
+(r164) found three classes of blocking defects in the
+reproduction scripts: a wrong data path that killed the first
+step of the heavy-recompute driver, missing third-party
+dependency guards in two gates, and three absolute
+user-machine paths in campaign engines. All repaired; a
+pre-release self-check (no user paths in sources) now runs
+inside the gate driver. \emph{Lesson: the published tree must
+be executed from scratch, as a stranger would, before every
+release.}
+\item[D30.] The same audit demonstrated three \emph{fake-green}
+gates by error injection: one gate derived its expected count
+from the same glob as the data (vanishing data passed
+$0=0$), one computed a checksum but never compared it, and
+one multiprocessing engine silently substituted the default
+method under the spawn start method, voiding a two-method
+cross-check on such platforms. All repaired; a standing
+injection self-test (\texttt{gates/selftest\_inject.py}) now
+corrupts each guarded artifact and requires every gate to
+fail. \emph{Lesson: a gate is only evidence if a deliberate
+corruption trips it; expectations must never be derived from
+the object under test.}
+\item[D31.] Coverage gaps: the $C_9$ headline constant and the
+$\{7,2\}$ inventory it depends on had no machine-readable
+gate coverage (receipts only), and the $b=7$ fine-family scan
+file was absent from the package while its receipt claimed
+it. All shipped and gate-covered (\texttt{g\_be} BE7),
+including the pre-registered identity
+$C_9+\{7,2\}=-\tfrac{75863}{302400}$ and the $\Sigma_9$
+partition identity. \emph{Lesson: a headline constant without
+a gate is a claim, not a result.}
+\item[D32.] Documentation lagging reality by one or two
+revisions in several shipped files (package self-descriptions,
+a docstring certifying superseded constants, stale
+``queued for compile'' comments contradicting the paper's
+compiled-status claim, grade fields frozen at their
+freeze-time values while the top-level text claimed proved
+status). All aligned; current grades now live in a dedicated
+versioned file with the regrade rule stated once.
+\emph{Lesson: frozen files keep their snapshots by design, so
+current status must live in versioned status files --- never
+let two layers say different things.}
+\item[D33.] The repair round itself was then re-reviewed by the
+compute side, which found and fixed defects \emph{in the
+repairs}: a helper function placed after the \texttt{\_\_main\_\_}
+block it serves (fatal when run as a script, invisible to
+import-based gates), an unsynchronized twin of a repaired
+file in the master tree, residual absolute paths outside the
+published subtree (caught by the widened pre-release
+self-check on its first run), a credential file that had
+silently upgraded a PENDING second path against its own
+receipt (restored; the honesty check now compares the
+observed single-path inventory against a hard-coded list, in
+both directions), and a witness-tolerance too loose to reject
+a corrupted atom (tightened to exact equality under
+injection). The manifest gained its own gate; the injection
+self-test gained an absence class. \emph{Lesson: fixes are
+code and claims like any other --- a repair enters the record
+only after adversarial re-execution by a second party, and
+``synchronized'' is verified by diff, not asserted.}
 \end{itemize}
 
 \noindent The registry's $30$th conversion occurred during the
@@ -4410,7 +4486,7 @@ under a hashed manifest, eleven gate scripts all green, and a
 recorded two-sided acceptance audit
 (\texttt{repro/ACCEPTANCE\_r141.md}); the subsequent freezes
 v3 (trace route) and v4 (branch-equality campaign) extend
-this append-only to the present suite of eighteen gates
+this append-only to the present suite of nineteen gates
 (\texttt{repro/REPRO\_V4\_FREEZE.md}). Total runtime of the full set is under fifteen minutes on one
 CPU (the session package's optional long gates under thirty; the
 exact $\{2,2,2\}$ certification under two hours; the N1
@@ -4637,8 +4713,10 @@ extraction and rationalization steps no longer exist in any
 form; the entire consumption layer is the rational linear
 algebra of Lemma~\ref{l:christoffel}. Verification:
 \texttt{certification/certify84.py}; Lean:
-\texttt{lean/RhGate/Certificate.lean} (compiled, previous
-corner) and \texttt{Certificate84.lean} (queued): expansion
+\texttt{lean/RhGate/Certificate.lean} (compiled; ships with
+the predecessor repository) and \texttt{Certificate84.lean}
+(compiled in this package's \texttt{RhGateK14} project;
+build and axiom audit in \texttt{lean/BUILD.md}): expansion
 identities, nonnegativity, corner evaluations, sign pattern,
 headlines; zero \texttt{sorry}s.
 

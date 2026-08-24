@@ -4,6 +4,25 @@ class.  --probe N calibrates per-orbit cost on N sampled orbits before committin
 Usage: run_k10.py NAME k s1,s2,... [--jobs N] [--probe N]"""
 import sys, os, json, time, random
 HERE = os.path.dirname(os.path.abspath(__file__))
+
+def _phase2(probe=False):
+    """Output directory for the phase-2 class values, created on demand.
+
+    AUDIT_R164 1.2 created the directory here instead of assuming it exists --
+    these runs previously died with FileNotFoundError AFTER hours of compute.
+    AUDIT_R177 2.9 adds the other half: call _phase2(probe=True) BEFORE the
+    compute starts, so an unwritable parent (read-only mount, full disk, wrong
+    owner) fails in the first second rather than the fifth hour.  A long job
+    should fail immediately or not at all.
+    """
+    d = os.path.join(HERE, "..", "phase2")
+    os.makedirs(d, exist_ok=True)
+    if probe:
+        t = os.path.join(d, ".writeprobe")
+        with open(t, "w") as f:
+            f.write("")
+        os.remove(t)
+    return d
 sys.path[:0] = [HERE, os.path.join(HERE, "..", "phase2")]
 from ratbackend import F, BACKEND
 from class_integral import class_integral, class_terms
@@ -17,6 +36,8 @@ def orbits_of(k, sizes):
                   key=lambda x: (-x[0], x[1]))
 
 if __name__ == "__main__":
+    # AUDIT_R177 2.9: fail in the first second, not the fifth hour.
+    _phase2(probe=True)
     name, k = sys.argv[1], int(sys.argv[2])
     sizes = [int(x) for x in sys.argv[3].split(",")]
     jobs = int(sys.argv[sys.argv.index("--jobs")+1]) if "--jobs" in sys.argv else 8
@@ -56,5 +77,5 @@ if __name__ == "__main__":
               flush=True)
     print(f"\n  {name} = {tot} = {float(tot):.12f}", flush=True)
     json.dump({"class": name, "k": k, "sizes": sizes, "orbits": rows, "total": str(tot)},
-              open(os.path.join(HERE, "..", "phase2",
+              open(os.path.join(_phase2(),
                                 f"values_r136_{name.replace('{','').replace('}','').replace(',','_').replace('^','p')}.json"), "w"), indent=1)

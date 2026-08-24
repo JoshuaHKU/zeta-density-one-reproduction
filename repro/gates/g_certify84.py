@@ -7,7 +7,28 @@ admissible / H_4 PD, and the sign lemma) without which the consumption step is
 not one-sided.  Also re-runs the unconditional k<=6 corner."""
 import os, re, sys, subprocess
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gatelib import check, require_count, finish
+from gatelib import check, require_count, finish, need
+
+# AUDIT_R177 2.10.  This gate does not import numpy itself; it drives
+# certification/certify_k8.py.  That script used to need numpy unconditionally
+# (to find the roots of K_4(x,0)), so on a numpy-less host -- e.g. host 220 --
+# the subprocess died, every regex below returned None, and this gate reported
+# a confusing partial failure while REPRODUCTION.md promised "stdlib only for
+# certification".
+#
+# The fix was not to bolt a guard on here but to make the promise true: the
+# rationalised atoms are a WITNESS, and certify_k8.py now replays them from
+# k8_atoms.json and re-verifies them in exact rational arithmetic, so the
+# normal path needs no numpy at all.  numpy is required only to REGENERATE the
+# archive (--emit-atoms).
+#
+# The guard that remains is therefore conditional and precise: this gate is
+# NOT-APPLICABLE only if the witness archive is absent AND numpy is missing,
+# i.e. only when neither route to the certificate exists.
+_ATOMS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                      "certification", "k8_atoms.json")
+if not os.path.exists(_ATOMS):
+    need("numpy")
 
 CERT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                     "certification", "certify_k8.py")

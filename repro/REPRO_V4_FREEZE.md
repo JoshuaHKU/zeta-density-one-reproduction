@@ -97,4 +97,7 @@ campaign enter the package here.
   cross-check at b=4), all PASS.
 - `gates/g_be.py` extended accordingly (31 checks, ALL GREEN).
 
-Registry at addendum: 571 / 529 / 61 (matches the paper).
+Registry at addendum: 571 / 529 / 61 (the paper at freeze time; the
+registry has since advanced through the r176/r177 audit rounds -- current
+numbers live in the paper's verification section, this line keeps the
+freeze-time snapshot).

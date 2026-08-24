@@ -1,15 +1,25 @@
 # -*- coding: utf-8 -*-
 """preprint-0.84 exact certification chain / 全链精确认证.
 
+Maintenance note.  The constants quoted below are the ones the code
+actually asserts; they were refreshed in AUDIT_R164 4.2 (C8, m8, lambda_4)
+and again in AUDIT_R177 2.3, which caught that lambda_4 itself had been
+updated while its two headline fractions still carried the SUPERSEDED
+denominator 40569016.  If you change a constant in the code, change it
+here in the same commit -- a stale docstring is what a referee reads first.
+H3/H4 positivity of the consumed moment sequence is checked at the end
+(added per AUDIT_R164 4.2).
+
 Verifies, in exact rational arithmetic (stdlib Fraction only):
   A. the corrected {2,2,2} bundle and M6 = 640/63;
   B. the re-centring identities and central moments;
   C. the k=7,8 assembly (Sigma7 = 7/90, m7 = 3439/180,
-     Sigma8 known part = 307/1260, m8 = 519/14 at C8 = 7/180);
+     Sigma8 known part = 307/1260, m8 = 747361/20160 at C8 = 157/4032);
   D. the Christoffel certificates: Q3* rational coefficients,
      lambda_3 = 247/2519, headlines 2025/2519, 2272/2519;
-     lambda_4 = 3053795/40569016, headlines 17230713/20284508,
-     37515221/40569016; sign patterns; cone interiority;
+     lambda_4 = 12241115/162540559, headlines 138058329/162540559
+     (= 1-2*lambda_4) and 150299444/162540559 (= 1-lambda_4);
+     sign patterns; cone interiority;
   E. the one-sided tolerances (Sigma7 >= 0.074844 margin,
      Sigma8 <= 0.290506 margin).
 Exit 0 iff every assertion holds.  python3 certify84.py
@@ -146,6 +156,40 @@ check("Sigma_7 = 7/90 >= 0.074844 (3.8% margin)",
       S7 >= F(74844,1000000))
 check("Sigma_8 = 633/2240 <= 0.290506 (2.8% margin)",
       S8 <= F(290506,1000000))
+
+# ---- AUDIT_R164 4.2: Hankel positivity H3/H4 of the consumed sequence ----
+def _hankel_pd():
+    from fractions import Fraction as _F
+    ms = [_F(1), _F(1), _F(4,3), _F(2), _F(13,4), _F(101,18), _F(640,63),
+          _F(3439,180), _F(747361,20160)]
+    for n in (3, 4):
+        H = [[ms[i+j] for j in range(n)] for i in range(n)]
+        # leading principal minors > 0 (fraction-free elimination)
+        pd = True
+        for k in range(1, n+1):
+            sub = [row[:k] for row in H[:k]]
+            # exact determinant
+            det = _det(sub)
+            pd = pd and (det > 0)
+        check(f"H{n} positive definite (exact minors)", pd)
+
+def _det(M):
+    from fractions import Fraction as _F
+    M = [row[:] for row in M]; n = len(M); sign = 1
+    for i in range(n):
+        p = next((r for r in range(i, n) if M[r][i] != 0), None)
+        if p is None: return _F(0)
+        if p != i: M[i], M[p] = M[p], M[i]; sign = -sign
+        for r in range(i+1, n):
+            f = M[r][i] / M[i][i]
+            for c in range(i, n):
+                M[r][c] -= f * M[i][c]
+    out = _F(sign)
+    for i in range(n): out *= M[i][i]
+    return out
+
+
+_hankel_pd()
 
 print("\nALL CHECKS PASS" if ok else "\nFAILURES PRESENT")
 raise SystemExit(0 if ok else 1)

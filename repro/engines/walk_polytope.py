@@ -180,7 +180,16 @@ def integral(pos, verbose=False):
                           for j in range(D)])
             dv = abs(np.linalg.det(M)) / fac
             if dv < 1e-14:
-                continue                   # degenerate sliver
+                # AUDIT_R164 2.5: a float determinant may only PRESCREEN;
+                # discarding an exact rational term needs an exact verdict.
+                # Adjudicate with an exact integer determinant (Fraction
+                # Bareiss-style Gaussian elimination); skip only if truly 0.
+                if _exact_det_nonzero([[W[j + 1][i] - W[0][i]
+                                        for i in range(D)]
+                                       for j in range(D)]):
+                    dv = 0.0   # keep the term; float volume contribution nil
+                else:
+                    continue               # exactly degenerate: safe to skip
             volnum += dv
             sub += simplex_monomial(W, cols, m_den)
         if abs(volnum - hull.volume) > 1e-8 * max(1.0, hull.volume):
@@ -191,6 +200,45 @@ def integral(pos, verbose=False):
             print(f"      sigma={sigma}  verts={len(V)}  simplices={len(simplices)}"
                   f"  vol={volnum:.8f}  contrib={float(sgn*sub):+.10f}")
     return 2 * total          # the two half-orthant families are equal
+
+
+# ---------------------------------------------------------------------------
+# AUDIT_R177 2.1: this helper MUST stay above the ``__main__`` block below.
+# ``integral`` calls it, and the self-test in ``__main__`` calls ``integral``.
+# When this module is run as a script the file executes top-to-bottom, so a
+# definition placed *after* ``__main__`` does not exist yet when the self-test
+# runs -- the first degenerate simplex then raises NameError.  (Importing the
+# module was unaffected, which is why the gate suite stayed green and the
+# regression self-test -- the only test that exercises the exact adjudication
+# below -- was the single thing that could not run.)
+# ---------------------------------------------------------------------------
+def _exact_det_nonzero(rows):
+    """Exact ``det != 0`` test by fraction-free Gaussian elimination.
+
+    ``rows`` arrives as exact rationals: ``vertices()`` solves with ``rsolve``
+    and returns Fractions, and the caller subtracts them without going through
+    float.  So this is a genuinely exact verdict, not exact arithmetic on
+    values that were already rounded -- which is the whole point of AUDIT_R164
+    2.5: a float determinant may PRESCREEN a simplex as degenerate, but only
+    an exact verdict may DISCARD the exact rational term it carries.
+    """
+    from fractions import Fraction as _F
+    M = [[_F(x) for x in r] for r in rows]
+    n = len(M)
+    for i in range(n):
+        piv = None
+        for r in range(i, n):
+            if M[r][i] != 0:
+                piv = r; break
+        if piv is None:
+            return False               # a zero column: exactly singular
+        if piv != i:
+            M[i], M[piv] = M[piv], M[i]
+        for r in range(i + 1, n):
+            f = M[r][i] / M[i][i]
+            for c in range(i, n):
+                M[r][c] -= f * M[i][c]
+    return True                        # all pivots non-zero: det != 0
 
 
 if __name__ == "__main__":

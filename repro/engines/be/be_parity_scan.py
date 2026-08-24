@@ -23,10 +23,10 @@ Gates:
   F-BE-PAR-b       Proposition A (strong): every T_P obeys T_P(-N)=(-1)^(b+1) T_P(N)
                    Proposition B (weak):  only the total does
 """
-import sys, json, time, itertools
+import os, sys, json, time, itertools
 from fractions import Fraction as Q
 from functools import lru_cache
-sys.path.insert(0, "/Users/joshua/Claude/Projects/黎曼猜想/preprint-0.84/repro/engines")
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 from tt_moments import schur_pair
 
 

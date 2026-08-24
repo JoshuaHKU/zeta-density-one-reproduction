@@ -116,7 +116,65 @@ def rationalise(x, den):
     return F(round(x * den), den)
 
 
-def build(M7, M8, den=10 ** 5, verbose=True):
+# ---------------------------------------------------------------------------
+# Archived witnesses (AUDIT_R177 2.10).
+#
+# The only step in build() that needs a third party is finding the roots of
+# K_4(x,0): numpy PROPOSES four floats, which are then rationalised into exact
+# atoms.  Nothing about the proof depends on how those atoms were found -- the
+# certificate y is rebuilt from them in exact rational arithmetic and its value
+# w0 is compared against the exact Christoffel optimum lam.  numpy is a search
+# heuristic, never a premise.
+#
+# So the atoms are a WITNESS, and a witness should be checkable without the
+# tool that produced it.  They are archived in k8_atoms.json, and build()
+# prefers the archive: the shipped verification path then runs on the standard
+# library alone -- which is what REPRODUCTION.md promises.  The archived atoms
+# are still CHECKED, not trusted: a wrong atom makes w0 - lam exceed the
+# tolerance and build() raises.  Regenerate with --emit-atoms (needs numpy).
+_ATOMS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "k8_atoms.json")
+
+
+def _atom_key(M7, M8):
+    return f"{M7}|{M8}"
+
+
+def _load_atoms(M7, M8):
+    """Return (atoms, expected_w0) or (None, None)."""
+    if not os.path.exists(_ATOMS):
+        return None, None
+    try:
+        rec = json.load(open(_ATOMS)).get(_atom_key(M7, M8))
+    except Exception:
+        return None, None
+    if not rec:
+        return None, None
+    return [F(a) for a in rec["atoms"]], F(rec["w0"]) if "w0" in rec else None
+
+
+def _save_atoms(M7, M8, ratr, den, w0):
+    db = {}
+    if os.path.exists(_ATOMS):
+        try:
+            db = json.load(open(_ATOMS))
+        except Exception:
+            db = {}
+    db[_atom_key(M7, M8)] = {"M7": str(M7), "M8": str(M8), "den": den,
+                             "atoms": [str(a) for a in ratr],
+                             # w0 is stored so the replay can check the atoms
+                             # EXACTLY, not just within the 1e-7 rationalisation
+                             # tolerance -- see the note in build().
+                             "w0": str(w0)}
+    db["_note"] = ("Rationalised extremal atoms (roots of K_4(x,0)) for the k=8 "
+                   "Christoffel certificate.  A WITNESS, not an input: build() "
+                   "rebuilds the certificate from these in exact rational "
+                   "arithmetic and rejects them if w0 - lambda_4(0) exceeds "
+                   "1e-7.  Archived so the verification path needs no numpy "
+                   "(AUDIT_R177 2.10).  Regenerate: certify_k8.py --emit-atoms")
+    json.dump(db, open(_ATOMS, "w"), indent=1)
+
+
+def build(M7, M8, den=10 ** 5, verbose=True, emit=False):
     mom = dict(M); mom[7] = M7; mom[8] = M8
     H = hankel(mom, 4)
     if not psd(H):
@@ -125,19 +183,62 @@ def build(M7, M8, den=10 ** 5, verbose=True):
     c = kernel_poly(mom, 4)
     # roots of K_4(x,0): monic quartic
     mon = [v / c[4] for v in c]
-    import numpy as np
-    rts = np.sort(np.roots([1.0, float(mon[3]), float(mon[2]), float(mon[1]), float(mon[0])]).real)
-    # pick the coarsest denominator that still delivers a certificate within tol of the optimum
-    for den in (10 ** 4, 10 ** 5, 10 ** 6, 10 ** 7, 10 ** 8, 10 ** 9, 10 ** 10):
-        ratr = [rationalise(float(r), den) for r in rts]
+
+    rts = None                      # float roots: only ever used for display
+    ratr, want_w0 = (None, None) if emit else _load_atoms(M7, M8)
+    if ratr is not None:
+        # --- stdlib-only path: replay the archived witness and CHECK it ---
         y = square_from_roots(ratr)
         w0 = evaluate(y, M7, M8)
-        if w0 - lam < F(1, 10 ** 7):
-            break
+        # Two checks, because the first one alone is too loose.  The
+        # rationalisation tolerance only says "this is SOME certificate near
+        # the optimum": AUDIT_R177 verified that perturbing one archived atom
+        # by 1e-4 still lands inside 1e-7, while changing the delivered
+        # headline rational.  So we also require w0 to reproduce EXACTLY the
+        # value recorded when the witness was emitted.  (The exact headline is
+        # pinned independently by gate g_certify84; this makes the artifact
+        # self-checking rather than relying on the gate to notice.)
+        if not (w0 - lam < F(1, 10 ** 7)):
+            raise ValueError(f"archived atoms for ({M7}, {M8}) do not certify: "
+                             f"w0 - lambda_4(0) = {float(w0 - lam):.3e} exceeds 1e-7. "
+                             f"Regenerate with --emit-atoms.")
+        if want_w0 is not None and w0 != want_w0:
+            raise ValueError(f"archived atoms for ({M7}, {M8}) are inconsistent with "
+                             f"the recorded w0: rebuilt {w0}, archived {want_w0}. "
+                             f"The witness has been altered; regenerate with "
+                             f"--emit-atoms.")
+        src = "archived witness (k8_atoms.json), no numpy"
+    else:
+        # --- search path: numpy proposes, exact arithmetic disposes ---
+        try:
+            import numpy as np
+        except ImportError:
+            raise SystemExit(
+                "certify_k8: no archived atoms for this (M7, M8) and numpy is "
+                "unavailable.  numpy is needed only to PROPOSE the roots of "
+                "K_4(x,0); the certificate itself is exact.  Either install "
+                "numpy, or run a point whose atoms are archived in "
+                "k8_atoms.json (see AUDIT_R177 2.10).")
+        rts = np.sort(np.roots([1.0, float(mon[3]), float(mon[2]),
+                                float(mon[1]), float(mon[0])]).real)
+        # coarsest denominator that still certifies within tol of the optimum
+        for den in (10 ** 4, 10 ** 5, 10 ** 6, 10 ** 7, 10 ** 8, 10 ** 9, 10 ** 10):
+            ratr = [rationalise(float(r), den) for r in rts]
+            y = square_from_roots(ratr)
+            w0 = evaluate(y, M7, M8)
+            if w0 - lam < F(1, 10 ** 7):
+                break
+        src = f"numpy root search, denominator {den}"
+        if emit:
+            _save_atoms(M7, M8, ratr, den, w0)
+            print(f"  atoms archived        : {_ATOMS}")
+
     if verbose:
         print("  moment cone           : (M7,M8) admissible, H_4 positive definite")
         print(f"  Christoffel optimum   : lambda_4(0) = {lam} = {float(lam):.10f}")
-        print(f"  extremal atoms (roots of K_4(x,0)) : {[round(float(r),8) for r in rts]}")
+        print(f"  atom source           : {src}")
+        if rts is not None:
+            print(f"  extremal atoms (roots of K_4(x,0)) : {[round(float(r),8) for r in rts]}")
         print(f"  rationalised atoms    : {[str(r) for r in ratr]}")
         print("  certificate signs     : " + " ".join(
             f"y{k}{'+' if y[k] > 0 else '-'}" for k in range(9)))
@@ -166,9 +267,20 @@ def table():
             except Exception:
                 row += "        --"
         print(f"        {M7f:8.6f} " + row)
+    # AUDIT_R177 2.10: this trailing block is DISPLAY ONLY -- it locates the
+    # cone vertex numerically for the reader's orientation and nothing above
+    # (or in gate g_certify84, which only reads the k<=6 corner from this
+    # table) depends on it.  It was the last numpy dependency on the
+    # certification path, so it now degrades to a one-line notice instead of
+    # taking the whole certificate chain down with it on a numpy-less host.
     print("\ncone vertex over m1..m6 (the extremal measure's own m7,m8):")
+    try:
+        import numpy as np
+    except ImportError:
+        print("  (skipped: numpy unavailable -- display only, nothing above "
+              "depends on it)")
+        return
     c = kernel_poly(M, 3)
-    import numpy as np
     mon = [v / c[3] for v in c]
     r = np.sort(np.roots([1.0, float(mon[2]), float(mon[1]), float(mon[0])]).real)
     at = np.concatenate([[0.0], r])
@@ -188,4 +300,7 @@ if __name__ == "__main__":
         d = json.load(open(p))
         M7, M8 = F(d["M7"]), F(d["M8"])
     print(f"k=8 certificate at M7 = {M7} = {float(M7):.6f}, M8 = {M8} = {float(M8):.6f}\n")
-    build(M7, M8)
+    # AUDIT_R177 2.10: --emit-atoms re-runs the numpy root search and archives
+    # the rationalised atoms as a witness, so that ordinary runs (and gate
+    # g_certify84) can verify on the standard library alone.
+    build(M7, M8, emit=("--emit-atoms" in sys.argv))

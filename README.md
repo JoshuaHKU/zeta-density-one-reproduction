@@ -63,12 +63,12 @@ what it consumes at what grade. / 分级：k≤14 全部常数证明级
 | `REPRODUCTION.md` | Reproduction checklist with recorded outputs / 复现清单 |
 | `lean/` | Lake project RhGateK14 (core Lean 4, v4.33.0, no mathlib): Sigma anchors, k=10/12/14 headline identities and thresholds, monotone-chain instance — compiled 3/3 modules / Lean 形式化工程（已编译） |
 | `certification/` | `certify91.py`: the full k<=14 exact-rational chain (anchors, binomial interlocks, lambda_5/6/7 certificates, monotone chain), stdlib only, ~10 s / 全链精确认证 |
-| `repro/` | The frozen v4 reproduction package: engines (independent trace-route implementations + branch-equality campaign engines), 18-gate suite (`./run_all.sh gates`, seconds, ALL GATES GREEN), canonical value tables with grade tags, the branch-equality campaign artifacts (TU/LTU scans, Moebius and fine-family parity scans, pre-registered odd-b surplus points, C_9 facet second method), receipts/adjudications trail, MANIFEST with SHA-256 / 复现包 v4（冻结，含分支相等战役全套工件） |
+| `repro/` | The frozen v4 reproduction package: engines (independent trace-route implementations + branch-equality campaign engines), 19-gate suite (`./run_all.sh gates`, seconds, ALL GATES GREEN), canonical value tables with grade tags, the branch-equality campaign artifacts (TU/LTU scans, Moebius and fine-family parity scans, pre-registered odd-b surplus points, C_9 facet second method), receipts/adjudications trail, MANIFEST with SHA-256 / 复现包 v4（冻结，含分支相等战役全套工件） |
 
 ## Quick verification / 快速验证
 
     python3 certification/certify91.py     # ALL CHECKS PASS, ~10 s
-    cd repro && ./run_all.sh gates         # 18 gates, ALL GATES GREEN
+    cd repro && ./run_all.sh gates         # 19 gates, ALL GATES GREEN
     python3 repro/gates/g_be.py            # branch-equality suite alone, 31 checks
     cd lean && lake build                  # 3 modules, no external deps
 

@@ -155,6 +155,38 @@ J = load("coeff_assembly.json")
 ok = all(lev.get("verdict") == "PASS" for lev in J["levels"].values())
 check("BE6 coeff_assembly.json all levels PASS (independent 2nd impl)", ok)
 
+
+# ---- BE7: C_9 / {7,2} coverage (AUDIT_R164 3.1/3.2) ----------------------
+CC = os.path.join(HERE, "..", "constants")
+C9 = json.load(open(os.path.join(CC, "c9", "term_orbits.json")))
+tot9 = F(0); wsum = 0
+for r in C9["orbit_values"].values():
+    tot9 += F(r["weight"]) * F(r["value"]); wsum += F(r["weight"])
+check("BE7 c9 rebuild: sum(weight*value) over 60,739 orbits == 27649/302400",
+      tot9 == F(27649, 302400) and len(C9["orbit_values"]) == 60739)
+check("BE7 c9 signed weights sum to zero", wsum == 0)
+J72 = json.load(open(os.path.join(CC, "j72", "values.json")))
+j72 = sum(F(e["value"]) * e["size"] for e in J72["orbit_values"].values())
+check("BE7 j72 rebuild: 9 x orbit sum == -4313/12600",
+      j72 == F(-4313, 12600) == F(J72["total"]))
+check("BE7 pre-registered identity C_9 + {7,2} == -75863/302400",
+      F(27649, 302400) + F(-4313, 12600) == F(-75863, 302400))
+TOT = json.load(open(os.path.join(CC, "TOTALS.json")))
+check("BE7 TOTALS.json carries c9 and j72",
+      TOT.get("c9") == "27649/302400" and TOT.get("j72") == "-4313/12600")
+j54 = F(json.load(open(os.path.join(CC, "j54", "values.json")))["total"])
+j225 = F(json.load(open(os.path.join(CC, "j225", "values.json")))["total"])
+check("BE7 Sigma_9 partition: {5,4}+{2,2,5}+C_9+{7,2} == 52207/302400",
+      j54 + j225 + F(27649, 302400) + F(-4313, 12600) == F(52207, 302400))
+S7 = load("sigma_scan_b7.json")
+check("BE7 sigma_scan_b7 summary: 47,293 == Fubini(7), POLY/PAR2/COVERAGE PASS",
+      int(S7["n_fine_terms"]) == 47293 == int(S7["fubini_expected"])
+      and S7["F_BE_POLY"] == "PASS" and S7["F_BE_PAR2"] == "PASS"
+      and str(S7["COVERAGE_CHECK"]).startswith("PASS"))
+nsh = sum(1 for i in range(6)
+          if os.path.exists(os.path.join(CB, f"sigma_scan_b7_s{i}of6.json")))
+check("BE7 sigma_scan_b7 shard files present 6/6", nsh == 6)
+
 print()
 if fails:
     print(f"*** g_be: {len(fails)} FAILURES: {fails}")

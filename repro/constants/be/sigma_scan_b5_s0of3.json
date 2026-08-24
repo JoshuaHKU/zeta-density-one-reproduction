@@ -2558,5 +2558,6 @@
    "1771561",
    "2985984"
   ]
- }
+ },
+ "_audit_note_r177": "PARTIAL VALIDATION SHARD -- NOT A RESULT.  This file covers shard 0 of 3 (181 of the 541 fine terms at b=5) and was kept as a sharding-correctness check.  The COMPLETE b=5 scan is sigma_scan_b5.json (541 terms = Fubini(5)), which is what gate g_be BE1 consumes.  AUDIT_R177 2.9 flagged that this file sat unlabelled beside the complete one and could be misread as an independent result.  Compare the b=7 shards (sigma_scan_b7_s{0..5}of6.json), which form a COMPLETE 6/6 cover and are gate-checked as such."
 }

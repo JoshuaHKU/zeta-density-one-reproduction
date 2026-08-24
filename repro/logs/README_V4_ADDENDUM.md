@@ -1,6 +1,6 @@
 # logs/ addendum (v4, 2026-08-22) -- append-only
 
-Audit outcome first: the 24 legacy files indexed in `README.md`
+Audit outcome first: the legacy files (10 of them indexed in `README.md`, 24 on disk at the time)
 were re-audited against the shipped receipts and REPRO_SPEC
 sec 6. **None qualifies for deletion**: every file is either
 cited by an acceptance/receipt (e.g. `r150_b14_partial.log` by
@@ -48,3 +48,26 @@ C_9 = 27649/302400 bitwise --- the value consumed by the paper.
 
 Everything above is append-only; the legacy `README.md` is
 unchanged.
+
+## Addendum v2 (AUDIT_R164 4.8): completing the index
+
+Every log on disk is now indexed exactly once (README.md, the v4 table
+above, or this table).  Usernames inside archived raw logs are kept:
+editing append-only evidence would violate the package's own
+discipline; exposure is limited to a bare username (no hosts, no IPs)
+and is recorded here as a conscious decision, not an oversight.
+
+| file | round | host | what |
+|---|---|---|---|
+| `r139_220_442_partial.log` | 139 | 220 | {4,4,2} partial checkpoint preceding the r141 final (incident evidence) |
+| `r139_231_442_crosshost.log` | 139 | 231 | {4,2,2,2} cross-host replication leg |
+| `r141_220_442_final.log` | 141 | 220 | {4,4,2}/{4,2,2,2} final run |
+| `r141_220_442_pre_restart.log` | 141 | 220 | pre-restart segment (OOM incident evidence; see D-register) |
+| `r141_230_622.log` | 141 | 230 | {6,2,2} run |
+| `r141_230_622_pre_restart.log` | 141 | 230 | pre-restart segment (incident evidence) |
+| `r141_231_72.log` | 141 | 231 | {7,2} facet run (source of constants/j72) |
+| `r141_238_54.log` | 141 | 238 | {5,4} run |
+| `r148_ott2_m10.log` | 148 | 240 | m_10(N) table points |
+| `r148_ott2_m9.log` | 148 | 240 | m_9(N) table points (trace route) |
+| `r148_ott3_b11.log` | 148 | 240 | m_11(N) table points |
+| `r150_fimpl.log` | 150 | 230 | F-IMPL dual-implementation overlap points |

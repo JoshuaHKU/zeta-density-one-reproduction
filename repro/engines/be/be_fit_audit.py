@@ -14,12 +14,12 @@ leading coefficient equal the archived exact m_b?
 No gap is filled by computing new points -- the orders say to report shortfalls,
 not to paper over them.
 """
-import sys, json, time
+import os, sys, json, time
 from fractions import Fraction as Q
-sys.path.insert(0, "/Users/joshua/Claude/Projects/黎曼猜想/preprint-0.84/repro/engines")
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 from tt_moments import m_b
 
-TAB = "/Users/joshua/Claude/Projects/黎曼猜想/preprint-0.84/repro/constants/tt/m_tables.json"
+TAB = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "constants", "tt", "m_tables.json")
 
 
 def exact_points(b, Nmax):

@@ -16,13 +16,25 @@ This costs nothing and is a free falsification surface: an RNG stream reused
 across workers, a Gram normalisation slip or a BLAS precision problem all land
 on these two exact lines."""
 import os, sys, glob
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from gatelib import check, require_count, finish, need
+need("numpy", "scipy")
 import numpy as np
 from scipy.special import polygamma
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from gatelib import check, require_count, finish
 
-POOLS = sorted(glob.glob(os.path.join(os.path.dirname(os.path.dirname(
-    os.path.abspath(__file__))), "data", "e*_*.npy")))
+# AUDIT_R164 2.1: the expected pool list is HARDCODED -- it must not be
+# derived from the same glob as the data, or the expectation vanishes
+# with the data and 0 == 0 green-lights an empty gate.
+_DATA = os.path.join(os.path.dirname(os.path.dirname(
+    os.path.abspath(__file__))), "data")
+EXPECTED_POOLS = ["eigs_N128.npy", "eigs_N256.npy", "eigs_N512.npy",
+                  "ev_400.npy", "ev_800.npy", "ev_1600.npy"]
+POOLS = [os.path.join(_DATA, p) for p in EXPECTED_POOLS
+         if os.path.exists(os.path.join(_DATA, p))]
+missing = [p for p in EXPECTED_POOLS
+           if not os.path.exists(os.path.join(_DATA, p))]
+for p in missing:
+    check(f"F-LOGDET pool present {p}", False)
 n = 0
 for p in POOLS:
     ev = np.load(p)
@@ -49,5 +61,5 @@ for p in POOLS:
     n += check(f"F-LOGDET var  {tag:<12}", abs(dv) <= 3,
                f"{vE:.6e} vs {vX:.6e}  {dv:+.2f} sd  (kappa {kappa:.2f}, "
                f"Gaussian bar would be {np.sqrt(2.0/(ns-1))*vE/se_v:.2f}x tighter)")
-require_count("F-LOGDET pools", n, 2 * len(POOLS))
+require_count("F-LOGDET pools", n, 2 * len(EXPECTED_POOLS))
 finish("F-LOGDET")

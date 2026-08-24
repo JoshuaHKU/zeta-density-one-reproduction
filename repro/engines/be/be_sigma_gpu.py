@@ -1,4 +1,14 @@
 #!/usr/bin/env python3
+# ============================================================================
+# SUPERSEDED -- DO NOT USE FOR VERIFICATION (AUDIT_R164 3.5)
+# This is the pre-r163 version with the WRONG term indexing: it enumerates
+# per-block slot permutations (Lah counts, terms(4) = 73) instead of the
+# correct merged-cluster families (Fubini counts, terms(4) = 75).  It is kept
+# only as part of the recorded history of defect D27.  The correct engines are
+# be_sigma2.py (CPU) and be_poly_par.py (GPU), whose term counts 13/75/541/4683
+# are gate-checked (g_be BE1).
+# ============================================================================
+
 """O-BE-5 (r160): per-(P, sigma) span-product scan, on the GPU.
 
     T_{P,sigma}(N) = sum_{m in [0,N)^b} prod_B  delta[sum_{i in B} k_i = 0]

@@ -7,7 +7,7 @@
    arithmetic regardless of grade.
 
    Pattern follows Certificate84.lean (grind on Rat identities).
-   To be compiled on the program director's toolchain. -/
+   Compiled with lake (leanprover/lean4:v4.33.0); see lean/BUILD.md. -/
 
 namespace RhGateK14
 

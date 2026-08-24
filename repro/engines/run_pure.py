@@ -3,6 +3,25 @@
 Validates on C5 = 1/36 and {6} = -1/126 before being used on {8}."""
 import sys, os, time, json
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
+
+def _phase2(probe=False):
+    """Output directory for the phase-2 class values, created on demand.
+
+    AUDIT_R164 1.2 created the directory here instead of assuming it exists --
+    these runs previously died with FileNotFoundError AFTER hours of compute.
+    AUDIT_R177 2.9 adds the other half: call _phase2(probe=True) BEFORE the
+    compute starts, so an unwritable parent (read-only mount, full disk, wrong
+    owner) fails in the first second rather than the fifth hour.  A long job
+    should fail immediately or not at all.
+    """
+    d = os.path.join(HERE, "..", "phase2")
+    os.makedirs(d, exist_ok=True)
+    if probe:
+        t = os.path.join(d, ".writeprobe")
+        with open(t, "w") as f:
+            f.write("")
+        os.remove(t)
+    return d
 from ratbackend import F, BACKEND
 from class_integral import edge_forms, cycle_walk, term_walk, one_term
 from symquot import quotient
@@ -34,6 +53,8 @@ def pure_class(k, jobs=1, verbose=True):
 
 
 if __name__ == "__main__":
+    # AUDIT_R177 2.9: fail in the first second, not the fifth hour.
+    _phase2(probe=True)
     jobs = int(sys.argv[sys.argv.index("--jobs")+1]) if "--jobs" in sys.argv else 8
     print(f"backend {BACKEND}", flush=True)
     if "--validate" in sys.argv:
@@ -49,4 +70,4 @@ if __name__ == "__main__":
     t0 = time.time(); v = pure_class(k, jobs)
     print(f"  C_{k} = {{{k}}} = {v} = {float(v):.12f}   {time.time()-t0:.0f}s", flush=True)
     json.dump({"class": f"{{{k}}}", "value": str(v)},
-              open(os.path.join(HERE, "..", "phase2", f"values_{k}.json"), "w"), indent=1)
+              open(os.path.join(_phase2(), f"values_{k}.json"), "w"), indent=1)

@@ -3,3 +3,14 @@ __pycache__/
 *.aux
 *.log.aux
 .DS_Store
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+lean/.lake/
+lean/build/
+*.selftest.bak
+.selftest_absence/

@@ -43,7 +43,13 @@ def job(args):
 
 
 def main():
-    cls = json.load(open(os.path.join(HERE, "block_classes.json")))
+    for cand in (os.environ.get("BLOCK_CLASSES"),
+                 os.path.join(HERE, "..", "data", "block_classes.json"),
+                 os.path.join(HERE, "block_classes.json")):
+        if cand and os.path.exists(cand):
+            cls = json.load(open(cand)); break
+    else:
+        raise SystemExit("block_classes.json not found; set BLOCK_CLASSES")
     p24 = [c for c in cls if c["label"] == "{2^4}"][0]
     orbs = p24["orbits"]
     tasks = [(f"P{i}", o["rep"], 8) for i, o in enumerate(orbs)]
