@@ -1,0 +1,552 @@
+backend cupy(dev1)  b=7: 7883 fine terms (Fubini), N=1..14, 4017.5s
+  F-BE-POLY-7: PASS
+  F-BE-PAR2-7: PASS  (sign 1)
+backend cupy(dev1)  b=7: 7882 fine terms (Fubini), N=1..14, 3953.6s
+  F-BE-POLY-7: PASS
+  F-BE-PAR2-7: PASS  (sign 1)
+backend cupy(dev0)  b=7: 7882 fine terms (Fubini), N=1..14, 3462.9s
+  F-BE-POLY-7: PASS
+  F-BE-PAR2-7: PASS  (sign 1)
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 2.2.6
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/joshua/be/src/be_poly_par.py", line 140, in <module>
+    V = values(b, Ns, xp, shard, nshard)
+  File "/home/joshua/be/src/be_poly_par.py", line 80, in values
+    m.append(t % N); t = t // N
+  File "/usr/lib/python3.10/importlib/util.py", line 247, in __getattribute__
+    self.__spec__.loader.exec_module(self)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/__init__.py", line 10, in <module>
+    from cupyx import linalg  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/__init__.py", line 4, in <module>
+    from cupyx.linalg import sparse  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/__init__.py", line 5, in <module>
+    from cupyx.linalg.sparse._solve import lschol  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/_solve.py", line 8, in <module>
+    from cupyx.scipy import sparse
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/__init__.py", line 50, in __getattr__
+    return _importlib.import_module(f'cupyx.scipy.{name}')
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/__init__.py", line 4, in <module>
+    from cupyx.scipy.sparse._base import _spbase  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_base.py", line 14, in <module>
+    import scipy.sparse as _sparse
+  File "/usr/lib/python3/dist-packages/scipy/sparse/__init__.py", line 267, in <module>
+    from ._csr import *
+  File "/usr/lib/python3/dist-packages/scipy/sparse/_csr.py", line 10, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+AttributeError: _ARRAY_API not found
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/joshua/be/src/be_poly_par.py", line 140, in <module>
+    V = values(b, Ns, xp, shard, nshard)
+  File "/home/joshua/be/src/be_poly_par.py", line 80, in values
+    m.append(t % N); t = t // N
+  File "/usr/lib/python3.10/importlib/util.py", line 247, in __getattribute__
+    self.__spec__.loader.exec_module(self)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/__init__.py", line 10, in <module>
+    from cupyx import linalg  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/__init__.py", line 4, in <module>
+    from cupyx.linalg import sparse  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/__init__.py", line 5, in <module>
+    from cupyx.linalg.sparse._solve import lschol  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/_solve.py", line 8, in <module>
+    from cupyx.scipy import sparse
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/__init__.py", line 50, in __getattr__
+    return _importlib.import_module(f'cupyx.scipy.{name}')
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/__init__.py", line 13, in <module>
+    from cupyx.scipy.sparse._coo import coo_array  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_coo.py", line 5, in <module>
+    import scipy.sparse
+  File "/usr/lib/python3/dist-packages/scipy/sparse/__init__.py", line 267, in <module>
+    from ._csr import *
+  File "/usr/lib/python3/dist-packages/scipy/sparse/_csr.py", line 10, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+AttributeError: _ARRAY_API not found
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/joshua/be/src/be_poly_par.py", line 140, in <module>
+    V = values(b, Ns, xp, shard, nshard)
+  File "/home/joshua/be/src/be_poly_par.py", line 80, in values
+    m.append(t % N); t = t // N
+  File "/usr/lib/python3.10/importlib/util.py", line 247, in __getattribute__
+    self.__spec__.loader.exec_module(self)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/__init__.py", line 10, in <module>
+    from cupyx import linalg  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/__init__.py", line 4, in <module>
+    from cupyx.linalg import sparse  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/__init__.py", line 5, in <module>
+    from cupyx.linalg.sparse._solve import lschol  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/_solve.py", line 8, in <module>
+    from cupyx.scipy import sparse
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/__init__.py", line 50, in __getattr__
+    return _importlib.import_module(f'cupyx.scipy.{name}')
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/__init__.py", line 16, in <module>
+    from cupyx.scipy.sparse._csc import csc_array  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_csc.py", line 4, in <module>
+    import scipy.sparse
+  File "/usr/lib/python3/dist-packages/scipy/sparse/__init__.py", line 267, in <module>
+    from ._csr import *
+  File "/usr/lib/python3/dist-packages/scipy/sparse/_csr.py", line 10, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+AttributeError: _ARRAY_API not found
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/joshua/be/src/be_poly_par.py", line 140, in <module>
+    V = values(b, Ns, xp, shard, nshard)
+  File "/home/joshua/be/src/be_poly_par.py", line 80, in values
+    m.append(t % N); t = t // N
+  File "/usr/lib/python3.10/importlib/util.py", line 247, in __getattribute__
+    self.__spec__.loader.exec_module(self)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/__init__.py", line 10, in <module>
+    from cupyx import linalg  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/__init__.py", line 4, in <module>
+    from cupyx.linalg import sparse  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/__init__.py", line 5, in <module>
+    from cupyx.linalg.sparse._solve import lschol  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/_solve.py", line 8, in <module>
+    from cupyx.scipy import sparse
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/__init__.py", line 50, in __getattr__
+    return _importlib.import_module(f'cupyx.scipy.{name}')
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/__init__.py", line 16, in <module>
+    from cupyx.scipy.sparse._csc import csc_array  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_csc.py", line 14, in <module>
+    from cupyx.scipy.sparse import _compressed
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_compressed.py", line 8, in <module>
+    import scipy.sparse
+  File "/usr/lib/python3/dist-packages/scipy/sparse/__init__.py", line 267, in <module>
+    from ._csr import *
+  File "/usr/lib/python3/dist-packages/scipy/sparse/_csr.py", line 10, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+AttributeError: _ARRAY_API not found
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/joshua/be/src/be_poly_par.py", line 140, in <module>
+    V = values(b, Ns, xp, shard, nshard)
+  File "/home/joshua/be/src/be_poly_par.py", line 80, in values
+    m.append(t % N); t = t // N
+  File "/usr/lib/python3.10/importlib/util.py", line 247, in __getattribute__
+    self.__spec__.loader.exec_module(self)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/__init__.py", line 10, in <module>
+    from cupyx import linalg  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/__init__.py", line 4, in <module>
+    from cupyx.linalg import sparse  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/__init__.py", line 5, in <module>
+    from cupyx.linalg.sparse._solve import lschol  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/_solve.py", line 8, in <module>
+    from cupyx.scipy import sparse
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/__init__.py", line 50, in __getattr__
+    return _importlib.import_module(f'cupyx.scipy.{name}')
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/__init__.py", line 16, in <module>
+    from cupyx.scipy.sparse._csc import csc_array  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_csc.py", line 14, in <module>
+    from cupyx.scipy.sparse import _compressed
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_compressed.py", line 24, in <module>
+    from cupyx.scipy.sparse import _index
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_index.py", line 19, in <module>
+    import scipy.sparse
+  File "/usr/lib/python3/dist-packages/scipy/sparse/__init__.py", line 267, in <module>
+    from ._csr import *
+  File "/usr/lib/python3/dist-packages/scipy/sparse/_csr.py", line 10, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+AttributeError: _ARRAY_API not found
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/joshua/be/src/be_poly_par.py", line 140, in <module>
+    V = values(b, Ns, xp, shard, nshard)
+  File "/home/joshua/be/src/be_poly_par.py", line 80, in values
+    m.append(t % N); t = t // N
+  File "/usr/lib/python3.10/importlib/util.py", line 247, in __getattribute__
+    self.__spec__.loader.exec_module(self)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/__init__.py", line 10, in <module>
+    from cupyx import linalg  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/__init__.py", line 4, in <module>
+    from cupyx.linalg import sparse  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/__init__.py", line 5, in <module>
+    from cupyx.linalg.sparse._solve import lschol  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/_solve.py", line 8, in <module>
+    from cupyx.scipy import sparse
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/__init__.py", line 50, in __getattr__
+    return _importlib.import_module(f'cupyx.scipy.{name}')
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/__init__.py", line 19, in <module>
+    from cupyx.scipy.sparse._csr import csr_array  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_csr.py", line 9, in <module>
+    import scipy.sparse
+  File "/usr/lib/python3/dist-packages/scipy/sparse/__init__.py", line 267, in <module>
+    from ._csr import *
+  File "/usr/lib/python3/dist-packages/scipy/sparse/_csr.py", line 10, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+AttributeError: _ARRAY_API not found
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/joshua/be/src/be_poly_par.py", line 140, in <module>
+    V = values(b, Ns, xp, shard, nshard)
+  File "/home/joshua/be/src/be_poly_par.py", line 80, in values
+    m.append(t % N); t = t // N
+  File "/usr/lib/python3.10/importlib/util.py", line 247, in __getattribute__
+    self.__spec__.loader.exec_module(self)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/__init__.py", line 10, in <module>
+    from cupyx import linalg  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/__init__.py", line 4, in <module>
+    from cupyx.linalg import sparse  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/__init__.py", line 5, in <module>
+    from cupyx.linalg.sparse._solve import lschol  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/_solve.py", line 8, in <module>
+    from cupyx.scipy import sparse
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/__init__.py", line 50, in __getattr__
+    return _importlib.import_module(f'cupyx.scipy.{name}')
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/__init__.py", line 22, in <module>
+    from cupyx.scipy.sparse._dia import dia_array  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_dia.py", line 4, in <module>
+    import scipy.sparse
+  File "/usr/lib/python3/dist-packages/scipy/sparse/__init__.py", line 267, in <module>
+    from ._csr import *
+  File "/usr/lib/python3/dist-packages/scipy/sparse/_csr.py", line 10, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+AttributeError: _ARRAY_API not found
+backend cupy(dev0)  b=7: 7882 fine terms (Fubini), N=1..14, 2278.6s
+  F-BE-POLY-7: PASS
+  F-BE-PAR2-7: PASS  (sign 1)
+/usr/lib/python3/dist-packages/scipy/__init__.py:146: UserWarning: A NumPy version >=1.17.3 and <1.25.0 is required for this version of SciPy (detected version 2.2.6
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/joshua/be/src/be_poly_par.py", line 140, in <module>
+    V = values(b, Ns, xp, shard, nshard)
+  File "/home/joshua/be/src/be_poly_par.py", line 80, in values
+    m.append(t % N); t = t // N
+  File "/usr/lib/python3.10/importlib/util.py", line 247, in __getattribute__
+    self.__spec__.loader.exec_module(self)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/__init__.py", line 10, in <module>
+    from cupyx import linalg  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/__init__.py", line 4, in <module>
+    from cupyx.linalg import sparse  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/__init__.py", line 5, in <module>
+    from cupyx.linalg.sparse._solve import lschol  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/_solve.py", line 8, in <module>
+    from cupyx.scipy import sparse
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/__init__.py", line 50, in __getattr__
+    return _importlib.import_module(f'cupyx.scipy.{name}')
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/__init__.py", line 4, in <module>
+    from cupyx.scipy.sparse._base import _spbase  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_base.py", line 14, in <module>
+    import scipy.sparse as _sparse
+  File "/usr/lib/python3/dist-packages/scipy/sparse/__init__.py", line 267, in <module>
+    from ._csr import *
+  File "/usr/lib/python3/dist-packages/scipy/sparse/_csr.py", line 10, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+AttributeError: _ARRAY_API not found
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/joshua/be/src/be_poly_par.py", line 140, in <module>
+    V = values(b, Ns, xp, shard, nshard)
+  File "/home/joshua/be/src/be_poly_par.py", line 80, in values
+    m.append(t % N); t = t // N
+  File "/usr/lib/python3.10/importlib/util.py", line 247, in __getattribute__
+    self.__spec__.loader.exec_module(self)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/__init__.py", line 10, in <module>
+    from cupyx import linalg  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/__init__.py", line 4, in <module>
+    from cupyx.linalg import sparse  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/__init__.py", line 5, in <module>
+    from cupyx.linalg.sparse._solve import lschol  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/_solve.py", line 8, in <module>
+    from cupyx.scipy import sparse
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/__init__.py", line 50, in __getattr__
+    return _importlib.import_module(f'cupyx.scipy.{name}')
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/__init__.py", line 13, in <module>
+    from cupyx.scipy.sparse._coo import coo_array  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_coo.py", line 5, in <module>
+    import scipy.sparse
+  File "/usr/lib/python3/dist-packages/scipy/sparse/__init__.py", line 267, in <module>
+    from ._csr import *
+  File "/usr/lib/python3/dist-packages/scipy/sparse/_csr.py", line 10, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+AttributeError: _ARRAY_API not found
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/joshua/be/src/be_poly_par.py", line 140, in <module>
+    V = values(b, Ns, xp, shard, nshard)
+  File "/home/joshua/be/src/be_poly_par.py", line 80, in values
+    m.append(t % N); t = t // N
+  File "/usr/lib/python3.10/importlib/util.py", line 247, in __getattribute__
+    self.__spec__.loader.exec_module(self)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/__init__.py", line 10, in <module>
+    from cupyx import linalg  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/__init__.py", line 4, in <module>
+    from cupyx.linalg import sparse  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/__init__.py", line 5, in <module>
+    from cupyx.linalg.sparse._solve import lschol  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/_solve.py", line 8, in <module>
+    from cupyx.scipy import sparse
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/__init__.py", line 50, in __getattr__
+    return _importlib.import_module(f'cupyx.scipy.{name}')
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/__init__.py", line 16, in <module>
+    from cupyx.scipy.sparse._csc import csc_array  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_csc.py", line 4, in <module>
+    import scipy.sparse
+  File "/usr/lib/python3/dist-packages/scipy/sparse/__init__.py", line 267, in <module>
+    from ._csr import *
+  File "/usr/lib/python3/dist-packages/scipy/sparse/_csr.py", line 10, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+AttributeError: _ARRAY_API not found
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/joshua/be/src/be_poly_par.py", line 140, in <module>
+    V = values(b, Ns, xp, shard, nshard)
+  File "/home/joshua/be/src/be_poly_par.py", line 80, in values
+    m.append(t % N); t = t // N
+  File "/usr/lib/python3.10/importlib/util.py", line 247, in __getattribute__
+    self.__spec__.loader.exec_module(self)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/__init__.py", line 10, in <module>
+    from cupyx import linalg  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/__init__.py", line 4, in <module>
+    from cupyx.linalg import sparse  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/__init__.py", line 5, in <module>
+    from cupyx.linalg.sparse._solve import lschol  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/_solve.py", line 8, in <module>
+    from cupyx.scipy import sparse
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/__init__.py", line 50, in __getattr__
+    return _importlib.import_module(f'cupyx.scipy.{name}')
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/__init__.py", line 16, in <module>
+    from cupyx.scipy.sparse._csc import csc_array  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_csc.py", line 14, in <module>
+    from cupyx.scipy.sparse import _compressed
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_compressed.py", line 8, in <module>
+    import scipy.sparse
+  File "/usr/lib/python3/dist-packages/scipy/sparse/__init__.py", line 267, in <module>
+    from ._csr import *
+  File "/usr/lib/python3/dist-packages/scipy/sparse/_csr.py", line 10, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+AttributeError: _ARRAY_API not found
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/joshua/be/src/be_poly_par.py", line 140, in <module>
+    V = values(b, Ns, xp, shard, nshard)
+  File "/home/joshua/be/src/be_poly_par.py", line 80, in values
+    m.append(t % N); t = t // N
+  File "/usr/lib/python3.10/importlib/util.py", line 247, in __getattribute__
+    self.__spec__.loader.exec_module(self)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/__init__.py", line 10, in <module>
+    from cupyx import linalg  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/__init__.py", line 4, in <module>
+    from cupyx.linalg import sparse  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/__init__.py", line 5, in <module>
+    from cupyx.linalg.sparse._solve import lschol  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/_solve.py", line 8, in <module>
+    from cupyx.scipy import sparse
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/__init__.py", line 50, in __getattr__
+    return _importlib.import_module(f'cupyx.scipy.{name}')
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/__init__.py", line 16, in <module>
+    from cupyx.scipy.sparse._csc import csc_array  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_csc.py", line 14, in <module>
+    from cupyx.scipy.sparse import _compressed
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_compressed.py", line 24, in <module>
+    from cupyx.scipy.sparse import _index
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_index.py", line 19, in <module>
+    import scipy.sparse
+  File "/usr/lib/python3/dist-packages/scipy/sparse/__init__.py", line 267, in <module>
+    from ._csr import *
+  File "/usr/lib/python3/dist-packages/scipy/sparse/_csr.py", line 10, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+AttributeError: _ARRAY_API not found
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/joshua/be/src/be_poly_par.py", line 140, in <module>
+    V = values(b, Ns, xp, shard, nshard)
+  File "/home/joshua/be/src/be_poly_par.py", line 80, in values
+    m.append(t % N); t = t // N
+  File "/usr/lib/python3.10/importlib/util.py", line 247, in __getattribute__
+    self.__spec__.loader.exec_module(self)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/__init__.py", line 10, in <module>
+    from cupyx import linalg  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/__init__.py", line 4, in <module>
+    from cupyx.linalg import sparse  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/__init__.py", line 5, in <module>
+    from cupyx.linalg.sparse._solve import lschol  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/_solve.py", line 8, in <module>
+    from cupyx.scipy import sparse
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/__init__.py", line 50, in __getattr__
+    return _importlib.import_module(f'cupyx.scipy.{name}')
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/__init__.py", line 19, in <module>
+    from cupyx.scipy.sparse._csr import csr_array  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_csr.py", line 9, in <module>
+    import scipy.sparse
+  File "/usr/lib/python3/dist-packages/scipy/sparse/__init__.py", line 267, in <module>
+    from ._csr import *
+  File "/usr/lib/python3/dist-packages/scipy/sparse/_csr.py", line 10, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+AttributeError: _ARRAY_API not found
+
+A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.2.6 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to 'numpy<2' or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File "/home/joshua/be/src/be_poly_par.py", line 140, in <module>
+    V = values(b, Ns, xp, shard, nshard)
+  File "/home/joshua/be/src/be_poly_par.py", line 80, in values
+    m.append(t % N); t = t // N
+  File "/usr/lib/python3.10/importlib/util.py", line 247, in __getattribute__
+    self.__spec__.loader.exec_module(self)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/__init__.py", line 10, in <module>
+    from cupyx import linalg  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/__init__.py", line 4, in <module>
+    from cupyx.linalg import sparse  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/__init__.py", line 5, in <module>
+    from cupyx.linalg.sparse._solve import lschol  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/linalg/sparse/_solve.py", line 8, in <module>
+    from cupyx.scipy import sparse
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/__init__.py", line 50, in __getattr__
+    return _importlib.import_module(f'cupyx.scipy.{name}')
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/__init__.py", line 22, in <module>
+    from cupyx.scipy.sparse._dia import dia_array  # NOQA
+  File "/home/joshua/.local/lib/python3.10/site-packages/cupyx/scipy/sparse/_dia.py", line 4, in <module>
+    import scipy.sparse
+  File "/usr/lib/python3/dist-packages/scipy/sparse/__init__.py", line 267, in <module>
+    from ._csr import *
+  File "/usr/lib/python3/dist-packages/scipy/sparse/_csr.py", line 10, in <module>
+    from ._sparsetools import (csr_tocsc, csr_tobsr, csr_count_blocks,
+AttributeError: _ARRAY_API not found
+backend cupy(dev1)  b=7: 7882 fine terms (Fubini), N=1..14, 2264.4s
+  F-BE-POLY-7: PASS
+  F-BE-PAR2-7: PASS  (sign 1)
+backend cupy(dev0)  b=7: 7882 fine terms (Fubini), N=1..14, 2270.6s
+  F-BE-POLY-7: PASS
+  F-BE-PAR2-7: PASS  (sign 1)

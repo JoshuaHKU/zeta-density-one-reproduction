@@ -1,0 +1,520 @@
+b=8: 197357 deduped wall matrices, enum 21s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (4 full)  463s
+  1000 checked (5 full)  970s
+  1500 checked (10 full)  1518s
+  2000 checked (12 full)  1894s
+  2500 checked (18 full)  2312s
+  3000 checked (24 full)  2862s
+  3500 checked (30 full)  3416s
+  4000 checked (33 full)  3821s
+  4500 checked (41 full)  4258s
+
+F-BE-TU-8 shard 0/40: PASS  4934 checked (64 full)  4625.8s
+b=8: 197357 deduped wall matrices, enum 22s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (2 full)  538s
+  1000 checked (3 full)  998s
+  1500 checked (7 full)  1534s
+  2000 checked (7 full)  1989s
+  2500 checked (13 full)  2532s
+  3000 checked (16 full)  2951s
+  3500 checked (18 full)  3269s
+  4000 checked (19 full)  3605s
+  4500 checked (31 full)  4147s
+
+F-BE-TU-8 shard 1/40: PASS  4934 checked (46 full)  4519.3s
+b=8: 197357 deduped wall matrices, enum 14s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (0 full)  485s
+  1000 checked (2 full)  1021s
+  1500 checked (4 full)  1502s
+  2000 checked (8 full)  2036s
+  2500 checked (15 full)  2586s
+  3000 checked (17 full)  3104s
+  3500 checked (25 full)  3603s
+  4000 checked (30 full)  4149s
+  4500 checked (37 full)  4630s
+
+F-BE-TU-8 shard 10/40: PASS  4934 checked (48 full)  4927.1s
+b=8: 197357 deduped wall matrices, enum 14s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (3 full)  366s
+  1000 checked (5 full)  890s
+  1500 checked (8 full)  1409s
+  2000 checked (10 full)  1929s
+  2500 checked (16 full)  2371s
+  3000 checked (23 full)  2910s
+  3500 checked (35 full)  3460s
+  4000 checked (41 full)  4022s
+  4500 checked (45 full)  4553s
+
+F-BE-TU-8 shard 11/40: PASS  4934 checked (55 full)  4846.7s
+b=8: 197357 deduped wall matrices, enum 21s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (0 full)  403s
+  1000 checked (0 full)  779s
+  1500 checked (1 full)  1293s
+  2000 checked (5 full)  1671s
+  2500 checked (9 full)  2033s
+  3000 checked (15 full)  2471s
+  3500 checked (21 full)  2881s
+  4000 checked (26 full)  3201s
+  4500 checked (35 full)  3747s
+
+F-BE-TU-8 shard 12/40: PASS  4934 checked (52 full)  4249.0s
+b=8: 197357 deduped wall matrices, enum 22s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (2 full)  549s
+  1000 checked (7 full)  903s
+  1500 checked (10 full)  1211s
+  2000 checked (14 full)  1525s
+  2500 checked (15 full)  1966s
+  3000 checked (16 full)  2430s
+  3500 checked (25 full)  3010s
+  4000 checked (28 full)  3547s
+  4500 checked (33 full)  4017s
+
+F-BE-TU-8 shard 13/40: PASS  4934 checked (43 full)  4406.8s
+b=8: 197357 deduped wall matrices, enum 19s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (5 full)  412s
+  1000 checked (8 full)  749s
+  1500 checked (10 full)  1054s
+  2000 checked (12 full)  1475s
+  2500 checked (17 full)  1973s
+  3000 checked (21 full)  2514s
+  3500 checked (35 full)  3133s
+  4000 checked (38 full)  3674s
+  4500 checked (48 full)  4218s
+
+F-BE-TU-8 shard 14/40: PASS  4934 checked (53 full)  4537.8s
+b=8: 197357 deduped wall matrices, enum 22s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (1 full)  500s
+  1000 checked (6 full)  1023s
+  1500 checked (8 full)  1385s
+  2000 checked (11 full)  1791s
+  2500 checked (13 full)  2309s
+  3000 checked (18 full)  2762s
+  3500 checked (27 full)  3104s
+  4000 checked (31 full)  3470s
+  4500 checked (36 full)  4029s
+
+F-BE-TU-8 shard 15/40: PASS  4934 checked (56 full)  4603.1s
+b=8: 197357 deduped wall matrices, enum 22s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (2 full)  527s
+  1000 checked (3 full)  892s
+  1500 checked (8 full)  1423s
+  2000 checked (10 full)  1825s
+  2500 checked (17 full)  2300s
+  3000 checked (21 full)  2678s
+  3500 checked (28 full)  3254s
+  4000 checked (31 full)  3790s
+  4500 checked (38 full)  4368s
+
+F-BE-TU-8 shard 16/40: PASS  4934 checked (53 full)  4771.8s
+b=8: 197357 deduped wall matrices, enum 22s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (3 full)  537s
+  1000 checked (5 full)  1064s
+  1500 checked (13 full)  1437s
+  2000 checked (18 full)  1923s
+  2500 checked (24 full)  2446s
+  3000 checked (29 full)  2867s
+  3500 checked (33 full)  3269s
+  4000 checked (37 full)  3584s
+  4500 checked (43 full)  3913s
+
+F-BE-TU-8 shard 17/40: PASS  4934 checked (58 full)  4324.5s
+b=8: 197357 deduped wall matrices, enum 22s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (4 full)  527s
+  1000 checked (6 full)  1036s
+  1500 checked (9 full)  1559s
+  2000 checked (11 full)  2075s
+  2500 checked (14 full)  2594s
+  3000 checked (17 full)  3116s
+  3500 checked (24 full)  3672s
+  4000 checked (28 full)  4100s
+  4500 checked (39 full)  4458s
+
+F-BE-TU-8 shard 18/40: PASS  4934 checked (50 full)  4761.7s
+b=8: 197357 deduped wall matrices, enum 22s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (1 full)  519s
+  1000 checked (4 full)  1047s
+  1500 checked (8 full)  1529s
+  2000 checked (11 full)  2015s
+  2500 checked (16 full)  2361s
+  3000 checked (21 full)  2812s
+  3500 checked (29 full)  3253s
+  4000 checked (33 full)  3793s
+  4500 checked (38 full)  4183s
+
+F-BE-TU-8 shard 19/40: PASS  4934 checked (48 full)  4485.0s
+b=8: 197357 deduped wall matrices, enum 22s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (4 full)  572s
+  1000 checked (7 full)  988s
+  1500 checked (9 full)  1395s
+  2000 checked (12 full)  1908s
+  2500 checked (19 full)  2485s
+  3000 checked (23 full)  2921s
+  3500 checked (32 full)  3400s
+  4000 checked (40 full)  3879s
+  4500 checked (49 full)  4482s
+
+F-BE-TU-8 shard 2/40: PASS  4934 checked (63 full)  4827.5s
+b=8: 197357 deduped wall matrices, enum 14s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (2 full)  307s
+  1000 checked (4 full)  821s
+  1500 checked (5 full)  1333s
+  2000 checked (7 full)  1854s
+  2500 checked (12 full)  2398s
+  3000 checked (15 full)  2927s
+  3500 checked (22 full)  3490s
+  4000 checked (26 full)  4022s
+  4500 checked (39 full)  4594s
+
+F-BE-TU-8 shard 3/40: PASS  4934 checked (48 full)  4881.7s
+b=8: 197357 deduped wall matrices, enum 22s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (1 full)  529s
+  1000 checked (3 full)  1062s
+  1500 checked (7 full)  1604s
+  2000 checked (12 full)  2078s
+  2500 checked (16 full)  2521s
+  3000 checked (21 full)  3064s
+  3500 checked (30 full)  3576s
+  4000 checked (36 full)  4107s
+  4500 checked (46 full)  4563s
+
+F-BE-TU-8 shard 4/40: PASS  4934 checked (60 full)  4887.4s
+b=8: 197357 deduped wall matrices, enum 14s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (3 full)  520s
+  1000 checked (4 full)  1040s
+  1500 checked (11 full)  1588s
+  2000 checked (12 full)  2100s
+  2500 checked (14 full)  2540s
+  3000 checked (17 full)  2945s
+  3500 checked (22 full)  3499s
+  4000 checked (26 full)  3953s
+  4500 checked (31 full)  4301s
+
+F-BE-TU-8 shard 5/40: PASS  4934 checked (40 full)  4657.3s
+b=8: 197357 deduped wall matrices, enum 22s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (3 full)  552s
+  1000 checked (8 full)  1105s
+  1500 checked (13 full)  1660s
+  2000 checked (15 full)  2170s
+  2500 checked (21 full)  2729s
+  3000 checked (22 full)  3244s
+  3500 checked (26 full)  3724s
+  4000 checked (29 full)  4199s
+  4500 checked (34 full)  4636s
+
+F-BE-TU-8 shard 6/40: PASS  4934 checked (43 full)  4920.3s
+b=8: 197357 deduped wall matrices, enum 22s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (3 full)  558s
+  1000 checked (3 full)  1070s
+  1500 checked (6 full)  1599s
+  2000 checked (11 full)  2157s
+  2500 checked (14 full)  2690s
+  3000 checked (15 full)  3202s
+  3500 checked (19 full)  3744s
+  4000 checked (26 full)  4309s
+  4500 checked (30 full)  4700s
+
+F-BE-TU-8 shard 7/40: PASS  4934 checked (34 full)  4964.6s
+b=8: 197357 deduped wall matrices, enum 22s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (2 full)  339s
+  1000 checked (5 full)  885s
+  1500 checked (7 full)  1407s
+  2000 checked (12 full)  1962s
+  2500 checked (14 full)  2483s
+  3000 checked (17 full)  3011s
+  3500 checked (28 full)  3607s
+  4000 checked (29 full)  3915s
+  4500 checked (36 full)  4400s
+
+F-BE-TU-8 shard 8/40: PASS  4934 checked (52 full)  4744.8s
+b=8: 197357 deduped wall matrices, enum 22s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (1 full)  412s
+  1000 checked (8 full)  761s
+  1500 checked (16 full)  1115s
+  2000 checked (18 full)  1546s
+  2500 checked (24 full)  1875s
+  3000 checked (26 full)  2184s
+  3500 checked (34 full)  2523s
+  4000 checked (41 full)  2946s
+  4500 checked (47 full)  3485s
+
+F-BE-TU-8 shard 9/40: PASS  4934 checked (60 full)  3932.4s
+b=8: 197357 deduped wall matrices, enum 12s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (1 full)  282s
+  1000 checked (2 full)  562s
+  1500 checked (4 full)  843s
+  2000 checked (5 full)  1120s
+  2500 checked (11 full)  1420s
+  3000 checked (16 full)  1719s
+  3500 checked (20 full)  2015s
+  4000 checked (23 full)  2310s
+  4500 checked (33 full)  2639s
+
+F-BE-TU-8 shard 20/40: PASS  4934 checked (43 full)  2930.1s
+b=8: 197357 deduped wall matrices, enum 19s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (4 full)  541s
+  1000 checked (6 full)  1059s
+  1500 checked (9 full)  1583s
+  2000 checked (12 full)  2113s
+  2500 checked (15 full)  2634s
+  3000 checked (23 full)  3089s
+  3500 checked (30 full)  3401s
+  4000 checked (33 full)  3696s
+  4500 checked (43 full)  4024s
+
+F-BE-TU-8 shard 21/40: PASS  4934 checked (59 full)  4342.9s
+b=8: 197357 deduped wall matrices, enum 19s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (5 full)  550s
+  1000 checked (7 full)  1065s
+  1500 checked (10 full)  1589s
+  2000 checked (14 full)  2131s
+  2500 checked (17 full)  2654s
+  3000 checked (20 full)  3074s
+  3500 checked (32 full)  3406s
+  4000 checked (40 full)  3725s
+  4500 checked (44 full)  4020s
+
+F-BE-TU-8 shard 22/40: PASS  4934 checked (58 full)  4342.7s
+b=8: 197357 deduped wall matrices, enum 19s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (2 full)  532s
+  1000 checked (7 full)  1088s
+  1500 checked (9 full)  1610s
+  2000 checked (12 full)  2143s
+  2500 checked (16 full)  2682s
+  3000 checked (23 full)  3104s
+  3500 checked (29 full)  3401s
+  4000 checked (36 full)  3705s
+  4500 checked (40 full)  3996s
+
+F-BE-TU-8 shard 23/40: PASS  4934 checked (52 full)  4285.6s
+b=8: 197357 deduped wall matrices, enum 19s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (2 full)  519s
+  1000 checked (4 full)  1030s
+  1500 checked (6 full)  1538s
+  2000 checked (11 full)  2077s
+  2500 checked (13 full)  2585s
+  3000 checked (17 full)  3036s
+  3500 checked (22 full)  3331s
+  4000 checked (25 full)  3620s
+  4500 checked (32 full)  3930s
+
+F-BE-TU-8 shard 24/40: PASS  4934 checked (41 full)  4213.2s
+b=8: 197357 deduped wall matrices, enum 19s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (6 full)  573s
+  1000 checked (9 full)  1105s
+  1500 checked (14 full)  1652s
+  2000 checked (16 full)  2172s
+  2500 checked (17 full)  2676s
+  3000 checked (20 full)  3202s
+  3500 checked (25 full)  3745s
+  4000 checked (30 full)  4274s
+  4500 checked (42 full)  4609s
+
+F-BE-TU-8 shard 25/40: PASS  4934 checked (58 full)  4919.9s
+b=8: 197357 deduped wall matrices, enum 12s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (2 full)  289s
+  1000 checked (4 full)  577s
+  1500 checked (6 full)  859s
+  2000 checked (10 full)  1150s
+  2500 checked (14 full)  1437s
+  3000 checked (18 full)  1730s
+  3500 checked (21 full)  2016s
+  4000 checked (28 full)  2328s
+  4500 checked (33 full)  2627s
+
+F-BE-TU-8 shard 26/40: PASS  4934 checked (47 full)  2932.8s
+b=8: 197357 deduped wall matrices, enum 19s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (1 full)  517s
+  1000 checked (5 full)  1050s
+  1500 checked (9 full)  1573s
+  2000 checked (11 full)  2078s
+  2500 checked (17 full)  2617s
+  3000 checked (17 full)  3108s
+  3500 checked (25 full)  3668s
+  4000 checked (31 full)  4211s
+  4500 checked (38 full)  4547s
+
+F-BE-TU-8 shard 27/40: PASS  4934 checked (49 full)  4834.7s
+b=8: 197357 deduped wall matrices, enum 19s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (5 full)  549s
+  1000 checked (7 full)  1074s
+  1500 checked (13 full)  1625s
+  2000 checked (14 full)  2141s
+  2500 checked (16 full)  2660s
+  3000 checked (20 full)  3078s
+  3500 checked (28 full)  3387s
+  4000 checked (31 full)  3675s
+  4500 checked (36 full)  3973s
+
+F-BE-TU-8 shard 28/40: PASS  4934 checked (44 full)  4245.1s
+b=8: 197357 deduped wall matrices, enum 13s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (3 full)  529s
+  1000 checked (3 full)  1027s
+  1500 checked (8 full)  1565s
+  2000 checked (16 full)  2134s
+  2500 checked (22 full)  2682s
+  3000 checked (24 full)  3199s
+  3500 checked (37 full)  3815s
+  4000 checked (39 full)  4307s
+  4500 checked (45 full)  4614s
+
+F-BE-TU-8 shard 29/40: PASS  4934 checked (62 full)  4929.7s
+b=8: 197357 deduped wall matrices, enum 19s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (3 full)  539s
+  1000 checked (7 full)  1078s
+  1500 checked (11 full)  1611s
+  2000 checked (12 full)  2120s
+  2500 checked (20 full)  2692s
+  3000 checked (25 full)  3242s
+  3500 checked (29 full)  3776s
+  4000 checked (34 full)  4280s
+  4500 checked (40 full)  4589s
+
+F-BE-TU-8 shard 30/40: PASS  4934 checked (48 full)  4861.4s
+b=8: 197357 deduped wall matrices, enum 12s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (2 full)  290s
+  1000 checked (4 full)  571s
+  1500 checked (6 full)  852s
+  2000 checked (9 full)  1137s
+  2500 checked (14 full)  1430s
+  3000 checked (18 full)  1721s
+  3500 checked (24 full)  2026s
+  4000 checked (26 full)  2313s
+  4500 checked (33 full)  2627s
+
+F-BE-TU-8 shard 31/40: PASS  4934 checked (47 full)  2935.8s
+b=8: 197357 deduped wall matrices, enum 19s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (2 full)  535s
+  1000 checked (6 full)  1069s
+  1500 checked (8 full)  1576s
+  2000 checked (12 full)  2111s
+  2500 checked (18 full)  2662s
+  3000 checked (20 full)  3070s
+  3500 checked (22 full)  3351s
+  4000 checked (25 full)  3640s
+  4500 checked (32 full)  3949s
+
+F-BE-TU-8 shard 32/40: PASS  4934 checked (50 full)  4271.7s
+b=8: 197357 deduped wall matrices, enum 19s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (2 full)  537s
+  1000 checked (5 full)  1069s
+  1500 checked (9 full)  1601s
+  2000 checked (10 full)  2116s
+  2500 checked (15 full)  2667s
+  3000 checked (21 full)  3093s
+  3500 checked (25 full)  3386s
+  4000 checked (27 full)  3673s
+  4500 checked (31 full)  3973s
+
+F-BE-TU-8 shard 33/40: PASS  4934 checked (43 full)  4272.5s
+b=8: 197357 deduped wall matrices, enum 19s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (2 full)  536s
+  1000 checked (5 full)  1073s
+  1500 checked (7 full)  1595s
+  2000 checked (8 full)  2115s
+  2500 checked (16 full)  2694s
+  3000 checked (20 full)  3246s
+  3500 checked (30 full)  3848s
+  4000 checked (37 full)  4346s
+  4500 checked (43 full)  4644s
+
+F-BE-TU-8 shard 34/40: PASS  4934 checked (57 full)  4942.0s
+b=8: 197357 deduped wall matrices, enum 19s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (1 full)  541s
+  1000 checked (2 full)  1069s
+  1500 checked (3 full)  1582s
+  2000 checked (9 full)  2146s
+  2500 checked (13 full)  2690s
+  3000 checked (19 full)  3107s
+  3500 checked (25 full)  3405s
+  4000 checked (28 full)  3690s
+  4500 checked (31 full)  3978s
+
+F-BE-TU-8 shard 35/40: PASS  4934 checked (48 full)  4290.2s
+b=8: 197357 deduped wall matrices, enum 19s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (4 full)  543s
+  1000 checked (5 full)  1052s
+  1500 checked (9 full)  1581s
+  2000 checked (11 full)  2095s
+  2500 checked (17 full)  2643s
+  3000 checked (18 full)  3151s
+  3500 checked (25 full)  3709s
+  4000 checked (27 full)  4220s
+  4500 checked (33 full)  4517s
+
+F-BE-TU-8 shard 36/40: PASS  4934 checked (47 full)  4813.2s
+b=8: 197357 deduped wall matrices, enum 16s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (3 full)  299s
+  1000 checked (5 full)  582s
+  1500 checked (7 full)  862s
+  2000 checked (13 full)  1167s
+  2500 checked (17 full)  1456s
+  3000 checked (20 full)  1744s
+  3500 checked (28 full)  2057s
+  4000 checked (33 full)  2358s
+  4500 checked (37 full)  2651s
+
+F-BE-TU-8 shard 37/40: PASS  4933 checked (48 full)  2940.5s
+b=8: 197357 deduped wall matrices, enum 19s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (4 full)  550s
+  1000 checked (6 full)  1063s
+  1500 checked (10 full)  1590s
+  2000 checked (11 full)  2093s
+  2500 checked (16 full)  2634s
+  3000 checked (19 full)  3161s
+  3500 checked (22 full)  3686s
+  4000 checked (28 full)  4248s
+  4500 checked (41 full)  4600s
+
+F-BE-TU-8 shard 38/40: PASS  4933 checked (57 full)  4911.5s
+b=8: 197357 deduped wall matrices, enum 19s
+  22 partition shapes; LEG A sample = 2029 matrices (1.0% of all)
+  500 checked (0 full)  513s
+  1000 checked (4 full)  1048s
+  1500 checked (7 full)  1572s
+  2000 checked (12 full)  2119s
+  2500 checked (18 full)  2666s
+  3000 checked (19 full)  3184s
+  3500 checked (26 full)  3768s
+  4000 checked (31 full)  4293s
+  4500 checked (38 full)  4599s
+
+F-BE-TU-8 shard 39/40: PASS  4933 checked (45 full)  4862.2s

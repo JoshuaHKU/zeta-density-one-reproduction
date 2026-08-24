@@ -79,8 +79,9 @@ in \S\ref{s:verif} and Appendix~\ref{a:record}.}}
 \textit{E-mail}: \texttt{hongy.yang@mail.utoronto.ca}}
 \and Shihua Yang\thanks{The University of Hong Kong.
 \textit{E-mail}: \texttt{u3590485@connect.hku.hk}}}
-\date{\today
-}
+\date{August 2026\\[4pt]
+\small DOI: \href{https://doi.org/10.5281/zenodo.21975236}%
+{10.5281/zenodo.21975236}}
 \begin{document}
 \maketitle
 
@@ -3347,7 +3348,14 @@ the exact logarithmic law, and classical moment theory ---
 in which no finite-order numerical value appears: the
 archived moment tables play no role in the proof of
 Theorem~\ref{t:dens1}, only in its effective instantiated
-rungs.
+rungs. In particular no inversion of main and error terms
+can occur along the way: at fixed $k$ the analytic error is
+$O_k((\log X)^{-A})$ and dies before $k$ ever moves, and the
+supremum step contains no analytic error term at all. (The
+bound $(b!)^{2}$ of Lemma~\ref{l:growth} is a growth bound
+on the \emph{limit moments themselves}, consumed by the
+Carleman criterion --- it is fuel for determinacy, not an
+error estimate.)
 \end{remark}
 
 \begin{remark}[What is and is not claimed]\label{r:dens}
@@ -3504,7 +3512,14 @@ consumption layer of \S\ref{s:frame}. Grades by layer:
 
 \medskip
 \noindent\emph{Reading guide (headline theorems, what each
-consumes, at what grade).}
+consumes, at what grade).} The machine-verified and
+exact-rational layers (a) and the human analytic layer (b)
+are physically separated throughout: every theorem carries
+its grade in its heading, and a reviewer wishing to
+concentrate on the analytic chain can restrict attention to
+the layer-(b) items listed below and audit them against the
+per-lemma structure of
+\S\S\ref{s:trunc}--\ref{s:four} and \S\ref{s:dens}.
 \begin{itemize}
 \item Theorem~\ref{t:main} ($0.8493/0.9246$): exact fourth
 moment (layer (b) analytic chain) $+$ symbolically certified
@@ -3863,6 +3878,31 @@ statement in this paper crosses that wall, and no
 within-band improvement can; we record the map so that
 progress inside the band --- including the density-one
 capstone --- is not misread as progress toward it.
+
+\medskip
+\noindent\emph{Crossing the two-moment barrier: what is and
+is not consumed.} A reader familiar with the classical
+literature will ask how any of this is possible within
+Montgomery's unconditional range: pair-correlation
+information with Fourier support in $(-1,1)$ famously cannot,
+by itself, push proportions past well-known ceilings --- and
+this paper agrees, having quantified its own instance
+($0.68185$ for any certificate consuming bandwidth-one data
+alone, i.e.\ the $(\lambda{=}1,k{=}2)$ corner). The
+resolution is that the tower never widens the band: it
+climbs in $k$. Montgomery's theorem feeds only the first
+two moments. Every higher moment is a \emph{separate,
+separately proved, unconditional} arithmetic input: through
+the explicit formula and the cell ledger it becomes a
+higher-order autocorrelation sum of $\Lambda$ (the
+multilinear prime sums of the singleton-free classes),
+closed by the Siegel--Walfisz theorem and Vaughan's estimate
+at moduli up to $(\log X)^{B}$ (Theorem~\ref{t:D},
+Theorem~\ref{t:winfty}, Lemma~\ref{l:pure}). No step widens
+the Fourier support of the pair correlation, no generalized
+hypothesis enters, and no cancellation miracle occurs; the
+barrier is a point of the $(\lambda,k)$ plane, not a wall
+across it.
 
 \medskip
 \noindent The per-$k$ bookkeeping is now automated on \emph{both}

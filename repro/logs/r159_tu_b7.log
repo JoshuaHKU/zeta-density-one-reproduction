@@ -1,0 +1,168 @@
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 0.9s
+  shard 0/24: 785 matrices
+  200/785  144s
+  400/785  291s
+  600/785  439s
+
+F-BE-TU-7: PASS   574.7s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 1.0s
+  shard 1/24: 785 matrices
+  200/785  144s
+  400/785  290s
+  600/785  438s
+
+F-BE-TU-7: PASS   577.1s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 1.0s
+  shard 10/24: 785 matrices
+  200/785  144s
+  400/785  289s
+  600/785  437s
+
+F-BE-TU-7: PASS   573.8s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 1.0s
+  shard 11/24: 785 matrices
+  200/785  150s
+  400/785  299s
+  600/785  448s
+
+F-BE-TU-7: PASS   586.9s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 1.0s
+  shard 2/24: 785 matrices
+  200/785  149s
+  400/785  300s
+  600/785  448s
+
+F-BE-TU-7: PASS   585.9s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 1.0s
+  shard 3/24: 785 matrices
+  200/785  149s
+  400/785  298s
+  600/785  446s
+
+F-BE-TU-7: PASS   585.8s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 1.0s
+  shard 4/24: 785 matrices
+  200/785  143s
+  400/785  288s
+  600/785  435s
+
+F-BE-TU-7: PASS   573.9s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 1.0s
+  shard 5/24: 785 matrices
+  200/785  143s
+  400/785  287s
+  600/785  437s
+
+F-BE-TU-7: PASS   576.9s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 1.0s
+  shard 6/24: 785 matrices
+  200/785  147s
+  400/785  293s
+  600/785  445s
+
+F-BE-TU-7: PASS   583.0s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 1.0s
+  shard 7/24: 785 matrices
+  200/785  145s
+  400/785  292s
+  600/785  444s
+
+F-BE-TU-7: PASS   582.8s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 1.0s
+  shard 8/24: 785 matrices
+  200/785  145s
+  400/785  293s
+  600/785  443s
+
+F-BE-TU-7: PASS   581.9s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 1.0s
+  shard 9/24: 785 matrices
+  200/785  148s
+  400/785  297s
+  600/785  445s
+
+F-BE-TU-7: PASS   584.0s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 0.9s
+  shard 12/24: 785 matrices
+  200/785  140s
+  400/785  282s
+  600/785  422s
+
+F-BE-TU-7: PASS   552.6s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 0.9s
+  shard 13/24: 785 matrices
+  200/785  134s
+  400/785  268s
+  600/785  403s
+
+F-BE-TU-7: PASS   528.2s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 0.9s
+  shard 14/24: 785 matrices
+  200/785  134s
+  400/785  272s
+  600/785  409s
+
+F-BE-TU-7: PASS   537.4s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 0.9s
+  shard 15/24: 785 matrices
+  200/785  138s
+  400/785  279s
+  600/785  417s
+
+F-BE-TU-7: PASS   548.4s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 0.9s
+  shard 16/24: 785 matrices
+  200/785  139s
+  400/785  278s
+  600/785  420s
+
+F-BE-TU-7: PASS   552.2s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 0.8s
+  shard 17/24: 785 matrices
+  200/785  138s
+  400/785  275s
+  600/785  414s
+
+F-BE-TU-7: PASS   540.4s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 0.9s
+  shard 18/24: 785 matrices
+  200/785  137s
+  400/785  279s
+  600/785  424s
+
+F-BE-TU-7: PASS   554.1s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 0.9s
+  shard 19/24: 784 matrices
+  200/784  132s
+  400/784  265s
+  600/784  403s
+
+F-BE-TU-7: PASS   529.5s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 0.9s
+  shard 20/24: 784 matrices
+  200/784  139s
+  400/784  278s
+  600/784  419s
+
+F-BE-TU-7: PASS   549.0s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 0.9s
+  shard 21/24: 784 matrices
+  200/784  149s
+  400/784  298s
+  600/784  447s
+
+F-BE-TU-7: PASS   582.3s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 0.9s
+  shard 22/24: 784 matrices
+  200/784  139s
+  400/784  281s
+  600/784  425s
+
+F-BE-TU-7: PASS   555.3s
+b=7: 18835 deduped wall matrices (rows 14 x cols 7)   enum 0.9s
+  shard 23/24: 784 matrices
+  200/784  135s
+  400/784  271s
+  600/784  407s
+
+F-BE-TU-7: PASS   536.4s
