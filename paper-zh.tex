@@ -39,11 +39,11 @@
 \newcommand{\e}{\mathrm{e}}
 \newcommand{\Si}{\mathrm{Si}}
 \title{\bf 黎曼zeta函数的几乎全部零点都是单零点且位于临界线上\thanks{验证状态（请先阅读此条）。\emph{无条件性}：本文中的每一个陈述在数论意义下都是无条件的——没有关于$\zeta$或任何$L$-函数的未证明假设进入任何层级（算术输入是Montgomery的带限配对相关定理、Siegel--Walfisz定理以及Matom\"aki--Radziwi\l{}\l--Tao的平均移位卷积定理；常数是不可有效化的）。下面关于\emph{六个有理常数的验证来源}的等级划分，不涉及任何数学假设。等级划分详见\S\ref{s:verif}和\S\ref{s:tt}。$k\le8$的子塔（标题0.8493/0.9246）处于前驱链的等级：每个被使用的常数都通过两种独立方法在精确有理算术中得到证明。$k=10,12,14$的梯级（标题0.8771/0.9385，0.8964/0.9482，$\mathbf{0.9104/0.9552}$）依赖于\S\ref{s:conv}(vii)中的Toeplitz--迹表示，其基础现已成定理（\S\ref{s:tt}）：模型转移引理、分支相等定理（$m_b(N)N^{b+1}$是单个多项式，对所有$N\ge1$）和奇偶性定理（$L(-N)=(-1)^{b+1}L(N)$）共同将每个新矩确定为精确有理数，由有限多个精确的有限$N$求值确定——这些求值本身已被证明为有理数，通过两个独立实现在预注册的保留点上进行逐位确认，并通过三个独立的$10^{7}$样本测量层进行验证。因此，直到$k=14$的每个梯级所使用的常数都处于证明等级，而密度一的封顶定理（定理~\ref{t:dens1}）仅使用已证明的软输入——决定性、精确对数律以及阶一致工具。本文整体的链等级为\emph{已认证候选者}，非纪录：每个连通常数都被证明是有理数（有理多面体体积的有限带符号和，\S\ref{s:conv}）；$k\le6$塔使用的六个常数已通过这些体积的符号求值证明为精确有理数（$C_5=\tfrac1{36}$，$\{4,2\}=-\tfrac{23}{420}$，$\{6\}=-\tfrac1{126}$，$\{2,2,2\}=\tfrac{32}{105}$，$\{5,2\}=\tfrac18$，$\{2^4\}=\tfrac{1661}{3780}$，$C_7=-\tfrac{17}{360}$，$C_8=\tfrac{157}{4032}$，\S\ref{s:five:conn}，\S\ref{s:seven}；在说明处使用两种独立精确方法）；现在每个被使用的常数都有两个独立确认（\S\ref{s:verif}(d)）——Lean形式化覆盖了恒等式和证书层（内核编译，核心Lean~4，不含任何未完成的证明占位（\texttt{sorry}）；\S\ref{s:verif}(f)），分析层未被形式化，且未经过外部评审。三个写出的条目W1--W3已写出（\S\ref{s:writeouts}），配对层常数已认证为精确有理数（\S\ref{s:five:cert}，附录~\ref{a:cert}），消耗步骤由精确有理对偶证书支持，该证书在无界支撑上有效（引理~\ref{l:dual}）。每一层的精确等级、差异登记表以及程序的验证门（形式化和外部评审先于任何纪录声明）见\S\ref{s:verif}和附录~\ref{a:record}。}}
-\author{Hongyi Yang\thanks{多伦多大学。\textit{电子邮箱}：\texttt{hongy.yang@mail.utoronto.ca}}
-\and Shihua Yang\thanks{香港大学。\textit{电子邮箱}：\texttt{u3590485@connect.hku.hk}}}
+\author{杨弘毅（Hongyi Yang）\thanks{多伦多大学。\textit{电子邮箱}：\texttt{hongy.yang@mail.utoronto.ca}}
+\and 杨世华（Shihua Yang）\thanks{香港大学。\textit{电子邮箱}：\texttt{u3590485@connect.hku.hk}}}
 \date{2026年8月\\[4pt]
-\small DOI：\href{https://doi.org/10.5281/zenodo.21975236}%
-{10.5281/zenodo.21975236}}
+\small DOI：\href{https://doi.org/10.5281/zenodo.22065921}%
+{10.5281/zenodo.22065921}}
 \begin{document}
 \maketitle
 
