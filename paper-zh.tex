@@ -38,7 +38,7 @@
 \newcommand{\SSS}{\mathfrak{S}}
 \newcommand{\e}{\mathrm{e}}
 \newcommand{\Si}{\mathrm{Si}}
-\title{\bf 黎曼zeta函数的几乎全部零点都是单零点且位于临界线上\thanks{验证状态（请先阅读此条）。\emph{无条件性}：本文中的每一个陈述在数论意义下都是无条件的——没有关于$\zeta$或任何$L$-函数的未证明假设进入任何层级（算术输入是Montgomery的带限配对相关定理、Siegel--Walfisz定理以及Matom\"aki--Radziwi\l{}\l--Tao的平均移位卷积定理；常数是不可有效化的）。下面关于\emph{六个有理常数的验证来源}的等级划分，不涉及任何数学假设。等级划分详见\S\ref{s:verif}和\S\ref{s:tt}。$k\le8$的子塔（标题0.8493/0.9246）处于前驱链的等级：每个被使用的常数都通过两种独立方法在精确有理算术中得到证明。$k=10,12,14$的梯级（标题0.8771/0.9385，0.8964/0.9482，$\mathbf{0.9104/0.9552}$）依赖于\S\ref{s:conv}(vii)中的Toeplitz--迹表示，其基础现已成定理（\S\ref{s:tt}）：模型转移引理、分支相等定理（$m_b(N)N^{b+1}$是单个多项式，对所有$N\ge1$）和奇偶性定理（$L(-N)=(-1)^{b+1}L(N)$）共同将每个新矩确定为精确有理数，由有限多个精确的有限$N$求值确定——这些求值本身已被证明为有理数，通过两个独立实现在预注册的保留点上进行逐位确认，并通过三个独立的$10^{7}$样本测量层进行验证。因此，直到$k=14$的每个梯级所使用的常数都处于证明等级，而密度一的封顶定理（定理~\ref{t:dens1}）仅使用已证明的软输入——决定性、精确对数律以及阶一致工具。本文整体的链等级为\emph{已认证候选者}，非纪录：每个连通常数都被证明是有理数（有理多面体体积的有限带符号和，\S\ref{s:conv}）；$k\le6$塔使用的六个常数已通过这些体积的符号求值证明为精确有理数（$C_5=\tfrac1{36}$，$\{4,2\}=-\tfrac{23}{420}$，$\{6\}=-\tfrac1{126}$，$\{2,2,2\}=\tfrac{32}{105}$，$\{5,2\}=\tfrac18$，$\{2^4\}=\tfrac{1661}{3780}$，$C_7=-\tfrac{17}{360}$，$C_8=\tfrac{157}{4032}$，\S\ref{s:five:conn}，\S\ref{s:seven}；在说明处使用两种独立精确方法）；现在每个被使用的常数都有两个独立确认（\S\ref{s:verif}(d)）——Lean形式化覆盖了恒等式和证书层（内核编译，核心Lean~4，不含任何未完成的证明占位（\texttt{sorry}）；\S\ref{s:verif}(f)），分析层未被形式化，且未经过外部评审。三个写出的条目W1--W3已写出（\S\ref{s:writeouts}），配对层常数已认证为精确有理数（\S\ref{s:five:cert}，附录~\ref{a:cert}），消耗步骤由精确有理对偶证书支持，该证书在无界支撑上有效（引理~\ref{l:dual}）。每一层的精确等级、差异登记表以及程序的验证门（形式化和外部评审先于任何纪录声明）见\S\ref{s:verif}和附录~\ref{a:record}。}}
+\title{\bf 黎曼zeta函数的几乎全部零点都是单零点且位于临界线上\thanks{验证状态（请先阅读此条）。\emph{无条件性}：本文中的每一个陈述在数论意义下都是无条件的——没有关于$\zeta$或任何$L$-函数的未证明假设进入任何层级（算术输入是Montgomery的带限配对相关定理、Siegel--Walfisz定理以及Matom\"aki--Radziwi\l{}\l--Tao的平均移位卷积定理；常数是不可有效化的）。下面关于\emph{六个有理常数的验证来源}的等级划分，不涉及任何数学假设。等级划分详见\S\ref{s:verif}和\S\ref{s:tt}。$k\le8$的子塔（标题0.8493/0.9246）处于前驱链的等级：每个被使用的常数都通过两种独立方法在精确有理算术中得到证明。$k=10,12,14$的梯级（标题0.8771/0.9385，0.8964/0.9482，$\mathbf{0.9104/0.9552}$）依赖于\S\ref{s:conv}(vii)中的Toeplitz--迹表示，其基础现已成定理（\S\ref{s:tt}）：模型转移引理、分支相等定理（$m_b(N)N^{b+1}$是单个多项式，对所有$N\ge1$）和奇偶性定理（$L(-N)=(-1)^{b+1}L(N)$）共同将每个新矩确定为精确有理数，由有限多个精确的有限$N$求值确定——这些求值本身已被证明为有理数，通过两个独立实现在预注册的保留点上进行逐位确认，并由三个独立的$10^{7}$样本测量层佐证（测量层为验证证据，不在证明链内）。因此，直到$k=14$的每个梯级所使用的常数都处于证明等级，而密度一的封顶定理（定理~\ref{t:dens1}）仅使用已证明的软输入——决定性、精确对数律以及阶一致工具。本文整体的链等级为\emph{已认证候选者}，非纪录：每个连通常数都被证明是有理数（有理多面体体积的有限带符号和，\S\ref{s:conv}）；$k\le6$塔使用的六个常数已通过这些体积的符号求值证明为精确有理数（$C_5=\tfrac1{36}$，$\{4,2\}=-\tfrac{23}{420}$，$\{6\}=-\tfrac1{126}$，$\{2,2,2\}=\tfrac{32}{105}$，$\{5,2\}=\tfrac18$，$\{2^4\}=\tfrac{1661}{3780}$，$C_7=-\tfrac{17}{360}$，$C_8=\tfrac{157}{4032}$，\S\ref{s:five:conn}，\S\ref{s:seven}；在说明处使用两种独立精确方法）；现在每个被使用的常数都有两个独立确认（\S\ref{s:verif}(d)）——Lean形式化覆盖了恒等式和证书层（内核编译，核心Lean~4，不含任何未完成的证明占位（\texttt{sorry}）；\S\ref{s:verif}(f)），分析层未被形式化，且未经过外部评审。三个写出的条目W1--W3已写出（\S\ref{s:writeouts}），配对层常数已认证为精确有理数（\S\ref{s:five:cert}，附录~\ref{a:cert}），消耗步骤由精确有理对偶证书支持，该证书在无界支撑上有效（引理~\ref{l:dual}）。每一层的精确等级、差异登记表以及程序的验证门（形式化和外部评审先于任何纪录声明）见\S\ref{s:verif}和附录~\ref{a:record}。}}
 \author{杨弘毅（Hongyi Yang）\thanks{多伦多大学。\textit{电子邮箱}：\texttt{hongy.yang@mail.utoronto.ca}}
 \and 杨世华（Shihua Yang）\thanks{香港大学。\textit{电子邮箱}：\texttt{u3590485@connect.hku.hk}}}
 \date{2026年8月\\[4pt]
@@ -61,7 +61,7 @@
 \liminf_{T\to\infty}\frac{N_d}{N}
 \;\ge\;1-\lambda_7\;=\;0.955230\ldots,
 \]
-其中$\lambda_7$为分子分母各四十位的显式有理数：超过\emph{十分之九}的零点是临界线上的单零点，超过\emph{二十分之十九}的零点互异。算术输入为Montgomery的带限配对相关定理、Siegel--Walfisz定理与Vaughan估计；两条结构定理封闭矩引擎——\emph{分支相等}（$m_b(N)N^{b+1}$是$N$的单一多项式，经全幺模格点多胞体表示与Ehrhart理论证明）与\emph{奇偶性}（$L(-N)=(-1)^{b+1}L(N)$，经Ehrhart--Macdonald自互反）——因此直到$k=14$的每个被消耗常数都是已证明的精确有理数，且任何更高阶只需多项式多次精确有限$N$求值。声明分级逐常数见\S\ref{s:verif}：常数层为已证明；分析链为待外部评审的已认证候选；消耗证书在核心Lean~4中经内核检查。论文附独立的复现与认证包（\url{https://github.com/JoshuaHKU/zeta-density-one-reproduction}）；证伪者注册表（$631$项预注册检查，$74$项触发并转换，全部前向记录）记录了研究轨迹。
+其中$\lambda_7$为分子分母各四十位的显式有理数：超过\emph{十分之九}的零点是临界线上的单零点，超过\emph{二十分之十九}的零点互异。算术输入为Montgomery的带限配对相关定理、Siegel--Walfisz定理与Vaughan估计；两条结构定理封闭矩引擎——\emph{分支相等}（$m_b(N)N^{b+1}$是$N$的单一多项式，经全幺模格点多胞体表示与Ehrhart理论证明）与\emph{奇偶性}（$L(-N)=(-1)^{b+1}L(N)$，经Ehrhart--Macdonald自互反）——因此直到$k=14$的每个被消耗常数都是已证明的精确有理数，且任何更高阶只需多项式多次精确有限$N$求值。声明分级逐常数见\S\ref{s:verif}：常数层为已证明；分析链为待外部评审的已认证候选；消耗证书在核心Lean~4中经内核检查。论文附独立的复现与认证包（\url{https://github.com/JoshuaHKU/zeta-density-one-reproduction}）；证伪者注册表（$637$项预注册检查，$74$项触发并转换，全部前向记录）记录了研究轨迹。
 \end{abstract}
 
 \medskip
@@ -366,10 +366,10 @@ $n_1n_2$和$n_3$是正整数，比值$e^{O(1/T)}$；若不等，比值与$1$之�
 对每个固定$\lambda\in(0,1]$和可允许锥形，$\mu_3$在$T\to\infty$时收敛，且在端点极限$\lambda\to1^-$，$\eta\to0^+$下其极限趋于$2$。
 \end{theorem}
 
-\begin{proof}[证明（九类分类账；完整细节见存档备忘录\texttt{V1\_completion.md}）]
+\begin{proof}[证明（九类分类账；两个非标准步骤在附录~\ref{a:v1}中写出）]
 在Gabor--Poisson折叠（引理~\ref{l:gabor}）后展开$\operatorname{tr}\widetilde G^{3}$对三循环
 $\Phi(\tau_1-\tau_2)\Phi(\tau_2-\tau_3)\Phi(\tau_3-\tau_1)$的贡献；尾部修正由迹--H\"older分裂
-$\operatorname{tr}(A+E)^3-\operatorname{tr}A^3$控制，其中$\|E\|_{\mathrm{op}}\le\theta_0\ll lT^{\lambda/2-1}$（命题~\ref{p:tail}）且$\|A\|_F^2=O(d\ell_1^2)$：总贡献$o(d\ell_1^3)$。在$\nu_X^{\otimes3}$的九类中，$\nu_X=\mu+\Pi_X+P_X$：（i）含$\Pi_X$的每类在窗口上点态$O(T^{\lambda/2-1})$，可忽略；（ii）单$P$类为$O(\sqrt X\,l^{2}L)$由$\sum\LL(n)n^{-1/2}\le3\sqrt X$；（iii）类$\mu^3$等于$d\ell_1^3(1+O(1/l))$（$\ell_1$归一化精确到$O(1/l)$；在$T=600/38400/10^{8}$处测得$1.0048/1.0014/1.0004$）；（iv）三个$\mu P^2$类中的每一个，由引理~\ref{l:m3res}的$k=2$情形加上对核尾部的Montgomery--Vaughan Hilbert不等式，化简为精确对角和$\sum_{n\le X}(\LL(n)^2/n)\,w(\log n)$，具有与$k=2$时相同的$(L-u)_+$形边缘权重（循环展开的结构常数局部依赖于边和槽，因此由$k=2$情形固定，其总和是Montgomery求值），且$\sum_{n\le X}(\LL^2/n)(L-\log n)=L^3/6\,(1+O(1/L))$：每类贡献$\tfrac13d\ell_1^3(1+o(1))$在端点，三个位置和为$1$；（v）类$P^3$由引理~\ref{l:m3res}强制为精确关系$n_1n_2=n_3$，即单个素数的幂，而$\sum_p\sum_{a+b=c}\log^3p\,p^{-c}=O(1)$使其为$O(Tl)$。求和：$\mu_3\to1+1=2$。交叉检查：同一常数链的$k=2$实例重现Montgomery的$\tfrac13$到四位；模型门$\int O_3C_3=0$精确（\S\ref{s:cert:model}）；有限高度形状$m_3m_1/m_2^2$与模型匹配到$2\%$。两个非标准步骤——命题~\ref{p:tail}的$k=3$尾部适配和局部性加校准固定常数链——在存档备忘录中写出，并按该严谨度使用。
+$\operatorname{tr}(A+E)^3-\operatorname{tr}A^3$控制，其中$\|E\|_{\mathrm{op}}\le\theta_0\ll lT^{\lambda/2-1}$（命题~\ref{p:tail}）且$\|A\|_F^2=O(d\ell_1^2)$：总贡献$o(d\ell_1^3)$。在$\nu_X^{\otimes3}$的九类中，$\nu_X=\mu+\Pi_X+P_X$：（i）含$\Pi_X$的每类在窗口上点态$O(T^{\lambda/2-1})$，可忽略；（ii）单$P$类为$O(\sqrt X\,l^{2}L)$由$\sum\LL(n)n^{-1/2}\le3\sqrt X$；（iii）类$\mu^3$等于$d\ell_1^3(1+O(1/l))$（$\ell_1$归一化精确到$O(1/l)$；在$T=600/38400/10^{8}$处测得$1.0048/1.0014/1.0004$）；（iv）三个$\mu P^2$类中的每一个，由引理~\ref{l:m3res}的$k=2$情形加上对核尾部的Montgomery--Vaughan Hilbert不等式，化简为精确对角和$\sum_{n\le X}(\LL(n)^2/n)\,w(\log n)$，具有与$k=2$时相同的$(L-u)_+$形边缘权重（循环展开的结构常数局部依赖于边和槽，因此由$k=2$情形固定，其总和是Montgomery求值），且$\sum_{n\le X}(\LL^2/n)(L-\log n)=L^3/6\,(1+O(1/L))$：每类贡献$\tfrac13d\ell_1^3(1+o(1))$在端点，三个位置和为$1$；（v）类$P^3$由引理~\ref{l:m3res}强制为精确关系$n_1n_2=n_3$，即单个素数的幂，而$\sum_p\sum_{a+b=c}\log^3p\,p^{-c}=O(1)$使其为$O(Tl)$。求和：$\mu_3\to1+1=2$。交叉检查：同一常数链的$k=2$实例重现Montgomery的$\tfrac13$到四位；模型门$\int O_3C_3=0$精确（\S\ref{s:cert:model}）；有限高度形状$m_3m_1/m_2^2$与模型匹配到$2\%$。两个非标准步骤——命题~\ref{p:tail}的$k=3$尾部适配和局部性加校准固定常数链——在附录~\ref{a:v1}中写出，并按该处所述等级使用。
 \end{proof}
 
 \subsection{第四矩：$197/60$分类账与类$R$}\label{s:cert:R}
@@ -966,6 +966,15 @@ $m_8=\tfrac{217}6+\tfrac{28}{45}+\tfrac{633}{2240}
 W3（引理~\ref{l:W3}）是$\mathcal B=\{2,2,2\}$情形；本文消耗的类是进一步实例\emph{W4} $=\{5,2\}$，\emph{W5} $=\{2^4\}$，\emph{W6} $=\{2,2,4\},\{6,2\}$，\emph{W7} $=\{4,4\}$；且第九、十阶分类账（$\{7,2\}$，$\{5,4\}$，$\{5,2,2\}$；$\{8,2\}$，$\{6,4\}$，$\{5,5\}$，$\{6,2,2\}$，$\{4,4,2\}$，$\{4,2,2,2\}$，$\{2^5\}$）无需进一步写出。纯类$\mathcal B=\{b\}$不通过定理~\ref{t:winfty}路由：其模型值直接输入，其涨落由逐因子方差引理控制，如$k=5,6$（\S\ref{s:five:conn}）。
 \end{corollary}
 
+\begin{remark}[跨因子偏差乘法——承重解析步骤的显式陈述]\label{r:transport}
+定理~\ref{t:winfty}中唯一随块数增长负担的步骤，是从逐块主项到其乘积的过渡：记$M_i$为块$B_i$的链主项、$D_i$为块内消耗Siegel--Walfisz与Vaughan之后的已解析偏差，证明使用
+\[
+\Bigl|\prod_i(M_i+D_i)-\prod_iM_i\Bigr|
+\;\le\;\sum_i|D_i|\prod_{j\ne i}\bigl(|M_j|+|D_j|\bigr),
+\]
+故所需的\emph{不是}块间独立性，而是逐块偏差相对主项质量可和。块间算术相关仅经由模$p$合并事件进入，已在局部律中精确入账（步骤(i)）；唯一的阿基米德耦合是联合重叠体积$O_b$，即已认证的精确层（步骤(ii)）；方差传输逐因子进行，因为命题~\ref{p:prod}的$(r{-}1)$维Parseval恒等式逐坐标成立，故每个因子在其余因子保持精确主项的情况下按引理~\ref{l:MM}/引理~\ref{l:minor}/引理~\ref{l:comb}分类（步骤(iii)）。本注记显式记录此性质，因为它承载着$k\ge5$的解析链：其$b\le4$的实例化在\S\ref{s:fm:R}中写出；一般$b$按\S\ref{s:verif}层(b)的等级消耗，如定理~\ref{t:schema}所述——属于待外部评审的解析链，不属于已证明常数层。
+\end{remark}
+
 \begin{theorem}[第七、八矩]\label{t:m78}
 在端点极限下，以命题~\ref{p:joints78}所述等级，
 \[
@@ -1311,7 +1320,7 @@ $T$ & 2400 & 4800 & 9600 & 19200 & 38400 & 57600 & 76800 & 153600\\
 \end{tabular}
 \end{center}
 
-\noindent（全范围几何平均每倍增$0.706$：纯平均律$2^{-1/2}$）。进一步面：局部闭包精确（零违规，七个配置）；Parseval精确；每箱Siegel--Walfisz面在范围上下降十倍；Bell(5)/Bell(6)门精确；五、六重积面在所有高度通过；良好间隔零违规；混合大小控制$24$--$31$倍高度稳定；消耗LP网格稳定。注册表：$631$个预注册检查，$589$个通过，$74$个触发并转换，全部前向记录（第$31$--$35$个转换属于修正常数通过、Lean编译和谱路径审计；第$36$--$41$个属于模型边缘审计、$\{2,2,2\}$分类修正及其后果、以及$C_8$候选偏差，\S\ref{s:verif}(f)，附录~\ref{a:record}，D19--D22）。
+\noindent（全范围几何平均每倍增$0.706$：纯平均律$2^{-1/2}$）。进一步面：局部闭包精确（零违规，七个配置）；Parseval精确；每箱Siegel--Walfisz面在范围上下降十倍；Bell(5)/Bell(6)门精确；五、六重积面在所有高度通过；良好间隔零违规；混合大小控制$24$--$31$倍高度稳定；消耗LP网格稳定。注册表：$637$个预注册检查，$595$个通过，$74$个触发并转换，全部前向记录（第$31$--$35$个转换属于修正常数通过、Lean编译和谱路径审计；第$36$--$41$个属于模型边缘审计、$\{2,2,2\}$分类修正及其后果、以及$C_8$候选偏差，\S\ref{s:verif}(f)，附录~\ref{a:record}，D19--D22）。
 
 2026年8月16日的认证审计重新运行：全矩链门套件在$T=9600$（全部通过，$72$s：色散$4.163\times 10^{-3}$，跟踪中位数$0.73\%$，SW RMS $1.599\times10^{-3}$，紧度$24.8$--$31.3\times$，五重$0.06$--$1.29\%$，六重$0.01$--$0.73\%$，LP在退役端点常数下为$0.79454/0.89727$两网格；修正常数重跑给出$0.79472/0.89736$）；四矩恒等式套件在$T=9600$（全部通过，$48$s）；\S\ref{s:fm}的常数套件（\texttt{m1\_suite.py validate}：$6/6$局部因子，$100/100$向量筛，锚点和跨约定差重现；核心$-0.00545$相对存档$-0.00544$；$\alpha$截断$-0.00491$）；锯齿认证（\texttt{sawtooth\_cert}：网格$1.8675$，样本$1.8419/1.8494/1.8512$，证书$2.100$）；连续求积门（\texttt{quadrature\_cert}：几何尾比$0.500$认证，$c_0=-1.4228$十倍程间稳定）；以及\S\ref{s:cert}的证书套件（\texttt{certificate\_verification.py}精确；\texttt{moment\_lp\_reopt} $0.0721$；\texttt{mu3\_ledger\_gates}；\texttt{cumulant\_engine}门$C_2$精确，$\int O_3C_3=0$）。消耗LP的独立重实现（不同代码，HiGHS后端）重现了\S\ref{s:lp}中记录的每个梯级。
 
@@ -1343,7 +1352,7 @@ $T$ & 2400 & 4800 & 9600 & 19200 & 38400 & 57600 & 76800 & 153600\\
 
 \emph{(a) 机器精确或精确有理，在认证审计中重新验证。}证书代数（引理~\ref{l:cert}）和$\kappa(c)$律；局部闭包（命题~\ref{p:local}）；Parseval和乘积恒等式；Bell分类账和冻结槽恒等式；无锚$67/12$和$39/4$；$197/60$分类账算术及现在完全精确的双记账对账（注记~\ref{r:books}）；通过二面体放置类的精确配对层常数$t_{\mathrm{adj}}=\tfrac7{60}$，$t_{\mathrm{opp}}=\tfrac1{30}$，$\{2,2,2\}=\tfrac{32}{105}$（命题~\ref{p:t222}，附录~\ref{a:cert}）；符号认证连通常数$C_5=\tfrac1{36}$，$\{4,2\}=-\tfrac{23}{420}$，$\{6\}=-\tfrac1{126}$（\S\ref{s:five:conn}；注册D18）；精确对偶证书（引理~\ref{l:dual}）——消耗步骤不涉及LP求解器、网格或支撑界；锯齿常数$C_{\mathrm{saw}}=2.10$（网格加解析认证）。
 
-\emph{(b) 已认证候选者分析层（预Lean，预评审）。}九类$\mu_3$分类账（两个非标准步骤在存档备忘录中写出）；截断清偿；引理D的谱证明（定理~\ref{t:D}）——其次/混合箱大小记账经典但在写出等级携带并经过面检查预算——及其到$k=5,6$的逐因子传输，包括写出的W1--W3（\S\ref{s:writeouts}），它们以该层等级证明；\S\ref{s:fm}的覆盖区/带/胶链。冻结链前有五轮对抗审计（存档轮次r93，r95，r100，r102）。
+\emph{(b) 已认证候选者分析层（预Lean，预评审）。}九类$\mu_3$分类账（两个非标准步骤在附录~\ref{a:v1}中写出）；截断清偿；引理D的谱证明（定理~\ref{t:D}）——其次/混合箱大小记账经典但在写出等级携带并经过面检查预算——及其到$k=5,6$的逐因子传输，包括写出的W1--W3（\S\ref{s:writeouts}），它们以该层等级证明；\S\ref{s:fm}的覆盖区/带/胶链。冻结链前有五轮对抗审计（存档轮次r93，r95，r100，r102）。
 
 \emph{(c) 写出条目。}已处理：W1（命题~\ref{p:W1}），W2（引理~\ref{l:W2}），W3（引理~\ref{l:W3}），每个带预注册面。W2完整（初等）；W1和W3以层(b)等级证明，因为它们消耗相同的谱传输。
 
@@ -1580,6 +1589,99 @@ x^6-\tfrac{39031}{5000}x^5+\tfrac{2422533313}{100000000}x^4
 其中$(abc)^2=\tfrac{129222147277358919747441}{62500000000000000000000}$，故$y_0=1$，$y_5=-\tfrac{39031}{5000}(abc)^{-2}<0$，$y_6=(abc)^{-2}>0$。在被替代角点给出$w_0=\tfrac{829278553005924403328783}{8140995278473611944088783}$及已发表标题$\tfrac{7962}{10000}$/$\tfrac{8981}{10000}$——当时有效且现在仍有效（消耗较弱但为真的$M_6$），被引理~\ref{l:dual}和引理~\ref{l:dual8}的精确最优值取代。在Christoffel公式下，求解器、网格、原子提取和有理化步骤不再以任何形式存在；整个消耗层是引理~\ref{l:christoffel}的有理线性代数。验证：
 \texttt{certification/certify84.py}；Lean：
 \texttt{lean/RhGate/Certificate.lean}（已编译；随前作仓库发布）和\texttt{Certificate84.lean}（在本包\texttt{RhGateK14}工程中编译；见\texttt{lean/BUILD.md}）：展开恒等式、非负性、角点求值、符号模式、标题；不含任何未完成的证明占位（\texttt{sorry}）。
+
+
+\section{第三矩的两个非标准步骤}\label{a:v1}
+
+本附录把九类$\mu_3$分类账（定理~\ref{t:m3}）中此前从程序存档备忘录消耗的两个步骤实质逐字并入正文，使第三矩的解析链在本文档内自含。移入不改变其等级：二者均属\S\ref{s:verif}层(b)的解析链，待外部评审；方括号引用指向\cite{C26}的已证明输入。
+
+\subsection*{（1）$k=3$尾部清偿}
+
+记$\widetilde G=\widetilde A+\widetilde E$为压缩矩阵到带限主部与尾部的分解，两个已证明输入为$\|\widetilde E\|_{\mathrm{op}}\le\theta_0\ll l\,T^{\lambda/2-1}$与$\|\widetilde E\|_{1}\le 2\theta_0/L$（\cite{C26}命题4.2的模式及其迹范数形式）。由迹的循环性，
+\[
+\operatorname{tr}\widetilde G^{3}-\operatorname{tr}\widetilde A^{3}
+=3\operatorname{tr}(\widetilde A^{2}\widetilde E)
++3\operatorname{tr}(\widetilde A\widetilde E^{2})
++\operatorname{tr}(\widetilde E^{3}),
+\]
+三组分别由
+\[
+|\operatorname{tr}(\widetilde A^{2}\widetilde E)|
+\le\|\widetilde E\|_{\mathrm{op}}\|\widetilde A\|_{F}^{2},\qquad
+|\operatorname{tr}(\widetilde A\widetilde E^{2})|
+\le\|\widetilde A\|_{\mathrm{op}}\|\widetilde E\|_{F}^{2},\qquad
+|\operatorname{tr}(\widetilde E^{3})|
+\le\|\widetilde E\|_{\mathrm{op}}\|\widetilde E\|_{F}^{2}
+\]
+控制。右侧每个Frobenius质量均为$O(d\ell_1^{2})$（$k=2$迹尺度，\cite{C26}已证明），且$\|\widetilde A\|_{\mathrm{op}}\le\|\widetilde G\|_{\mathrm{op}}+\theta_0=O(\ell_1)$；故整个差为$O(\theta_0\,d\ell_1^{2})+O(\ell_1\theta_0^{2}d)=o(d\ell_1^{3})$，因$\theta_0\ll lT^{\lambda/2-1}=o(l)$。尾部在$\mu_3$归一化下双边不可见。
+
+\subsection*{（2）常数链的局部性与校准}
+
+分类账中两个幸存的单位质量类是$\mu^{3}$类与三个$\mu P^{2}$对角类。每个$\mu P^{2}$类中窗口积分强制精确共振（$n=m$；$C<2\pi$间隙论证，引理~\ref{l:m3res}的$k=2$情形），留下对角素数和
+\[
+\sum_{n\le X}\frac{\Lambda(n)^{2}}{n}\,K_3(\log n),\qquad
+K_3=\text{（窗口核链）}\cdot(L-\log n)_{+},
+\]
+其复合窗口/余弦核链与$k=2$对角类\emph{逐槽相同}——这就是局部性陈述：从$k=2$到$k=3$没有任何新的阿基米德常数进入对角槽，因为槽核恒等地因子化。链常数因此由校准\emph{固定}：同一链的$k=2$实例必须重现\cite{C26}（定理5.8）已证明的Montgomery主项，这钉住了常数；配合$\sum_{n\le X}\frac{\Lambda(n)^{2}}{n}(L-\log n)=\tfrac{L^{3}}{6}(1+O(1/L))$（\cite{C26}(5.2)加分部求和），每个$\mu P^{2}$类在$\lambda\to1^-$贡献$\tfrac13\,d\ell_1^{3}(1+o(1))$，三个位置和为第二个单位。非对角残差由Montgomery--Vaughan不等式如定理正文所写清偿。\emph{等级}：局部性论证与校准恒等式是解析的，按层(b)消耗；存档的四位数值链门是佐证，不在证明链内。
+
+\section{精确多胞体路线的手工样板}\label{a:worked}
+
+本附录把配对演算中两个被消耗的常数从定义手工走到精确值，再在同一对象上展示\S\ref{s:five:conn}的多胞体表示与刻面递归，使读者在信任$C_5$、$\{4,2\}$、$\{6\}$的$1310$项规模之前，能在小尺度上端到端跟随精确有理机器。
+
+\subsection*{（1）热身：三行得到$t_{\mathrm{adj}}=\tfrac7{60}$}
+
+相邻二弦走形的位置为$(0,x,0,y)$（命题~\ref{p:t222}），故$t_{\mathrm{adj}}=\int_{[-1,1]^{2}}(1-\operatorname{span}(0,x,y))_{+}\,|x||y|\,dxdy$。两个对称$(x,y)\mapsto(-x,-y)$与$x\leftrightarrow y$把四个象限归为两型：
+\[
+\text{同号：}A_2=2\!\!\int_{0\le a\le b\le1}\!\!(1-b)\,ab
+=\int_0^1 b^{3}(1-b)\,db=\tfrac1{20};\qquad
+\text{异号：}S_2=\int_{\substack{a,b\ge0\\ a+b\le1}}(1-a-b)\,ab=\tfrac{1!\,1!\,1!}{5!}=\tfrac1{120},
+\]
+故$t_{\mathrm{adj}}=2(A_2+S_2)=\tfrac7{60}$。（对面走形$(0,x,x{+}y,y)$的\emph{每个}象限均为异号型，故$t_{\mathrm{opp}}=4S_2=\tfrac1{30}$；异号型即Dirichlet积分$\int_{\Delta_n}\prod x_i^{\alpha_i}\,dx=\prod\alpha_i!\,/\,(n+\sum\alpha_i)!$。）
+
+\subsection*{（2）一个三弦常数端到端：$T_2=\tfrac1{180}$}
+
+取命题~\ref{p:t222}的交叉数二安置类，代表匹配$(1,3)(2,5)(4,6)$：增量$(v_1,\dots,v_6)=(x,y,-x,z,-y,-z)$，走形位置
+\[
+p=(0,\;x,\;x{+}y,\;y,\;y{+}z,\;z),\qquad
+T_2=\int_{[-1,1]^{3}}\bigl(1-\operatorname{span}(p)\bigr)_{+}\,|x||y||z|\,dxdydz .
+\]
+在整体取负$(x,y,z)\mapsto(-x,-y,-z)$与反射$x\leftrightarrow z$（保持位置表不变）之下，八个卦限折叠为两型、各四个；记$(a,b,c)=(|x|,|y|,|z|)$：
+\[
+\operatorname{span}=
+\begin{cases}
+b+\max(a,c) & \text{卦限}(+,+,+),\ (-,-,-),\ (+,-,+),\ (-,+,-)，\\[2pt]
+a+b+c & \text{四个混合卦限，}
+\end{cases}
+\]
+（例如在$(+,+,-)$中最大值为$p_3=x+y$、最小值为$p_6=z$，故span为$x+y-z=a+b+c$；在$(+,-,+)$中最大值为$\max(x,z)$、最小值为$y$。）于是$T_2=4I_A+4I_S$，其中
+\[
+I_A=2\!\!\int_{0\le a\le c}\!\!(1-b-c)_{+}\,abc
+=2\int_0^1\!c\,\frac{c^{2}}2\,\frac{(1-c)^{3}}6\,dc
+=\int_0^1\frac{c^{3}(1-c)^{3}}6\,dc=\frac{B(4,4)}6=\frac1{840},
+\]
+\[
+I_S=\int_{\substack{a,b,c\ge0\\ a+b+c\le1}}(1-a-b-c)\,abc=\frac{1!\,1!\,1!\,1!}{7!}=\frac1{5040},\qquad
+T_2=\frac4{840}+\frac4{5040}=\frac{24+4}{5040}=\frac1{180}.
+\]
+按尺寸$2/3/6/3/1$组装五个安置类，重现$\{2,2,2\}=2T_0+3T_0'+6T_1+3T_2+T_3=\tfrac{32}{105}$。
+
+\subsection*{（3）同一计算的多胞体体积形式与刻面递归的一层}
+
+槽提升$(1-\operatorname{span})_{+}=\int_{\mathbb R}\prod_i\mathbf 1[t\le p_i\le t+1]\,dt$与权重提升$|x|=\int_0^{|x|}du$把每个卦限项化为一个有界$\{0,\pm1\}$多胞体的体积。对（2）的混合卦限：
+\[
+I_S=\operatorname{Vol}_7\Bigl\{(a,b,c,u,v,w,s):\
+0\le u\le a,\ 0\le v\le b,\ 0\le w\le c,\ s\ge0,\ a+b+c+s\le1\Bigr\},
+\]
+坐标$s$实现槽、$u,v,w$实现权重。\S\ref{s:five:conn}的刻面递归以其有理（投影）形式使用：
+\[
+\operatorname{Vol}_n(P)=\frac1n\sum_i
+\frac{h_i}{|n_{i,k_i}|}\,\operatorname{Vol}_{n-1}^{\pi_{k_i}}(F_i),
+\]
+其中$h_i$为刻面$i$相对所选顶点的仿射偏移，$\operatorname{Vol}^{\pi_k}$为沿$n_{i,k}\ne0$的坐标$k$投影后的刻面体积：几何距离中的无理归一化$\|n_i\|$与内蕴刻面体积中的同一因子相消——这正是\S\ref{s:five:conn}所述的安排。在单纯形因子$\Delta=\{a,b,c,s\ge0,\ a{+}b{+}c{+}s\le1\}$上自原点走一层：四个坐标刻面含顶点（$h=0$）而退出；斜刻面$h=1$、$|n_s|=1$、沿$s$投影为体积$\tfrac16$的单位三维单纯形；故$\operatorname{Vol}_4(\Delta)=\tfrac14\cdot\tfrac11\cdot\tfrac16=\tfrac1{24}$，全程无任何无理数进入。在全部七个坐标中递归（对完整七维多胞体取一般位置的顶点，使每个刻面都有贡献），终止于单纯形并返回$I_S=\tfrac1{5040}$，与上面的Dirichlet求值一致——这正是该演算对其消耗的每一项强制执行的双方法一致。
+
+\subsection*{（4）在$C_5$、$\{4,2\}$、$\{6\}$处的实例化}
+
+$C_5$分类账的一项是\S\ref{s:conv}(ii)分拆-循环累积量公式的一个$(P,\sigma)$对：块按循环序$\sigma$的合并走形扮演上文$p$的角色，符号为$(-1)^{|P|-1}$，提升多胞体由同一单位系数超平面族切割；$\{6\}$的一项仅走形长度不同。该计算与（2）--（3）的差别在规模而不在种类：$150$、$78$、$1082$个这样的项，每项以精确分数连同其多胞体数据存档于复现包，其带符号和即已证明值$\tfrac1{36}$、$-\tfrac{23}{420}$、$-\tfrac1{126}$。把那个规模系回本附录规模的门禁陈述于\S\ref{s:five:conn}：纯四循环$\Phi_4=-\tfrac1{60}$经同一代码路径由两种精确方法得到；两个符号引擎在每个双算项上逐分数一致；$\{4,2\}$的三个安置类（$-\tfrac2{315},-\tfrac1{1260},-\tfrac1{252}$，重数$6/6/3$）重组为$-\tfrac{23}{420}$——与（2）中$\{2,2,2\}$展示的同一尺寸加权组装。
 
 \begin{thebibliography}{99}
 

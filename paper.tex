@@ -42,9 +42,10 @@ polynomial, every $N\ge1$) and the parity theorem
 ($L(-N)=(-1)^{b+1}L(N)$) together determine each new moment
 as an exact rational from finitely many exact finite-$N$
 evaluations --- themselves proved rationals, confirmed
-bitwise on pre-registered held-out points, by two independent
-implementations, and by three independent $10^{7}$-sample
-measurement tiers. The consumed constants of every rung
+bitwise on pre-registered held-out points by two independent
+implementations, and corroborated by three independent
+$10^{7}$-sample measurement tiers (the tiers are verification
+evidence, outside the proof chain). The consumed constants of every rung
 through $k=14$ are thereby at proof grade, and the
 density-one capstone (Theorem~\ref{t:dens1}) consumes only
 proved soft inputs --- determinacy, the exact logarithmic
@@ -138,7 +139,7 @@ kernel-checked in core Lean~4. A standalone reproduction and
 certification package accompanies the paper
 (\url{https://github.com/JoshuaHKU/zeta-density-one-reproduction});
 a falsifier registry
-($631$ pre-registered checks, $74$ fired and converted, all
+($637$ pre-registered checks, $74$ fired and converted, all
 forward-recorded) documents the research trail.
 \end{abstract}
 
@@ -815,8 +816,8 @@ converges as $T\to\infty$, and its limit tends to $2$ in the
 endpoint limit $\lambda\to1^-$, $\eta\to0^+$.
 \end{theorem}
 
-\begin{proof}[Proof (nine-class ledger; full details in the
-archived memo \texttt{V1\_completion.md})]
+\begin{proof}[Proof (nine-class ledger; the two nonstandard
+steps are written out in Appendix~\ref{a:v1})]
 Expand $\operatorname{tr}\widetilde G^{3}$ against the $3$-cycle
 $\Phi(\tau_1-\tau_2)\Phi(\tau_2-\tau_3)\Phi(\tau_3-\tau_1)$ after
 the Gabor--Poisson collapse (Lemma~\ref{l:gabor}); the tail
@@ -851,8 +852,9 @@ $\int O_3C_3=0$ is exact (\S\ref{s:cert:model}); the
 finite-height shape $m_3m_1/m_2^2$ matches the model to $2\%$.
 Two nonstandard steps --- the $k=3$ tail adaptation of
 Proposition~\ref{p:tail} and the locality-plus-calibration fixing of
-the constant chain --- are written out in the archived memo and
-are consumed at that rigor.
+the constant chain --- are written out in
+Appendix~\ref{a:v1} and are consumed at the grade stated
+there.
 \end{proof}
 
 \subsection{The fourth moment: the $197/60$ ledger and the class
@@ -2394,6 +2396,39 @@ their fluctuations are controlled by the factor-wise variance
 lemmas, as at $k=5,6$ (\S\ref{s:five:conn}).
 \end{corollary}
 
+\begin{remark}[Cross-factor deviation multiplication ---
+the load-bearing analytic step, stated explicitly]
+\label{r:transport}
+The one step of Theorem~\ref{t:winfty} whose burden grows with
+the block count is the passage from per-block main terms to
+their product: writing $M_i$ for the chain main term of block
+$B_i$ and $D_i$ for its resolved deviation after
+Siegel--Walfisz and Vaughan are consumed inside the block, the
+proof uses
+\[
+\Bigl|\prod_i(M_i+D_i)-\prod_iM_i\Bigr|
+\;\le\;\sum_i|D_i|\prod_{j\ne i}\bigl(|M_j|+|D_j|\bigr),
+\]
+so what is required is \emph{not} independence across blocks
+but per-block deviations summable against the main-term
+masses. Cross-block arithmetic correlation enters only through
+the mod-$p$ merger events, booked exactly in the local law
+(step (i)); the only archimedean coupling is the joint overlap
+volume $O_b$, which is the certified exact layer (step (ii));
+and the variance transport is per-factor because the
+$(r{-}1)$-dimensional Parseval identity of
+Proposition~\ref{p:prod} holds coordinatewise, so each factor
+is classified against Lemma~\ref{l:MM} /
+Lemma~\ref{l:minor} / Lemma~\ref{l:comb} with the other
+factors held at their exact main terms (step (iii)). This
+remark records the property explicitly because it carries the
+$k\ge5$ analytic chain: its instantiations at $b\le4$ are
+written out in \S\ref{s:fm:R}; at general $b$ it is consumed
+at the grade of \S\ref{s:verif} layer (b), as stated in
+Theorem~\ref{t:schema} --- part of the analytic chain awaiting
+external review, not of the proved-constant layer.
+\end{remark}
+
 \begin{theorem}[The seventh and eighth moments]\label{t:m78}
 In the endpoint regime, at the grades stated in
 Proposition~\ref{p:joints78},
@@ -3412,7 +3447,7 @@ per-bin Siegel--Walfisz face falling tenfold over the range;
 Bell(5)/Bell(6) gates exact; five- and six-fold product faces
 green at all heights; well-spacing zero violations; hybrid size
 control $24$--$31\times$ height-stable; consumption LP
-grid-stable. The registry: $631$ pre-registered checks, $589$
+grid-stable. The registry: $637$ pre-registered checks, $595$
 passed, $74$ fired and converted, all forward-recorded (the
 $31$st--$35$th conversions belong to the corrected-constants
 pass, the Lean compiles and the spectral-route audit; the
@@ -3576,7 +3611,7 @@ $C_{\mathrm{saw}}=2.10$ (grid-plus-analytic certification).
 
 \emph{(b) Certified-candidate analytic layer (pre-Lean,
 pre-review).} The nine-class $\mu_3$ ledger (two nonstandard
-steps written out in the archived memo); the truncation
+steps written out in Appendix~\ref{a:v1}); the truncation
 discharge; the spectral proof of Lemma D (Theorem~\ref{t:D}) ---
 whose minor/mixed-bin size bookkeeping is classical in kind but
 carried at write-out grade with face-checked budgets --- and its
@@ -4730,6 +4765,230 @@ the predecessor repository) and \texttt{Certificate84.lean}
 build and axiom audit in \texttt{lean/BUILD.md}): expansion
 identities, nonnegativity, corner evaluations, sign pattern,
 headlines; zero \texttt{sorry}s.
+
+
+\section{The two nonstandard steps of the third moment}
+\label{a:v1}
+
+This appendix incorporates, verbatim in substance, the two
+steps of the nine-class $\mu_3$ ledger
+(Theorem~\ref{t:m3}) that previous revisions consumed from an
+archived program memo, so that the analytic chain of the third
+moment is self-contained in this document. Their grade is
+unchanged by the move: both are part of the layer-(b) analytic
+chain of \S\ref{s:verif}, awaiting external review; the
+bracketed citations are to the proved inputs of \cite{C26}.
+
+\subsection*{(1) The $k=3$ tail discharge}
+
+Write $\widetilde G=\widetilde A+\widetilde E$ for the split of
+the compressed matrix into its band-limited main part and the
+tail, with the two proved inputs
+$\|\widetilde E\|_{\mathrm{op}}\le\theta_0\ll l\,T^{\lambda/2-1}$
+and $\|\widetilde E\|_{1}\le 2\theta_0/L$
+(\cite{C26}, Prop.~4.2 pattern and its trace-norm form). By
+cyclicity of the trace,
+\[
+\operatorname{tr}\widetilde G^{3}-\operatorname{tr}\widetilde A^{3}
+=3\operatorname{tr}(\widetilde A^{2}\widetilde E)
++3\operatorname{tr}(\widetilde A\widetilde E^{2})
++\operatorname{tr}(\widetilde E^{3}),
+\]
+and the three groups are bounded by
+\[
+|\operatorname{tr}(\widetilde A^{2}\widetilde E)|
+\le\|\widetilde E\|_{\mathrm{op}}\|\widetilde A\|_{F}^{2},
+\qquad
+|\operatorname{tr}(\widetilde A\widetilde E^{2})|
+\le\|\widetilde A\|_{\mathrm{op}}\|\widetilde E\|_{F}^{2},
+\qquad
+|\operatorname{tr}(\widetilde E^{3})|
+\le\|\widetilde E\|_{\mathrm{op}}\|\widetilde E\|_{F}^{2}.
+\]
+Every Frobenius mass on the right is $O(d\ell_1^{2})$ (the
+$k=2$ trace scale, proved in \cite{C26}), and
+$\|\widetilde A\|_{\mathrm{op}}\le\|\widetilde G\|_{\mathrm{op}}
++\theta_0=O(\ell_1)$; hence the whole difference is
+$O(\theta_0\,d\ell_1^{2})+O(\ell_1\theta_0^{2}d)
+=o(d\ell_1^{3})$, since $\theta_0\ll lT^{\lambda/2-1}=o(l)$.
+The tail is therefore invisible at the $\mu_3$ normalization,
+two-sidedly.
+
+\subsection*{(2) Locality and calibration of the constant
+chain}
+
+The two surviving unit-mass classes of the ledger are the
+$\mu^{3}$ class and the three $\mu P^{2}$ diagonal classes. In
+each $\mu P^{2}$ class the window integral forces exact
+resonance ($n=m$; the $C<2\pi$ gap argument, the $k=2$ instance of
+Lemma~\ref{l:m3res}), leaving the diagonal prime sum
+\[
+\sum_{n\le X}\frac{\Lambda(n)^{2}}{n}\,K_3(\log n),
+\qquad
+K_3=\text{(window kernel chain)}\cdot(L-\log n)_{+},
+\]
+with the \emph{same} composite window/cosine kernel chain, slot
+for slot, as the $k=2$ diagonal class --- this is the locality
+statement: between $k=2$ and $k=3$ no new archimedean constant
+enters a diagonal slot, because the slot kernels factor
+identically. The chain constant is therefore \emph{fixed} by
+calibration: the $k=2$ instance of the identical chain must
+reproduce the Montgomery main term proved in \cite{C26}
+(Thm.~5.8), which pins the constant; with
+$\sum_{n\le X}\frac{\Lambda(n)^{2}}{n}(L-\log n)
+=\tfrac{L^{3}}{6}(1+O(1/L))$
+(\cite{C26}, (5.2), and partial summation) each $\mu P^{2}$
+class contributes $\tfrac13\,d\ell_1^{3}(1+o(1))$ at
+$\lambda\to1^-$, and the three positions sum to the second
+unit. The off-diagonal residue is discharged by the
+Montgomery--Vaughan inequality exactly as written in the
+theorem. \emph{Grade}: the locality argument and the
+calibration identity are analytic and are consumed at layer
+(b); the archived four-digit numerical chain gate is
+corroboration, outside the proof chain.
+
+\section{A worked sample of the exact polytope route}
+\label{a:worked}
+
+This appendix walks two consumed constants of the pairing
+calculus from definition to exact value by hand, then exhibits
+the polytope representation and the facet recursion of
+\S\ref{s:five:conn} on the same object, so that a reader can
+follow the exact-rational machinery end to end at small scale
+before trusting it at the $1310$-term scale of $C_5$,
+$\{4,2\}$, $\{6\}$.
+
+\subsection*{(1) Warm-up: $t_{\mathrm{adj}}=\tfrac7{60}$ in
+three lines}
+
+The adjacent two-chord walk has positions $(0,x,0,y)$
+(Proposition~\ref{p:t222}), so
+$t_{\mathrm{adj}}=\int_{[-1,1]^{2}}
+(1-\operatorname{span}(0,x,y))_{+}\,|x||y|\,dxdy$. The two
+symmetries $(x,y)\mapsto(-x,-y)$ and $x\leftrightarrow y$
+reduce the four quadrants to two types:
+\[
+\text{same sign: } A_2=2\!\!\int_{0\le a\le b\le1}\!\!(1-b)\,ab
+=\int_0^1 b^{3}(1-b)\,db=\tfrac1{20};
+\qquad
+\text{mixed: } S_2=\int_{\substack{a,b\ge0\\ a+b\le1}}
+(1-a-b)\,ab=\tfrac{1!\,1!\,1!}{5!}=\tfrac1{120},
+\]
+whence $t_{\mathrm{adj}}=2(A_2+S_2)=2(\tfrac1{20}+\tfrac1{120})
+=\tfrac7{60}$. (For the opposite walk $(0,x,x{+}y,y)$
+\emph{every} quadrant is the mixed form, so
+$t_{\mathrm{opp}}=4S_2=\tfrac1{30}$; the mixed form is
+Dirichlet's integral $\int_{\Delta_n}\prod x_i^{\alpha_i}\,dx
+=\prod\alpha_i!\,/\,(n+\sum\alpha_i)!$.)
+
+\subsection*{(2) A three-chord constant end to end:
+$T_2=\tfrac1{180}$}
+
+Take the crossing-two placement class of
+Proposition~\ref{p:t222} in its representative matching
+$(1,3)(2,5)(4,6)$: increments
+$(v_1,\dots,v_6)=(x,y,-x,z,-y,-z)$, walk positions
+\[
+p=(0,\;x,\;x{+}y,\;y,\;y{+}z,\;z),
+\qquad
+T_2=\int_{[-1,1]^{3}}
+\bigl(1-\operatorname{span}(p)\bigr)_{+}\,|x||y||z|\,dxdydz .
+\]
+Under the global negation $(x,y,z)\mapsto(-x,-y,-z)$ and the
+reflection $x\leftrightarrow z$ (which maps the position list
+to itself), the eight octants collapse to two types, four
+octants each; writing $(a,b,c)=(|x|,|y|,|z|)$:
+\[
+\operatorname{span}=
+\begin{cases}
+b+\max(a,c) & \text{octants } (+,+,+),\ (-,-,-),\
+(+,-,+),\ (-,+,-),\\[2pt]
+a+b+c & \text{the four mixed octants,}
+\end{cases}
+\]
+(e.g.\ in $(+,+,-)$ the maximum is $p_3=x+y$ and the minimum
+is $p_6=z$, so the span is $x+y-z=a+b+c$; in $(+,-,+)$ the
+maximum is $\max(x,z)$ and the minimum is $y$). Hence
+$T_2=4I_A+4I_S$ with
+\[
+I_A=2\!\!\int_{0\le a\le c}\!\!(1-b-c)_{+}\,abc
+=2\int_0^1\!c\,\frac{c^{2}}2\,\frac{(1-c)^{3}}6\,dc
+=\int_0^1\frac{c^{3}(1-c)^{3}}6\,dc
+=\frac{B(4,4)}6=\frac1{840},
+\]
+\[
+I_S=\int_{\substack{a,b,c\ge0\\ a+b+c\le1}}(1-a-b-c)\,abc
+=\frac{1!\,1!\,1!\,1!}{7!}=\frac1{5040},
+\qquad
+T_2=\frac4{840}+\frac4{5040}
+=\frac{24+4}{5040}=\frac1{180}.
+\]
+Assembling the five placement classes with their sizes
+($2/3/6/3/1$) reproduces
+$\{2,2,2\}=2T_0+3T_0'+6T_1+3T_2+T_3=\tfrac{32}{105}$.
+
+\subsection*{(3) The same computation as a polytope volume,
+and one level of the facet recursion}
+
+The slab lift $(1-\operatorname{span})_{+}
+=\int_{\mathbb R}\prod_i\mathbf 1[t\le p_i\le t+1]\,dt$ and the
+weight lift $|x|=\int_0^{|x|}du$ turn each octant term into the
+volume of one bounded $\{0,\pm1\}$-polytope. For the mixed
+octant of (2):
+\[
+I_S=\operatorname{Vol}_7\Bigl\{(a,b,c,u,v,w,s):\
+0\le u\le a,\ 0\le v\le b,\ 0\le w\le c,\ s\ge0,\
+a+b+c+s\le1\Bigr\},
+\]
+the coordinate $s$ realizing the slab and $u,v,w$ the weights.
+The facet recursion of \S\ref{s:five:conn} is used in its
+rational (projected) form
+\[
+\operatorname{Vol}_n(P)=\frac1n\sum_i
+\frac{h_i}{|n_{i,k_i}|}\,
+\operatorname{Vol}_{n-1}^{\pi_{k_i}}(F_i),
+\]
+where $h_i$ is the affine offset of facet $i$ from the chosen
+apex, and $\operatorname{Vol}^{\pi_k}$ is the volume of the
+facet projected along a coordinate $k$ with $n_{i,k}\ne0$: the
+irrational normalization $\|n_i\|$ of the geometric distance
+cancels against the same factor in the intrinsic facet volume,
+which is the arrangement referred to in \S\ref{s:five:conn}.
+One level, on the simplex factor
+$\Delta=\{a,b,c,s\ge0,\ a{+}b{+}c{+}s\le1\}$ from the apex at
+the origin: the four coordinate facets contain the apex
+($h=0$) and drop out; the tilted facet has $h=1$, $|n_s|=1$,
+and projects along $s$ onto the unit $3$-simplex of volume
+$\tfrac16$; hence
+$\operatorname{Vol}_4(\Delta)=\tfrac14\cdot\tfrac{1}{1}\cdot
+\tfrac16=\tfrac1{24}$, with no irrational number ever entering.
+Recursing in the full seven coordinates (the $u,v,w$ facets
+enter with $h\ne0$ once the apex is interior work) terminates
+at simplices and returns $I_S=\tfrac1{5040}$, in agreement with
+the Dirichlet evaluation above --- the two-method agreement
+that the calculus enforces on every term it consumes.
+
+\subsection*{(4) Instantiation at $C_5$, $\{4,2\}$, $\{6\}$}
+
+A term of the $C_5$ ledger is one $(P,\sigma)$-pair of the
+partition-cyclic cumulant formula of \S\ref{s:conv}(ii): the
+merged walk of the blocks in the cyclic order $\sigma$ plays
+the role of $p$ above, the sign is $(-1)^{|P|-1}$, and the
+lifted polytope is cut by the same unit-coefficient hyperplane
+family; a term of $\{6\}$ differs only in its walk length. The
+computation differs from (2)--(3) in scale, not in kind: $150$, $78$
+and $1082$ such terms, each archived as an exact fraction with
+its polytope data in the reproduction package, their signed
+sums the proved values $\tfrac1{36}$, $-\tfrac{23}{420}$,
+$-\tfrac1{126}$. The gates tying that scale back to this
+appendix's scale are stated in \S\ref{s:five:conn}: the pure
+four-cycle $\Phi_4=-\tfrac1{60}$ through the same code path by
+both exact methods; the fraction-by-fraction agreement of the
+two symbolic engines on every doubly-computed term; and the
+three placement classes of $\{4,2\}$
+($-\tfrac2{315},-\tfrac1{1260},-\tfrac1{252}$, multiplicities
+$6/6/3$) recombining to $-\tfrac{23}{420}$ --- the same
+size-weighted assembly displayed for $\{2,2,2\}$ in (2).
 
 \begin{thebibliography}{99}
 
