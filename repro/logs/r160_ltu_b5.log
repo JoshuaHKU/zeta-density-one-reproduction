@@ -1,8 +1,0 @@
-b=5: 501 deduped lifted matrices   enum 0.0s
-  100/501  8s
-  200/501  59s
-  300/501  178s
-  400/501  304s
-  500/501  664s
-
-F-BE-LTU-5 shard 0/1: PASS  726.6s

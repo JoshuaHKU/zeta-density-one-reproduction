@@ -1,8 +1,0 @@
-b=6: 203 partitions, N=2..11, 4110s
-  per-term parity: 203/203 satisfy, 0 violate
-  total satisfies parity: True
-  *** F-BE-PAR-6: PROPOSITION A ***
-b=6: 203 partitions, N=2..11, 4707s
-  per-term parity: 203/203 satisfy, 0 violate
-  total satisfies parity: True
-  *** F-BE-PAR-6: PROPOSITION A ***

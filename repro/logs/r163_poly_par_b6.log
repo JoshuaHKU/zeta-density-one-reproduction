@@ -1,3 +1,0 @@
-backend cupy(dev0)  b=6: 4683 fine terms (Fubini), N=1..13, 95.4s
-  F-BE-POLY-6: PASS
-  F-BE-PAR2-6: PASS  (sign -1)

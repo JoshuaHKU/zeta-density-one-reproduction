@@ -1,6 +1,0 @@
-name = "RhGateK14"
-defaultTargets = ["RhGateK14"]
-
-[[lean_lib]]
-name = "RhGateK14"
-roots = ["Certificate84", "CertificateK1012", "CertificateK14"]
